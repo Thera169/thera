@@ -6,12 +6,12 @@ Scenario: begin chat
 	When I click on ‘Start Session’
 	Then I should see the waiting page
 
-# Scenario: select Message Box
-# 	When I select "Message Box"
-# 	And I type "Hello Volunteer"
-# 	And I press Enter
-# 	Then I should see "Hello Volunteer" in "Conversation Box"
-# 	And the volunteer should see "Hello Volunteer" in "Conversation Box"
+Scenario: select Message Box
+	When I select "Message Box"
+	And I type "Hello Volunteer"
+	And I press Enter
+	Then I should see "Hello Volunteer" in "Conversation Box"
+	And the volunteer should see "Hello Volunteer" in "Conversation Box"
 
 # Feature: getting service needed
 # 	As a user I want to be sure that I will speak to a volunteer
