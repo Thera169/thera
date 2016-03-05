@@ -50,4 +50,10 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'simplecov', :require => false
+end
+
 ruby '2.3.0'
