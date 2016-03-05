@@ -19,10 +19,10 @@
 # #
 
 
-# require 'uri'
-# require 'cgi'
-# require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
-# require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "selectors"))
+require 'uri'
+require 'cgi'
+require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
+require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "selectors"))
 
 # module WithinHelpers
 #   def with_scope(locator)
@@ -252,3 +252,119 @@
 # Then /^show me the page$/ do
 #   save_and_open_page
 # end
+
+When(/^I fill out the fields and press the ‘Register Volunteer’ submission button,$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I am taken to a new page with a table titled ‘All Volunteers’ that shows all existing volunteers\.$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I click on the ‘Edit Existing Volunteer’ button on the admin homepage,$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I am redirected to a new page with a search bar\.$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I type in a name \(e\.g\. Kayla Razavi\)$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^press the ‘Search’ icon$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I am redirected to a similar form titled ‘Add New Volunteer’ as introduced before\.$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I click on ‘Start Session’$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should see the waiting page$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I select "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I type "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I press Enter$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should see "([^"]*)" in "([^"]*)"$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^the volunteer should see "([^"]*)" in "([^"]*)"$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^I am on the login page$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^I type "([^"]*)" in "([^"]*)"$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^I click "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should see the messenger page$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should see "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should not see the "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^I have a conversation with "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^"([^"]*)" is waiting$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^the "([^"]*)" request should be highlighted blue$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^the "([^"]*)" request should be white$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^"([^"]*)" should be unread$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^"([^"]*)" messaged me first$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^"([^"]*)" messaged me second$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^"([^"]*)" messaged me last$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^"([^"]*)" request should be under "([^"]*)" request$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
