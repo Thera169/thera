@@ -21,6 +21,9 @@ module NavigationHelpers
     
     when /^the conversation\s?page$/
       '/conversations'
+    
+    when /^the chat\s?page$/
+      '/conversations/1/edit'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

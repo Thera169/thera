@@ -9,16 +9,26 @@ Scenario: Start conversation
   When I follow "Start a Conversation"
   Then I should see "New Conversation"
 
-Scenario: Create conversation
+Scenario: Go back to main page
   Given I am on the new conversation page
   Then I should see "New Conversation"
   When I follow "Back"
   Then I should be on the conversation page
+
+Scenario: Create message
+  Given I am on the home page
   When I follow "Start a Conversation"
   And I press "Create Conversation"
   And I fill in "message_box" with "Hey"
-  And I press "Submit"
+  And I press "submit message"
   Then I should see "Hey"
+  
+#   Given I am on the chat page
+#   When I press "Update Conversation"
+#   Then I should see "Chatbox"
+#   And I fill in "message_box" with "Hey"
+#   And I press "submit message"
+#   Then I should see "Hey"
   
 #  Scenario: Create message
    
