@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   
-  root 'conversations#new'
+  root 'conversations#index'
+  
+  # match "/message", :to 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

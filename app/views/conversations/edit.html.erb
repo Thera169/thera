@@ -16,21 +16,17 @@
 
   <ul>
     <% @messages.each do |message| %>
-        <li><%= message.content %></li
+        <li><%= message.content %></li>
     <% end %>
   </ul>
   
   <%= form_for Message.new, :html => {:id => "message_box"}, :url => '/messages', remote: true do |f| %>
     <%= f.text_field :content %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <%= f.hidden_field :conversation_id, {value: @conversation.id}%>
     <%= f.submit "submit message" %>
   <% end %>
-  <!--<form action="/messages" method="POST" data-remote="true">-->
-  <!--  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">-->
-  <!--  <input type="hidden" name="conversation_id" value="<%= @conversation.id%>">-->
-  <!--  Input Message: <input type="text" name="content">-->
-  <!--  <input type="submit" value="Submit">-->
-  <!--</form>-->
+
 
 </div>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>

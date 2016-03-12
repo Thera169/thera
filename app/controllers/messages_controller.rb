@@ -47,15 +47,16 @@ class MessagesController < ApplicationController
       respond_to do |format| 
         if @message.save
             # format.json { render :json => current_user.profile.avatar_url, :status => 200 } 
-            format.html { render :nothing => true, :notice => 'Update SUCCESSFUL!' } 
+            format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'Update SUCCESSFUL!' } 
         else 
-            format.html { render :action => "edit" } 
+            format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'didnt work!' } 
             # format.json { render :json => current_user.errors, :status => :unprocessable_entity } 
         end 
       end 
     else
-      flash[:notice] = "Please enter in a message"
-      # redirect_to :back
+      @conversation = Conversation.find(params[:message][:conversation_id])
+      flash[:notice] = "Please enter in a message" # DOES NOT WORK
+      redirect_to '/conversations/' + @conversation.id.to_s + '/edit'
     end
     
     # redirect_to '/conversations'
