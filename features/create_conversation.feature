@@ -16,9 +16,11 @@ Scenario: Create conversation
   Then I should be on the conversation page
   When I follow "Start a Conversation"
   And I press "Create Conversation"
-  Then I should see "Chatbox:"
+  And I fill in "message_box" with "Hey"
+  And I press "Submit"
+  Then I should see "Hey"
   
- Scenario: Create message
+#  Scenario: Create message
    
 
 

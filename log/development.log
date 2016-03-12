@@ -11465,3 +11465,28 @@ Processing by ConversationsController#edit as HTML
   [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = ?  [["conversation_id", 51]]
   Rendered conversations/edit.html.erb within layouts/application (3.7ms)
 Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/conversations" for 66.117.129.5 at 2016-03-12 09:09:44 +0000
+Cannot render console from 66.117.129.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConversationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BRRp1lRmfH2Fid3Dp7UCUX0T8nYR9eCjupyYJ1iVhUSIjPWpF2fZYzRMonBsEDRu+23kSF22iiap0omYXqqXpA==", "commit"=>"Create Conversation"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", "Your chat has started."], ["created_at", "2016-03-12 09:09:44.319085"], ["updated_at", "2016-03-12 09:09:44.319085"]]
+  [1m[36m (13.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conversations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-03-12 09:09:44.334102"], ["updated_at", "2016-03-12 09:09:44.334102"]]
+  [1m[35m (7.7ms)[0m  commit transaction
+Redirected to https://thera-jasminelee1.c9users.io/conversations/52/edit
+Completed 302 Found in 27ms (ActiveRecord: 21.4ms)
+
+
+Started GET "/conversations/52/edit" for 66.117.129.5 at 2016-03-12 09:09:44 +0000
+Cannot render console from 66.117.129.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConversationsController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mConversation Load (0.2ms)[0m  [1mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = ? LIMIT 1[0m  [["id", 52]]
+  Rendered conversations/_form.html.erb (1.2ms)
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = ?  [["conversation_id", 52]]
+  Rendered conversations/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.4ms)
