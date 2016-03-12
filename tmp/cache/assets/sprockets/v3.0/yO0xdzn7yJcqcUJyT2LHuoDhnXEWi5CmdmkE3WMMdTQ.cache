@@ -1,0 +1,23 @@
+I"¦(function() {
+  var update;
+
+  update = function() {
+    return $.get('/conversations/' + conversation_id / +'.json', null, function(data, status, jqXHR) {
+      var d, i, len, m, msgsSorted;
+      msgsSorted = _.sortBy(data, function(message) {
+        return new Date(message.created_at).getTime();
+      });
+      $('.message_box').empty();
+      for (i = 0, len = msgsSorted.length; i < len; i++) {
+        m = msgsSorted[i];
+        d = moment(m.created_at);
+        $('.message_box').append('<li>' + '<span class="created_at">' + d.format('hh:mm') + '</span>' + m.content + '</li>');
+      }
+      return setTimeout(update, 750);
+    });
+  };
+
+  update();
+
+}).call(this);
+:ET

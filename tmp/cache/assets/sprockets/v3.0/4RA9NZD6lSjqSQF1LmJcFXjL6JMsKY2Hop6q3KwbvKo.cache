@@ -1,0 +1,31 @@
+I"²(function() {
+  window.Poller = {
+    poll: function(timeout) {
+      if (timeout === 0) {
+        return Poller.request();
+      } else {
+        return this.pollTimeout = setTimeout(function() {
+          return Poller.request();
+        }, timeout || 5000);
+      }
+    },
+    clear: function() {
+      return clearTimeout(this.pollTimeout);
+    },
+    request: function() {
+      var first_id;
+      first_id = $('.message_text').first().data('id');
+      return $.get('/conversations/' + conversation_id + '/edit', {
+        after_id: first_id
+      });
+    }
+  };
+
+  jQuery(function() {
+    if ($('.message_text').size() > 0) {
+      return Poller.poll();
+    }
+  });
+
+}).call(this);
+:ET

@@ -6,11 +6,20 @@ Scenario: Start conversation
   Given I am on the home page
   Then I should see "Thera"
   And I should see "Enter an existing conversation"
-  When I press "Start a Conversation"
+  When I follow "Start a Conversation"
   Then I should see "New Conversation"
 
-# Scenario: Create conversation
-#   Given I am on the c
+Scenario: Create conversation
+  Given I am on the new conversation page
+  Then I should see "New Conversation"
+  When I follow "Back"
+  Then I should be on the conversation page
+  When I follow "Start a Conversation"
+  And I press "Create Conversation"
+  Then I should see "Chatbox:"
+  
+ Scenario: Create message
+   
 
 
 # Scenario: register volunteer

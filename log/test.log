@@ -416,3 +416,520 @@ Processing by ConversationsController#new as HTML
   Rendered conversations/new.html.erb within layouts/application (29.5ms)
 Completed 200 OK in 83ms (Views: 57.4ms | ActiveRecord: 0.4ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by ConversationsController#new as HTML
+  Rendered conversations/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "conversations"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "messages"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/conversations" for 127.0.0.1 at 2016-03-12 08:58:30 +0000
+Processing by ConversationsController#index as HTML
+  [1m[36mConversation Load (0.2ms)[0m  [1mSELECT "conversations".* FROM "conversations"[0m
+  Rendered conversations/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 22ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/messages" for 127.0.0.1 at 2016-03-12 08:58:30 +0000
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages"
+  Rendered messages/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "conversations" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-03-12 08:58:30.266439"], ["updated_at", "2016-03-12 08:58:30.266439"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conversations" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-03-12 08:58:30.272447"], ["updated_at", "2016-03-12 08:58:30.272447"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered conversations/index.html.erb (2.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  Rendered conversations/_form.html.erb (8.7ms)
+  Rendered conversations/new.html.erb (45.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conversations" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-03-12 08:58:30.355292"], ["updated_at", "2016-03-12 08:58:30.355292"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered conversations/show.html.erb (0.8ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-03-12 08:58:30.368559"], ["updated_at", "2016-03-12 08:58:30.368559"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered messages/_form.html.erb (2.0ms)
+  Rendered messages/edit.html.erb (35.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-03-12 08:58:30.424974"], ["updated_at", "2016-03-12 08:58:30.424974"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2016-03-12 08:58:30.431085"], ["updated_at", "2016-03-12 08:58:30.431085"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered messages/index.html.erb (1.8ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  Rendered messages/_form.html.erb (2.2ms)
+  Rendered messages/new.html.erb (33.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (2.4ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "messages" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-03-12 08:58:30.493874"], ["updated_at", "2016-03-12 08:58:30.493874"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered messages/show.html.erb (0.9ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-03-12 09:01:16 +0000
+Processing by ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1mSELECT "conversations".* FROM "conversations"[0m
+  Rendered conversations/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 66ms (Views: 42.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-03-12 09:01:37 +0000
+Processing by ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1mSELECT "conversations".* FROM "conversations"[0m
+  Rendered conversations/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 75ms (Views: 45.3ms | ActiveRecord: 0.4ms)
+Started GET "/conversations/new" for 127.0.0.1 at 2016-03-12 09:01:37 +0000
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (9.3ms)
+  Rendered conversations/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-03-12 09:05:34 +0000
+Processing by ConversationsController#index as HTML
+  [1m[36mConversation Load (0.2ms)[0m  [1mSELECT "conversations".* FROM "conversations"[0m
+  Rendered conversations/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 59ms (Views: 33.3ms | ActiveRecord: 0.3ms)
+Started GET "/conversations/new" for 127.0.0.1 at 2016-03-12 09:05:34 +0000
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (10.0ms)
+  Rendered conversations/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-03-12 09:05:51 +0000
+Processing by ConversationsController#index as HTML
+  [1m[36mConversation Load (0.2ms)[0m  [1mSELECT "conversations".* FROM "conversations"[0m
+  Rendered conversations/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 76ms (Views: 45.3ms | ActiveRecord: 0.3ms)
+Started GET "/conversations/new" for 127.0.0.1 at 2016-03-12 09:05:51 +0000
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (8.9ms)
+  Rendered conversations/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/conversations/new" for 127.0.0.1 at 2016-03-12 09:05:51 +0000
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (2.6ms)
+  Rendered conversations/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-03-12 09:06:59 +0000
+Processing by ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1mSELECT "conversations".* FROM "conversations"[0m
+  Rendered conversations/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 74ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+Started GET "/conversations/new" for 127.0.0.1 at 2016-03-12 09:06:59 +0000
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (11.2ms)
+  Rendered conversations/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/conversations/new" for 127.0.0.1 at 2016-03-12 09:06:59 +0000
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (0.6ms)
+  Rendered conversations/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started GET "/conversations" for 127.0.0.1 at 2016-03-12 09:06:59 +0000
+Processing by ConversationsController#index as HTML
+  [1m[35mConversation Load (0.2ms)[0m  SELECT "conversations".* FROM "conversations"
+  Rendered conversations/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-03-12 09:08:07 +0000
+Processing by ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1mSELECT "conversations".* FROM "conversations"[0m
+  Rendered conversations/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 79ms (Views: 49.1ms | ActiveRecord: 0.4ms)
+Started GET "/conversations/new" for 127.0.0.1 at 2016-03-12 09:08:07 +0000
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (11.2ms)
+  Rendered conversations/new.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/conversations" for 127.0.0.1 at 2016-03-12 09:08:07 +0000
+Processing by ConversationsController#index as HTML
+  [1m[35mConversation Load (0.2ms)[0m  SELECT "conversations".* FROM "conversations"
+  Rendered conversations/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-03-12 09:09:01 +0000
+Processing by ConversationsController#index as HTML
+  [1m[36mConversation Load (0.2ms)[0m  [1mSELECT "conversations".* FROM "conversations"[0m
+  Rendered conversations/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 61ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+Started GET "/conversations/new" for 127.0.0.1 at 2016-03-12 09:09:01 +0000
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (9.3ms)
+  Rendered conversations/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/conversations/new" for 127.0.0.1 at 2016-03-12 09:09:01 +0000
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (0.6ms)
+  Rendered conversations/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/conversations" for 127.0.0.1 at 2016-03-12 09:09:01 +0000
+Processing by ConversationsController#index as HTML
+  [1m[35mConversation Load (0.2ms)[0m  SELECT "conversations".* FROM "conversations"
+  Rendered conversations/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-03-12 09:09:26 +0000
+Processing by ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1mSELECT "conversations".* FROM "conversations"[0m
+  Rendered conversations/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 80ms (Views: 50.8ms | ActiveRecord: 0.4ms)
+Started GET "/conversations/new" for 127.0.0.1 at 2016-03-12 09:09:27 +0000
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (16.0ms)
+  Rendered conversations/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/conversations/new" for 127.0.0.1 at 2016-03-12 09:09:27 +0000
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (0.6ms)
+  Rendered conversations/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started GET "/conversations" for 127.0.0.1 at 2016-03-12 09:09:27 +0000
+Processing by ConversationsController#index as HTML
+  [1m[35mConversation Load (0.2ms)[0m  SELECT "conversations".* FROM "conversations"
+  Rendered conversations/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+Started GET "/conversations/new" for 127.0.0.1 at 2016-03-12 09:09:27 +0000
+Processing by ConversationsController#new as HTML
+  Rendered conversations/_form.html.erb (0.8ms)
+  Rendered conversations/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started POST "/conversations" for 127.0.0.1 at 2016-03-12 09:09:27 +0000
+Processing by ConversationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Create Conversation"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::UnknownAttributeError - unknown attribute 'conversation_id' for Message.:
+  activerecord (4.2.5) lib/active_record/attribute_assignment.rb:59:in `rescue in _assign_attribute'
+  activerecord (4.2.5) lib/active_record/attribute_assignment.rb:54:in `_assign_attribute'
+  activerecord (4.2.5) lib/active_record/attribute_assignment.rb:41:in `block in assign_attributes'
+  activerecord (4.2.5) lib/active_record/attribute_assignment.rb:35:in `assign_attributes'
+  activerecord (4.2.5) lib/active_record/core.rb:566:in `init_attributes'
+  activerecord (4.2.5) lib/active_record/core.rb:281:in `initialize'
+  activerecord (4.2.5) lib/active_record/inheritance.rb:61:in `new'
+  activerecord (4.2.5) lib/active_record/persistence.rb:50:in `create!'
+  app/controllers/conversations_controller.rb:44:in `create'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  cucumber-rails (1.4.3) lib/cucumber/rails/action_controller.rb:10:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/urlmap.rb:66:in `block in call'
+  rack (1.6.4) lib/rack/urlmap.rb:50:in `call'
+  rack-test (0.6.3) lib/rack/mock_session.rb:30:in `request'
+  rack-test (0.6.3) lib/rack/test.rb:244:in `process_request'
+  rack-test (0.6.3) lib/rack/test.rb:67:in `post'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/forwardable.rb:184:in `post'
+  capybara (2.4.4) lib/capybara/rack_test/browser.rb:60:in `process'
+  capybara (2.4.4) lib/capybara/rack_test/browser.rb:35:in `process_and_follow_redirects'
+  capybara (2.4.4) lib/capybara/rack_test/browser.rb:26:in `submit'
+  capybara (2.4.4) lib/capybara/rack_test/form.rb:75:in `submit'
+  capybara (2.4.4) lib/capybara/rack_test/node.rb:60:in `click'
+  cucumber-rails (1.4.3) lib/cucumber/rails/capybara/javascript_emulation.rb:16:in `click_with_javascript_emulation'
+  capybara (2.4.4) lib/capybara/node/element.rb:133:in `block in click'
+  capybara (2.4.4) lib/capybara/node/base.rb:84:in `synchronize'
+  capybara (2.4.4) lib/capybara/node/element.rb:133:in `click'
+  capybara (2.4.4) lib/capybara/node/actions.rb:37:in `click_button'
+  capybara (2.4.4) lib/capybara/session.rb:676:in `block (2 levels) in <class:Session>'
+  capybara (2.4.4) lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+  features/step_definitions/web_steps.rb:77:in `block in <top (required)>'
+  cucumber (2.3.2) lib/cucumber/core_ext/instance_exec.rb:25:in `block in cucumber_instance_exec'
+  cucumber (2.3.2) lib/cucumber/core_ext/instance_exec.rb:42:in `cucumber_run_with_backtrace_filtering'
+  cucumber (2.3.2) lib/cucumber/core_ext/instance_exec.rb:13:in `cucumber_instance_exec'
+  cucumber (2.3.2) lib/cucumber/rb_support/rb_step_definition.rb:102:in `invoke'
+  cucumber (2.3.2) lib/cucumber/step_match.rb:27:in `invoke'
+  cucumber (2.3.2) lib/cucumber/step_match.rb:20:in `block in activate'
+  cucumber-core (1.4.0) lib/cucumber/core/test/action.rb:23:in `execute'
+  cucumber-core (1.4.0) lib/cucumber/core/test/step.rb:31:in `execute'
+  cucumber-core (1.4.0) lib/cucumber/core/test/runner.rb:104:in `execute'
+  cucumber-core (1.4.0) lib/cucumber/core/test/runner.rb:51:in `execute'
+  cucumber-core (1.4.0) lib/cucumber/core/test/runner.rb:26:in `test_step'
+  cucumber-core (1.4.0) lib/cucumber/core/test/step.rb:16:in `describe_to'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:26:in `block (3 levels) in describe_to'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:25:in `block (2 levels) in describe_to'
+  cucumber (2.3.2) lib/cucumber/filters/prepare_world.rb:22:in `block in test_case'
+  cucumber-core (1.4.0) lib/cucumber/core/test/around_hook.rb:16:in `execute'
+  cucumber-core (1.4.0) lib/cucumber/core/test/runner.rb:104:in `execute'
+  cucumber-core (1.4.0) lib/cucumber/core/test/runner.rb:51:in `execute'
+  cucumber-core (1.4.0) lib/cucumber/core/test/runner.rb:33:in `around_hook'
+  cucumber-core (1.4.0) lib/cucumber/core/test/around_hook.rb:11:in `describe_to'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:106:in `block (2 levels) in compose_around_hooks'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:107:in `compose_around_hooks'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:24:in `block in describe_to'
+  cucumber-core (1.4.0) lib/cucumber/core/test/runner.rb:18:in `test_case'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:23:in `describe_to'
+  cucumber (2.3.2) lib/cucumber/filters/prepare_world.rb:11:in `test_case'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:23:in `describe_to'
+  cucumber (2.3.2) lib/cucumber/filters/apply_around_hooks.rb:8:in `test_case'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:23:in `describe_to'
+  cucumber (2.3.2) lib/cucumber/filters/apply_after_hooks.rb:5:in `test_case'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:23:in `describe_to'
+  cucumber (2.3.2) lib/cucumber/filters/apply_before_hooks.rb:5:in `test_case'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:23:in `describe_to'
+  cucumber (2.3.2) lib/cucumber/filters/apply_after_step_hooks.rb:8:in `test_case'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:23:in `describe_to'
+  cucumber (2.3.2) lib/cucumber/filters/activate_steps.rb:11:in `test_case'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:23:in `describe_to'
+  cucumber (2.3.2) lib/cucumber/filters/quit.rb:11:in `test_case'
+  cucumber-core (1.4.0) lib/cucumber/core/test/case.rb:23:in `describe_to'
+  cucumber-core (1.4.0) lib/cucumber/core/test/filters/locations_filter.rb:17:in `block in done'
+  cucumber-core (1.4.0) lib/cucumber/core/test/filters/locations_filter.rb:16:in `done'
+  cucumber-core (1.4.0) lib/cucumber/core/filter.rb:61:in `done'
+  cucumber-core (1.4.0) lib/cucumber/core/test/filters/tag_filter.rb:18:in `done'
+  cucumber-core (1.4.0) lib/cucumber/core/compiler.rb:23:in `done'
+  cucumber-core (1.4.0) lib/cucumber/core/gherkin/parser.rb:39:in `done'
+  cucumber-core (1.4.0) lib/cucumber/core.rb:29:in `parse'
+  cucumber-core (1.4.0) lib/cucumber/core.rb:18:in `compile'
+  cucumber (2.3.2) lib/cucumber/runtime.rb:68:in `run!'
+  cucumber (2.3.2) lib/cucumber/cli/main.rb:32:in `execute!'
+  cucumber (2.3.2) bin/cucumber:8:in `<top (required)>'
+   () usr/local/rvm/gems/ruby-2.3.0/bin/cucumber:23:in `<main>'
+   () usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
+
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
