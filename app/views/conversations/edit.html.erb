@@ -1,0 +1,97 @@
+<!--<h1>Editing Conversation</h1>-->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<%= render 'form' %>
+
+<!--<h1> Edit Conversation</h1>-->
+
+<%= link_to 'Back to conversations', conversations_path %>
+
+<h1>Chatbox:</h1>
+
+<!--<p id="notice"><%= notice %></p>-->
+
+<div class='right_column'>
+
+  <ul>
+    <% @messages.each do |message| %>
+        <li><%= message.content %></li
+    <% end %>
+  </ul>
+  
+  <%= form_for Message.new, :html => {:id => "message_box"}, :url => '/messages', remote: true do |f| %>
+    <%= f.text_field :content %>
+    <%= f.hidden_field :conversation_id, {value: @conversation.id}%>
+    <%= f.submit "submit message" %>
+  <% end %>
+  <!--<form action="/messages" method="POST" data-remote="true">-->
+  <!--  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">-->
+  <!--  <input type="hidden" name="conversation_id" value="<%= @conversation.id%>">-->
+  <!--  Input Message: <input type="text" name="content">-->
+  <!--  <input type="submit" value="Submit">-->
+  <!--</form>-->
+
+</div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+
+// <script>
+//   var message = document.getElementById('message_box').value
+// </script>
+
+
+<!--<script>-->
+<!--    var conversation_id = "<% @conversation.id %>";-->
+<!--    $(function() {-->
+<!--  var update;-->
+<!--  console.log("poop");-->
+<!--  update = function() {-->
+<!--    return $.get('/conversations/' + conversation_id, null, function(data, status, jqXHR) {-->
+<!--      var d, m, msgsSorted, _i, _len;-->
+<!--      msgsSorted = _.sortBy(data, function(message) {-->
+<!--        return new Date(message.created_at).getTime();-->
+<!--      });-->
+<!--      $('.message_box').empty();-->
+<!--      for (_i = 0, _len = msgsSorted.length; _i < _len; _i++) {-->
+<!--        m = msgsSorted[_i];-->
+<!--        d = moment(m.created_at);-->
+<!--        $('.message_box').append('<li>' + '<span class="created_at">' + d.format('hh:mm') + '</span>' + m.content + '</li>');-->
+<!--      }-->
+<!--      setTimeout(update, 2000);-->
+<!--      return /(?:)/;-->
+<!--    });-->
+<!--  };-->
+<!--  return update();-->
+<!--});-->
+<!--</script>-->
+
+<!--IGNORE THIS SHIT-->
+<!--<script type='text/coffeescript'>-->
+<!--  # Place all the behaviors and hooks related to the matching controller here.-->
+<!--# All this logic will automatically be available in application.js.-->
+<!--# You can use CoffeeScript in this file: http://coffeescript.org/-->
+<!--update = ->-->
+<!--  $.get '/conversations/' + conversation_id/ + '.json', null, (data, status, jqXHR) ->-->
+<!--    msgsSorted = _.sortBy data, (message) ->-->
+<!--      new Date(message.created_at).getTime() # get messages sorted by creation time ascending-->
+
+<!--    # refreshing messages list-->
+<!--    $('.message_box').empty()-->
+<!--    for m in msgsSorted-->
+<!--      d = moment(m.created_at)-->
+<!--      $('.message_box').append('<li>' +-->
+<!--      '<span class="created_at">' + d.format('hh:mm') + '</span>' +-->
+<!--      m.content +-->
+<!--      '</li>')-->
+
+<!--    setTimeout update, 750 # polling at least every 750 ms but don't overlap between requests-->
+
+<!--update() -->
+<!--</script>-->
+<!--<script type="text/javascript" src="./assets/javascripts/conversations.coffee"></script>-->
+<!--<script type="text/javascript" src="./app/assets/javascripts/application.js"></script>-->
+<!--<script type="text/javascript" src="./app/assets/javascripts/messages.coffee"></script>-->
+<!--<script type="text/javascript" src="./app/assets/javascripts/moment.min.js"></script>-->
+
+
+<!--<script type="text/javascript" src="http://github.com/jashkenas/coffee-script/raw/master/extras/coffee-script.js"></script>-->
