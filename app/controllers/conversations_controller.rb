@@ -1,6 +1,5 @@
 class ConversationsController < ApplicationController
-  before_action :set_conversation, only: [:show, :edit, :update, :destroy]
-  
+
   # DUMMY FOR THE DUMMY PUSH
 
   # GET /conversations
@@ -26,7 +25,7 @@ class ConversationsController < ApplicationController
 
   # GET /conversations/1/edit
   def edit
-    # @conversation = params[:id]
+    @conversation = Conversation.find(params[:id])
     if request.xhr? 
       puts "we did a ajax yay"
       @messages = Message.where(conversation_id: params[:id])
