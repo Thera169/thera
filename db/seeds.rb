@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # Test comment for commit
-r1 = Role.create({name: "Regular", description: "Can read items"})
-r2 = Role.create({name: "Seller", description: "Can read and create items. Can update and destroy own items"})
+r1 = Role.create({name: "Survivor", description: "Can create converstations and create and read messages"})
+r2 = Role.create({name: "Volunteer", description: "Can create messages and read any conversations"})
 r3 = Role.create({name: "Admin", description: "Can perform any CRUD operation on any resource"})
 
 u1 = User.create({name: "Sally", email: "sally@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r1.id})

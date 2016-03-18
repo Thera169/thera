@@ -1,14 +1,17 @@
 class ConversationsController < ApplicationController
 
   # DUMMY FOR THE DUMMY PUSH
+  load_and_authorize_resource
 
   # GET /conversations
   # GET /conversations.json
   def index
+ 
     @conversations = Conversation.all
     # gets the latest message that hasn't been displayed yet/that's just been created
     # using after_id, the id of the last displayed message
     # @messages = Message.where('id > ?', params[:after_id].to_i).order('created at DESC')
+     puts("yo")
     @messages = []
   end
 
@@ -32,6 +35,7 @@ class ConversationsController < ApplicationController
       render(:partial => 'messages', :object => @messages)
     else    
       # ***** make sure to explicitly pass a value in params for conversation_id!
+
       @messages = Message.where(:conversation_id => params[:id])
     end
   end

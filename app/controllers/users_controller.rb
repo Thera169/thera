@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
+  #load_and_authorize_resource
+
 
   # GET /users
   # GET /users.json
   def index
+    
     @users = User.all
+    authorize! :read, @users
   end
 
   # GET /users/1
@@ -20,7 +24,10 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    
   end
+  
+
 
   # GET /users/1/edit
   def edit
