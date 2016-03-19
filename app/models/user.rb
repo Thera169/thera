@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_one :conversation, :dependent => :destroy
   
   validates_presence_of :name
+  validates_confirmation_of :password
+
   before_save :assign_role
 
   def assign_role
@@ -14,7 +16,7 @@ class User < ActiveRecord::Base
   end
   
   def self.new_survivor
-    role = Role.where(:name => "Survivor").first
+    role = User.get_role("Volunteer")
     pw = (0...8).map { (30 + rand(26)).chr }.join
     email = (0...8).map { (30 + rand(26)).chr }.join 
     user = User.create(:name => "anon", 
@@ -23,6 +25,27 @@ class User < ActiveRecord::Base
                            :password => pw,
                            :password_confirmation => pw)
     return user
+  end
+  
+  def self.admin_make_user(args)
+    role = nil
+    error = ""
+    if args[:role_id].downcase == "volunteer"
+      role = User.get_role("Volunteer")
+    elsif args[:role_id].downcase == "admin"
+      role = User.get_role("Admin")
+    else
+      error = "Either choose role volunteer or admin"
+      return nil  # return error later
+    end
+    
+    return User.create!(:name => args[:name], :role_id => role.id,
+                        :email => args[:email], :password => args[:password],
+                        :password_confirmation => args[:password_confirmation])
+  end
+
+  def self.get_role(name)
+    Role.where(:name => name).first
   end
 
   def generate_conversation

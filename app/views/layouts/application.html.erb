@@ -7,7 +7,11 @@
 <body>
 
 <% if user_signed_in? %>
-  Signed in as <%= current_user.email %>. Not you?
+  <% if current_user.survivor? %>
+  Welcome Survivor
+  <% else %>
+  Signed in as <%= current_user.name + ": " + current_user.role.name %>
+  <% end %>
   <%= button_to "Edit profile", edit_user_registration_path %>
   <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
 <% else %>

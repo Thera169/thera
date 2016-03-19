@@ -12,7 +12,9 @@
 <body>
   <h1>Thera</h1>
   
-
+  <% if can? :manage, User %>
+    <h4 id="users"> <%= link_to "Manage Volunteers", users_path %> </h4>
+  <% end %>
   <h4 id="existing_conversation_header">Enter an existing conversation</h4>
 
   <table id="existing_conversation_table">
@@ -27,7 +29,7 @@
   
     <tbody>
       <% @conversations.each do |conversation| %>
-        <% if can? :manage, conversation %> 
+        <% if can? :update, conversation %> 
         <tr>
           <td><%= link_to "Conversation #{conversation.id}", edit_conversation_path(conversation) %></td>
           <!--<td><%= link_to 'Show', conversation %></td>-->
@@ -38,6 +40,7 @@
       <% end %>
     </tbody>
   </table>
+  
   
   <!--hide back button bc we don't need it yet-->
   <!--<%= link_to 'Back', conversations_path %>-->
