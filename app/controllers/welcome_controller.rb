@@ -2,18 +2,18 @@ class WelcomeController < ApplicationController
   def index
   end
   def new_survivor
-    role = Role.where(:name => "Survivor").first
-    pw = (0...8).map { (30 + rand(26)).chr }.join
-    email = (0...8).map { (30 + rand(26)).chr }.join 
-    @user = User.create(:name => "anon", 
-                           :role_id => role.id,
-                           :email => email,
-                           :password => pw,
-                           :password_confirmation => pw)
-    @user.save()
+    @user = User.new_survivor()
     sign_in(@user, event: :authentication )
     sign_in @user, :bypass => true 
-
-    redirect_to root_path
+    #@conversation = @user.generate_conversation
+    @conversation = Conversation.create()
+    @conversation.messages.build(content: "Your chat has started.",
+                                                  conversation_id: @conversation.id)
+    @user.conversation = @conversation
+    if @conversation
+      redirect_to edit_conversation_url(@conversation)
+    else
+      redirect_to root_path
+    end
   end
 end

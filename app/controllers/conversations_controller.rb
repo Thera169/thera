@@ -42,6 +42,7 @@ class ConversationsController < ApplicationController
 
   # POST /conversations
   # POST /conversations.json
+  # deprecated ?
   def create
     @conversation = Conversation.new(conversation_params)
     @message = Message.create!(content: "Your chat has started.", conversation_id: @conversation.id)
