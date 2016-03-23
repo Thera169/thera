@@ -12,7 +12,7 @@
 <body>
   <h1>Thera</h1>
   
-  <% if can? :manage, User %>
+  <% if can? :manage, :all %>
     <h4 id="users"> <%= link_to "Manage Volunteers", users_path %> </h4>
   <% end %>
   <h4 id="existing_conversation_header">Enter an existing conversation</h4>

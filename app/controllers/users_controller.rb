@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
-  #load_and_authorize_resource
+  load_and_authorize_resource
 
 
   # GET /users
@@ -26,11 +26,22 @@ class UsersController < ApplicationController
   def new
     @user = User.new()
   end
-  
-
 
   # GET /users/1/edit
+  def edit_self
+    id = params[:id]
+    if id.to_i == current_user.id
+      @user = current_user
+    else
+      redirect_to edit_user_path(User.find(id))
+    end
+  end
+
+
+  # GET admin/users/1/edit
   def edit
+    puts(params)
+    @user
   end
 
   # POST /users
@@ -73,13 +84,6 @@ class UsersController < ApplicationController
     end
   end
 
-  protected
-  def needs_password?(user, params)
-    params[:password].present?
-  end
-
-  # DELETE /users/1
-  # DELETE /users/1.json
   def destroy
     @user.destroy
     respond_to do |format|
@@ -87,6 +91,14 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  protected
+  def needs_password?(user, params)
+    params[:password].present?
+  end
+
+  # DELETE /users/1
+  # DELETE /users/1.json
 
   private
     def needs_password?(user, params)

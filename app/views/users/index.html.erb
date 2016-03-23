@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to "Back", conversations_path %>
 <h1>Listing Users</h1>
-
+<%= link_to 'New User', new_user_path %>
 <table>
   <thead>
     <tr>
@@ -13,19 +14,29 @@
   </thead>
 
   <tbody>
+    <tr>
+      <td>Me (<%= current_user.name %>) </td>
+      <td><%= current_user.email %></td>
+      <td><%= current_user.role.name %></td>
+      <td><%#= link_to 'Show', current_user %></td>
+      <td><%= button_to 'Edit', edit_user_path(current_user), :method => :get %></td>
+      <td><%= button_to 'Destroy', current_user, method: :delete, data: { confirm: "Are you sure?" }  %></td>
+    </tr>
     <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.role %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <% if user != current_user %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.role.name %></td>
+          <td><%#= link_to 'Show', user %></td>
+          <td><%= button_to 'Edit', edit_user_path(user), :method => :get %></td>
+          <td><%= button_to 'Destroy', user_path(user), method: :delete, data: { confirm: "Are you sure?" }   %></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+

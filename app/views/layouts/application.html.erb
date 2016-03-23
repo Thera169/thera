@@ -12,7 +12,7 @@
   <% else %>
   Signed in as <%= current_user.name + ": " + current_user.role.name %>
   <% end %>
-  <%= button_to "Edit profile", edit_user_registration_path %>
+  <%= button_to "Edit profile", edit_self_path(current_user), :method => :get %>
   <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
 <% else %>
   <%= link_to "Sign in", new_user_session_path %>

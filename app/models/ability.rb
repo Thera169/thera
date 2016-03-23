@@ -5,6 +5,7 @@ class Ability
     if user.admin?
       can :manage, :all
     elsif user.volunteer?
+      can :manage, User, id: user.id
       can :read, Conversation
       can :update, Conversation
       can :read, Message
