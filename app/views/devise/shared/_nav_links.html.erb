@@ -1,0 +1,18 @@
+
+
+
+<% if user_signed_in? %>
+    <% if not current_user.survivor? %>
+        <% if controller_name == "conversations" %>
+            <% if controller.action_name == "edit" %>
+                <%= button_to "Home", root_path, :method => :get  %>
+            <% end %>
+        <% end %>
+        <%= button_to "Edit profile", edit_self_path(current_user), :method => :get %>
+    <% end %>
+    <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
+<% elsif (controller_name != "welcome") %>
+    <%= button_to "Home", root_path, :method => :get  %>
+<% elsif controller_name != "sessions" %>
+    <%= button_to  "Log in", new_user_session_path,  :method => :get %>
+<% end %>

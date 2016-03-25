@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   end
   
   def self.new_survivor
-    role = User.get_role("Volunteer")
+    role = User.get_role("Survivor")
     pw = (0...8).map { (30 + rand(26)).chr }.join
     email = (0...8).map { (30 + rand(26)).chr }.join 
     user = User.create(:name => "anon", 

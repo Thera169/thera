@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= javascript_include_tag :defaults %>
+  <!--Loads application.s (which contains all our javascript) and does so async so that inline JS doesn't fuck up external JS. -->
+  <%= javascript_include_tag "application", async: Rails.env.production? %> 
   <title>Thera</title>
 </head>
 <body>
@@ -12,12 +13,8 @@
   <% else %>
   Signed in as <%= current_user.name + ": " + current_user.role.name %>
   <% end %>
-  <%= button_to "Edit profile", edit_self_path(current_user), :method => :get %>
-  <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
-<% else %>
-  <%= link_to "Sign in", new_user_session_path %>
 <% end %>
-
+<%= render "devise/shared/nav_links" %>
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, id: "flash_#{name}" %>
 <% end %>
