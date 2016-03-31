@@ -27,9 +27,18 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
-  <% if current_user.id == @user.id %> 
-    <%= link_to "Change Password", edit_user_password_path(current_user) %>
-  <% end %>
+ <div class="field">
+    <%= f.label :password, "New password" %><br />
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+    <% end %>
+    <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirm new password" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>

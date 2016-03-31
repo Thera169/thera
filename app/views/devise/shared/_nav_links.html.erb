@@ -3,12 +3,14 @@
 
 <% if user_signed_in? %>
     <% if not current_user.survivor? %>
-        <% if controller_name == "conversations" %>
-            <% if controller.action_name == "edit" %>
-                <%= button_to "Home", root_path, :method => :get  %>
-            <% end %>
+
+        <% if not (controller_name == "conversations" and controller.action_name == "index") %>
+            <%= button_to "Home", root_path, :method => :get  %>
         <% end %>
-        <%= button_to "Edit profile", edit_self_path(current_user), :method => :get %>
+
+        <% if not (controller_name == "users" and controller.action_name == "edit_self") %>
+            <%= button_to "Edit profile", edit_self_path(current_user), :method => :get %>
+        <% end %>
     <% end %>
     <%= button_to "Sign out", destroy_user_session_path, :method => :delete %>
 <% elsif (controller_name != "welcome") %>

@@ -32,7 +32,7 @@ class ConversationsController < ApplicationController
     if request.xhr? 
       puts "we did a ajax yay"
       @messages = Message.where(conversation_id: params[:id])
-      render(:partial => 'messages', :object => @messages)
+      render(:partial => 'message', :collection => @messages)
     else    
       # ***** make sure to explicitly pass a value in params for conversation_id!
 
@@ -46,8 +46,7 @@ class ConversationsController < ApplicationController
   def create
     @conversation = Conversation.new(conversation_params)
     @message = Message.create!(content: "Your chat has started.", conversation_id: @conversation.id)
-    puts "--------"
-    puts @message
+
     respond_to do |format|
       if @conversation.save
         format.html { redirect_to edit_conversation_url(@conversation), notice: 'Conversation was successfully created.' }

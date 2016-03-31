@@ -8,8 +8,10 @@ class WelcomeController < ApplicationController
     #@conversation = @user.generate_conversation
     @conversation = Conversation.create()
     @conversation.messages.build(content: "Your chat has started.",
-                                                  conversation_id: @conversation.id)
+                                      conversation_id: @conversation.id)
+    @messages = @conversation.messages
     @user.conversation = @conversation
+    # puts(@user.role.name)
     if @conversation
       redirect_to edit_conversation_url(@conversation)
     else

@@ -24,6 +24,9 @@ module NavigationHelpers
     
     when /^the chat\s?page$/
       '/conversations/1/edit'
+      
+    when /^the admin login page$/
+      '/users/sign_in'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

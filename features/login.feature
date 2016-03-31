@@ -4,7 +4,7 @@ Feature: login
     so that I can have admin/login privileges
     
 Scenario: Admin Login
-  Given an admin exists with username "Admin1" and password "12345678"
+  Given an admin exists with email "Admin1" and password "12345678"
   And I am on the login page
   When I fill in "Username:" with "Admin1"
   And I fill in "Password:" with "12345678"
@@ -12,7 +12,7 @@ Scenario: Admin Login
   And I should be on the admin page
 
 Scenario: Volunteer Login
-  Given a volunteer exists with username "Volunteer1" and password "12345678"
+  Given a volunteer exists with email "Volunteer1" and password "12345678"
   And I am on the login page
   When I fill in "Username:" with "Volunteer1"
   And I fill in "Password:" with "12345678"

@@ -1,0 +1,38 @@
+I"õ(function() {
+  console.log(conversation_id);
+
+  console.log("inside coffeescript");
+
+  $(function() {
+    var update;
+    update = void 0;
+    console.log('poop');
+    update = function() {
+      return $.get('/conversations/' + conversation_id, null, function(data, status, jqXHR) {
+        var _i, _len, d, m, msgsSorted;
+        d = void 0;
+        m = void 0;
+        msgsSorted = void 0;
+        _i = void 0;
+        _len = void 0;
+        msgsSorted = _.sortBy(data, function(message) {
+          return new Date(message.created_at).getTime();
+        });
+        $('.message_box').empty();
+        _i = 0;
+        _len = msgsSorted.length;
+        while (_i < _len) {
+          m = msgsSorted[_i];
+          d = moment(m.created_at);
+          $('.message_box').append('<li>' + '<span class="created_at">' + d.format('hh:mm') + '</span>' + m.content + '</li>');
+          _i++;
+        }
+        setTimeout(update, 2000);
+        return /(?:)/;
+      });
+    };
+    return update();
+  });
+
+}).call(this);
+:ET

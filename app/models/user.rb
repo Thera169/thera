@@ -30,6 +30,7 @@ class User < ActiveRecord::Base
   def self.admin_make_user(args)
     role = nil
     error = ""
+    puts(args[:role_id])
     if args[:role_id].downcase == "volunteer"
       role = User.get_role("Volunteer")
     elsif args[:role_id].downcase == "admin"

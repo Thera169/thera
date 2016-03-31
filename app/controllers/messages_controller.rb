@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
- 
+ respond_to :html, :js
   load_and_authorize_resource
 
   # GET /messages
@@ -45,19 +45,26 @@ class MessagesController < ApplicationController
       #     # format.json { render :show, status: :created, location: @message }
       #   end
       # end
+      
+      if request.xhr?
+        puts "AJAX REQUEST MADE!"
+      end
+
       respond_to do |format| 
         if @message.save
             # format.json { render :json => current_user.profile.avatar_url, :status => 200 } 
             format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'Update SUCCESSFUL!' } 
+            format.json { render :show, status: :created, location: @message } #fuck this line. how do I show the messages w/o reloading?
         else 
             format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'didnt work!' } 
+            format.json {render json: @message.errors}
             # format.json { render :json => current_user.errors, :status => :unprocessable_entity } 
         end 
       end 
     else
       @conversation = Conversation.find(params[:message][:conversation_id])
       flash[:notice] = "Please enter in a message" # DOES NOT WORK
-      redirect_to '/conversations/' + @conversation.id.to_s + '/edit'
+      # redirect_to '/conversations/' + @conversation.id.to_s + '/edit'
     end
     
     # redirect_to '/conversations'
@@ -96,6 +103,6 @@ class MessagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
-      params.require(:message).permit(:content)
+      params.require(:message).permit(:content, :conversation_id)
     end
 end

@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'cancancan', '~> 1.10'
 
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
@@ -25,6 +26,11 @@ group :development, :test do
   gem 'cucumber-rails-training-wheels'
   gem 'better_errors'
   gem "binding_of_caller"  
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'ffaker'
+  gem 'simplecov', :require => false
+  gem 'autotest-rails'
+  gem 'metric_fu'
 end
 
 group :development do

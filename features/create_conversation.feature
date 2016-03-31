@@ -3,24 +3,22 @@ Feature: all users
 	So I can get the help I need
 	
 Scenario: Start conversation
-  Given I am on the home page
-  Then I should see "Thera"
-  And I should see "Enter an existing conversation"
-  When I follow "Start a Conversation"
-  Then I should see "New Conversation"
+  Given I am logged in as a survivor
+  And I am on the home page
+  When I press "Start a Conversation"
+  Then I should see "Your chat has started."
 
-Scenario: Go back to main page
-  Given I am on the new conversation page
-  Then I should see "New Conversation"
-  When I follow "Back"
-  Then I should be on the conversation page
+Scenario: Sign out and go back to main page
+  Given I am logged in as a survivor
+  And I start a new conversation
+  When I press "Sign out"
+  Then I should be on the home page
+  And I should see "Signed out successfully."
 
 Scenario: Create message
-  Given I am on the home page
-  When I follow "Start a Conversation"
-  And I press "Create Conversation"
-  And I fill in "message_box" with "Hey"
-  And I press "submit message"
+  Given I am logged in as a survivor
+  And I start a new conversation
+  And type a message saying "Hey"
   Then I should see "Hey"
   
 #   Given I am on the chat page
