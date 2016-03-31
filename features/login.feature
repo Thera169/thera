@@ -4,49 +4,51 @@ Feature: login
     so that I can have admin/login privileges
     
 Scenario: Admin Login
-  Given an admin exists with email "Admin1" and password "12345678"
+  Given all roles exist  
+  And an admin exists with email "testAdminEmail@test.com" and password "12345678" and name "John"
   And I am on the login page
-  When I fill in "Username:" with "Admin1"
-  And I fill in "Password:" with "12345678"
-  Then I should see "Login Successful"
-  And I should be on the admin page
+  When I fill in "Email" with "testAdminEmail@test.com"
+  And I fill in "Password" with "12345678"
+  And I press "Log in"
+  Then I should see "Signed in as John: Admin"
+  And I should be on the authenticated home page
 
 Scenario: Volunteer Login
-  Given a volunteer exists with email "Volunteer1" and password "12345678"
+  Given all roles exist  
+  And a volunteer exists with email "testVolunteerEmail@test.com" and password "12345678" and name "Alice"
   And I am on the login page
-  When I fill in "Username:" with "Volunteer1"
-  And I fill in "Password:" with "12345678"
-  Then I should see "Login Successful"
-  And I should be on the volunteer page
+  When I fill in "Email" with "testVolunteerEmail@test.com"
+  And I fill in "Password" with "12345678"
+  And I press "Log in"
+  Then I should see "Signed in as Alice: Volunteer"
+  And I should be on the authenticated home page
 
-Scenario: Failed admin login
-  Given an admin exists with username "Admin1" and password "12345678"
-  And I am on the admin login page
-  When I fill in "Username:" with "Admin2"
-  And I fill in "Password:" with "12345678"
-  Then I should see "Login Attempt Failed"
-  And I should be on the admin login page
-
-Scenario: Failed volunteer login
-  Given a volunteer exists with username "Volunteer1" and password "12345678"
-  And I am on the volunteer login page
-  When I fill in "Username:" with "Volunteer2"
-  And I fill in "Password:" with "12345678"
-  Then I should see "Login Attempt Failed"
-  And I should be on the volunteer login page
+Scenario: Failed login
+  Given all roles exist 
+  And a volunteer exists with email "testVolunteerEmail@test.com" and password "12345678" and name "Alice"
+  And I am on the login page
+  When I fill in "Email" with "123testVolunteerEmail@test.com"
+  And I fill in "Password" with "12345678"
+  And I press "Log in"
+  Then I should see "Invalid email or password."
+  And I should be on the login page
   
 Scenario: Failed admin password
-  Given an admin exists with username "Admin1" and password "12345678"
-  And I am on the admin login page
-  When I fill in "Username:" with "Admin1"
-  And I fill in "Password:" with "1234567"
-  Then I should see "Incorrect Password"
-  And I should be on the admin login page
+  Given all roles exist 
+  And an admin exists with email "testAdminEmail@test.com" and password "12345678" and name "John"
+  And I am on the login page
+  When I fill in "Email" with "testAdminEmail@test.com"
+  And I fill in "Password" with "1234567"
+  And I press "Log in"
+  Then I should see "Invalid email or password."
+  And I should be on the login page
   
 Scenario: Failed volunteer password
-  Given a volunteer exists with username "Volunteer1" and password "12345678"
-  And I am on the volunteer login page
-  When I fill in "Username:" with "Volunteer1"
-  And I fill in "Password:" with "1234567"
-  Then I should see "Incorrect Password"
-  And I should be on the volunteer login page
+  Given all roles exist
+  And a volunteer exists with email "testVolunteerEmail@test.com" and password "12345678" and name "Alice"
+  And I am on the login page
+  When I fill in "Email" with "testVolunteerEmail@test.com"
+  And I fill in "Password" with "1234567"
+  And I press "Log in"
+  Then I should see "Invalid email or password."
+  And I should be on the login page

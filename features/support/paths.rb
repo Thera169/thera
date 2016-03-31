@@ -15,19 +15,25 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
+      
+    when /^the authenticated home\s?page$/
+      '/'
     
     when /^the new\s?conversation\s?page$/
       '/conversations/new'
     
-    when /^the conversation\s?page$/
+    when /^the conversations\s?page$/
       '/conversations'
     
     when /^the chat\s?page$/
       '/conversations/1/edit'
       
-    when /^the admin login page$/
+    when /^the login page$/
       '/users/sign_in'
-
+      
+    when /^the conversation page$/
+      '/conversations/1/edit'
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

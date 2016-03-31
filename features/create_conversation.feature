@@ -18,18 +18,8 @@ Scenario: Sign out and go back to main page
 Scenario: Create message
   Given I am logged in as a survivor
   And I start a new conversation
-  And type a message saying "Hey"
+  And I type a message saying "Hey"
   Then I should see "Hey"
-  
-#   Given I am on the chat page
-#   When I press "Update Conversation"
-#   Then I should see "Chatbox"
-#   And I fill in "message_box" with "Hey"
-#   And I press "submit message"
-#   Then I should see "Hey"
-  
-#  Scenario: Create message
-   
 
 
 # Scenario: register volunteer

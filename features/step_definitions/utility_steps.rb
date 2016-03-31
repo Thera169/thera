@@ -36,8 +36,10 @@ Given /^I start a new conversation$/ do
         Given I am on the home page
         And I press "Start a Conversation"
     }
-    conv_id = Conversation.all.last.id.to_s
-    visit 'conversations/' + conv_id + '/edit'
+    test_volunteer = User.create(:name => "test volunteer", :email => "testVolunteerEmail@test.com",
+                                    :password => "test1234", :role_id => 2)
+    conv = Conversation.create(:user_id => test_volunteer.id)
+    path_to('the conversation page')
 end
 
 Given /^I type a message saying "([^"].*)"$/ do |msg|
@@ -47,16 +49,30 @@ Given /^I type a message saying "([^"].*)"$/ do |msg|
     }
 end
 
-Given /^an admin exists with email "([^"].*)" and password "([^"].*)"$/ do |mail, pass|
-    if User.exists?(email: mail)
-        User.where(email: mail).first.destroy!
+Given /^an admin exists with email "([^"].*)" and password "([^"].*)" and name "([^"].*)"$/ do |mail, pass, user|
+    if User.exists?(email: mail, role_id: 3)
+        User.where(email: mail).destroy!
     end
-    User.create!(:name => "test admin",:email => mail , :role_id => 3, :password => pass)
+    User.create!(:name => user, :role_id => 3, :email => mail, :password => pass)
 end
 
-Given /^a volunteer exists with email "([^"].*)" and password "([^"].*)"$/ do |mail, pass|
-    if User.exists?(email: mail)
-        User.where(email: mail).first.destroy!
+Given /^a volunteer exists with email "([^"].*)" and password "([^"].*)" and name "([^"].*)"$/ do |mail, pass, user|
+    if User.exists?(email: mail, role_id: 2)
+        User.where(email: mail).destroy!
     end
-    User.create!(:name => "test volunteer", :email => mail , :role_id => 2, :password => pass)
+    User.create!(:name => user, :role_id => 2, :email => mail, :password => pass)
 end
+
+Given /^all roles exist$/ do
+    Role.create(:name => "Survivor", :description => "Can create conversations and create and read messages")
+    Role.create(:name => "Volunteer", :description => "Can create messages and read any conversations")
+    Role.create(:name => "Admin", :description => "Can perform any CRUD operation on any resource")
+end
+
+# When /^I delete the user with the email: "([^"].*)"$/ do |mail|
+#     page.all(:xpath, '//tr').each do |entry|
+#         if entry.has_content mail
+            
+#         end    
+#     end
+# end

@@ -52,9 +52,10 @@ class User < ActiveRecord::Base
   def generate_conversation
     if survivor? or admin?
         self.conversation = Conversation.create()
-        message = self.conversation.messages.build(content: "Your chat has started.",
-                                                  conversation_id: self.conversation.id)
-        if conversation.save() and message.save()
+        # message = self.conversation.messages.build(content: "Your chat has started.",
+        #                                           conversation_id: self.conversation.id)
+        if conversation.save() 
+          # and message.save()
           return conversation
         end
         return nil

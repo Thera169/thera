@@ -67,7 +67,6 @@ end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
-  puts page.body
 
 end
 
@@ -76,7 +75,6 @@ When /^(?:|I )go to (.+)$/ do |page_name|
 end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
-  puts page.body
   click_button(button)
 end
 
@@ -85,7 +83,7 @@ When /^(?:|I )follow "([^"]*)"$/ do |link|
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
-  puts page.body
+  # puts page.body
 
   fill_in(field, :with => value)
 end
@@ -132,7 +130,7 @@ When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
 end
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
-  puts page.body
+  # puts page.body
 
   if page.respond_to? :should
     page.should have_content(text)

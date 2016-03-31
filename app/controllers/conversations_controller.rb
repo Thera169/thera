@@ -45,7 +45,7 @@ class ConversationsController < ApplicationController
   # deprecated ?
   def create
     @conversation = Conversation.new(conversation_params)
-    @message = Message.create!(content: "Your chat has started.", conversation_id: @conversation.id)
+    # @message = Message.create!(content: "Your chat has started.", conversation_id: @conversation.id)
 
     respond_to do |format|
       if @conversation.save
