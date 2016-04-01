@@ -114,6 +114,7 @@ RSpec.describe User, type: :model do
           mock_conv.should_receive(:[]=).with("user_id", 1)
           mock_conv.should_receive(:save).and_return(true)
           Conversation.should_receive(:create).and_return(mock_conv)
+        
         end
         it "should create a conversation if the user is an admin" do
           role_id = Role.where(name: "Admin").first.id
