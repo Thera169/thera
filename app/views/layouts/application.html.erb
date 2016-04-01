@@ -2,13 +2,14 @@
 <html>
 <head>
   <!--Loads application.s (which contains all our javascript) and does so async so that inline JS doesn't fuck up external JS. -->
-  <%= javascript_include_tag "application", async: Rails.env.production? %> 
+<!-- set async: Rails.env.production? when we actually push this to prod-->
+  <%= javascript_include_tag "application", async: true %>  
   <title>Thera</title>
   <%= include_gon(:init => true) %>
   <%= Gon::Base.render_data({}) %>
   
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!--<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>-->
+  <!--<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>-->
 </head>
 <body>
 

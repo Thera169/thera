@@ -112,24 +112,29 @@ RSpec.describe User, type: :model do
         before(:each) do
           mock_conv = mock_model(Conversation)
           mock_conv.should_receive(:[]=).with("user_id", 1)
-          mock_conv.should_receive(:save).and_return(true)
+          mock_conv.should_receive(:save).twice.and_return(true)
+          mock_conv.should_receive(:did_it_work).and_return(true)
           Conversation.should_receive(:create).and_return(mock_conv)
-          let(:mock_conv) {mock_conv}
         end
         it "should create a conversation if the user is an admin" do
           role_id = Role.where(name: "Admin").first.id
           admin_user = User.create!(:name => "Mr. Admin", :role_id => role_id,
                             :email => "testAdminEmail@test.com", :password => "test1234",
                             :password_confirmation => "test1234")
-          admin_user.generate_conversation.should == mock_conv
+          admin_user.generate_conversation.did_it_work.should == true
         end
         it "should create a conversation if the user is a survivor" do
           role_id = Role.where(name: "Survivor").first.id
           survivor_user = User.create!(:name => "Ms. Survivor", :role_id => role_id,
                             :email => "testSurvivorEmail@test.com", :password => "test1234",
                             :password_confirmation => "test1234")
-          survivor_user.generate_conversation.should == mock_conv
+          survivor_user.generate_conversation.did_it_work.should == true
         end
+      end
+      describe "failed conversation generation" do
+        # before(:each) do
+        #   mock_conv = mock_model(Conversation)
+        # end
         it "should not create a conversation if the user is a volunteer" do
           role_id = Role.where(name: "Volunteer").first.id
           volunteer_user = User.create!(:name => "Mr. Volunteer", :role_id => role_id,

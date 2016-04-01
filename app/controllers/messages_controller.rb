@@ -59,7 +59,7 @@ class MessagesController < ApplicationController
             # format.json { render :json => current_user.profile.avatar_url, :status => 200 } 
             format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'Update SUCCESSFUL!' } 
             # format.json { render :show, status: :created, location: @message } #fuck this line. how do I show the messages w/o reloading?
-            format.json { render :partial => 'messages', :object => @messages }
+            format.json { render :partial => '../conversations/messages', :object => @messages }
         else 
             format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'didnt work!' } 
             format.json {render json: @message.errors}

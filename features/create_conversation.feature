@@ -5,13 +5,14 @@ Feature: all users
 Scenario: Start conversation
   Given I am logged in as a survivor
   And I am on the home page
-  When I press "Start a Conversation"
+  And all roles exist
+  When I start a new conversation
   Then I should see "Your chat has started."
 
 Scenario: Sign out and go back to main page
   Given I am logged in as a survivor
   And I start a new conversation
-  When I press "Sign out"
+  When I press the button: "Sign out"
   Then I should be on the home page
   And I should see "Signed out successfully."
 

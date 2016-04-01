@@ -64,8 +64,8 @@
   // }
 
   console.log("In conversation.js");
-  // console.log(gon.conversation_id);
-  console.log("Conversation id is: "+ conversation_id)
+  console.log("gon: "+gon.conversation_id);
+  // console.log("Conversation id is: "+ conversation_id)
   var Thera = this;
   console.log("Thera global obj is :" + Thera);
 
@@ -75,9 +75,11 @@
   
   Thera.submitNewMessage = function() {
     // clear text box here
+    var valuesToSubmit = $('form#message_box').serialize();
     $.ajax({
         type: "POST",
-        url: $(this).attr('action'), //sumbits it to the given url of the form
+        url: "/messages",
+        // url: $(this).attr('action'), //sumbits it to the given url of the form
         data: valuesToSubmit,
         dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
     }).
@@ -94,7 +96,11 @@
   Thera.setupTimer = function() {
    setTimeout(Thera.updateMessages, 2000);
   }  
-  
+
+$('form#message_box').submit(function() {
+  Thera.submitNewMessage();
+  return false;
+});
 // $('form#message_box').submit(function() {  
 //     var valuesToSubmit = $(this).serialize();
 //     $.ajax({

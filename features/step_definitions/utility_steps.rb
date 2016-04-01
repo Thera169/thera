@@ -43,7 +43,11 @@ Given /^I start a new conversation$/ do
 end
 
 Given /^I type a message saying "([^"].*)"$/ do |msg|
-    fill_in 'message_content', :with => msg
+    page.fill_in 'message_box', :with => msg
+    
+    element = page.find("message_box")
+    element.set(@visitor[:name])
+    
     steps %{
         And I press "submit message"
     }
@@ -77,6 +81,10 @@ When /^I delete the user with the email: "([^"].*)"$/ do |mail|
     page.accept_alert 'Are you sure?' do
         click_button('OK')
     end
+end
+
+When /^(?:|I )press the button: "([^"]*)"$/ do |button|
+  click_on(button)
 end
 
 # page.all(:xpath, '//tr').each do |entry|
