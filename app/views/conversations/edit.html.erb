@@ -1,6 +1,5 @@
 <!--<h1>Editing Conversation</h1>-->
-
-
+ 
 <!--<h1> Edit Conversation</h1>-->
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, id: "flash_#{name}" %>
@@ -27,7 +26,7 @@
 </div>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
 <script>
-  // var conversation_id = <%= @conversation.id %>;
+  var conversation_id = <%= @conversation.id %>;
   console.log('inside edit.html.erb');
   // var Thera = this; 
   // console.log("Thera global obj is :" + Thera);

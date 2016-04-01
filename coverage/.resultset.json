@@ -1,17 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/ubuntu/workspace/app/models/role.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/app/models/conversation.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
       "/home/ubuntu/workspace/app/controllers/users_controller.rb": [
         0,
         0,
@@ -431,6 +420,8 @@
         0,
         0,
         0,
+        0,
+        0,
         0
       ],
       "/home/ubuntu/workspace/app/controllers/welcome_controller.rb": [
@@ -562,6 +553,17 @@
         0,
         0
       ],
+      "/home/ubuntu/workspace/app/models/conversation.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/ubuntu/workspace/app/models/role.rb": [
+        0,
+        0,
+        0
+      ],
       "/home/ubuntu/workspace/app/helpers/users_helper.rb": [
         0,
         0
@@ -583,7 +585,7 @@
         0
       ]
     },
-    "timestamp": 1459483278
+    "timestamp": 1459484493
   },
   "Cucumber Features": {
     "coverage": {

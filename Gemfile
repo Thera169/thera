@@ -27,8 +27,7 @@ group :development, :test do
   gem 'cucumber-rails-training-wheels'
   gem 'better_errors'
   gem "binding_of_caller"  
-  gem "factory_girl_rails", "~> 4.0"
-  # gem 'factory_girl'
+  gem 'factory_girl'
   gem 'ffaker'
   gem 'simplecov', :require => false
   gem 'autotest-rails'

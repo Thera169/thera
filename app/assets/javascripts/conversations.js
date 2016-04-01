@@ -64,7 +64,8 @@
   // }
 
   console.log("In conversation.js");
-  console.log(gon.conversation_id);
+  // console.log(gon.conversation_id);
+  console.log("Conversation id is: "+ conversation_id)
   var Thera = this;
   console.log("Thera global obj is :" + Thera);
 
