@@ -44,10 +44,6 @@ end
 
 Given /^I type a message saying "([^"].*)"$/ do |msg|
     page.fill_in 'message_box', :with => msg
-    
-    element = page.find("message_box")
-    element.set(@visitor[:name])
-    
     steps %{
         And I press "submit message"
     }

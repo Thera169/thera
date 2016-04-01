@@ -132,9 +132,6 @@ RSpec.describe User, type: :model do
         end
       end
       describe "failed conversation generation" do
-        # before(:each) do
-        #   mock_conv = mock_model(Conversation)
-        # end
         it "should not create a conversation if the user is a volunteer" do
           role_id = Role.where(name: "Volunteer").first.id
           volunteer_user = User.create!(:name => "Mr. Volunteer", :role_id => role_id,

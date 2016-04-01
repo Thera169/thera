@@ -1,4 +1,5 @@
 require 'rails_helper'
+# require 'factory_girl'
 
 describe WelcomeController, type: :controller do
      describe 'making a new survivor' do
