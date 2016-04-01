@@ -10,16 +10,19 @@ Scenario: Start conversation
   Then I should see "Your chat has started."
 
 Scenario: Sign out and go back to main page
-  Given I am logged in as a survivor
+  Given all roles exist
+  And I am logged in as a survivor
   And I start a new conversation
-  When I press the button: "Sign out"
+  When I press "Sign out"
   Then I should be on the home page
   And I should see "Signed out successfully."
 
 Scenario: Create message
-  Given I am logged in as a survivor
+  Given all roles exist
+  And I am logged in as a survivor
   And I start a new conversation
   And I type a message saying "Hey"
+  When I refresh the page
   Then I should see "Hey"
 
 

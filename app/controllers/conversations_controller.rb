@@ -32,17 +32,18 @@ class ConversationsController < ApplicationController
   def edit
     @conversation = Conversation.find(params[:id])
     gon.conversation_id = @conversation.id
+    @messages = Message.where(:conversation_id => params[:id])
 
-    if request.xhr? 
-      puts "we did a ajax yay"
-      @messages = Message.where(conversation_id: params[:id])
-      render :partial => 'messages', :object => @messages
-      # render(:partial => 'message', :collection => @messages)
-    else    
-      # ***** make sure to explicitly pass a value in params for conversation_id!
+    # if request.xhr? 
+    #   puts "we did a ajax yay"
+    #   @messages = Message.where(conversation_id: params[:id])
+    #   render :partial => 'messages', :object => @messages
+    #   # render(:partial => 'message', :collection => @messages)
+    # else    
+    #   # ***** make sure to explicitly pass a value in params for conversation_id!
 
-      @messages = Message.where(:conversation_id => params[:id])
-    end
+    #   @messages = Message.where(:conversation_id => params[:id])
+    # end
   end
 
   # POST /conversations

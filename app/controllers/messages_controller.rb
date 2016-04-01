@@ -54,18 +54,23 @@ class MessagesController < ApplicationController
         puts "AJAX REQUEST MADE!"
       end
 
-      respond_to do |format| 
-        if @message.save
-            # format.json { render :json => current_user.profile.avatar_url, :status => 200 } 
-            format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'Update SUCCESSFUL!' } 
-            # format.json { render :show, status: :created, location: @message } #fuck this line. how do I show the messages w/o reloading?
-            format.json { render :partial => '/conversations/messages', :object => @messages }
-        else 
-            format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'didnt work!' } 
-            format.json {render json: @message.errors}
-            # format.json { render :json => current_user.errors, :status => :unprocessable_entity } 
-        end 
-      end 
+      @messages = Message.where(conversation_id: params[:id])
+      render :partial => '/conversations/messages', :object => @messages
+      
+      # Work with Sam/Ian to figure out what here is important and what isn't - Jasmine
+      # respond_to do |format| 
+      #   if @message.save
+      #       # format.json { render :json => current_user.profile.avatar_url, :status => 200 } 
+      #       # format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'Update SUCCESSFUL!' } 
+      #       # format.json { render :show, status: :created, location: @message } #fuck this line. how do I show the messages w/o reloading?
+      #       @messages = Message.where(conversation_id: params[:id])
+      #       render :partial => '/conversations/messages', :object => @messages
+      #   else 
+      #       format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'didnt work!' } 
+      #       format.json {render json: @message.errors}
+      #       # format.json { render :json => current_user.errors, :status => :unprocessable_entity } 
+      #   end 
+      # end 
     else
       @conversation = Conversation.find(params[:message][:conversation_id])
       flash[:notice] = "Please enter in a message" # DOES NOT WORK

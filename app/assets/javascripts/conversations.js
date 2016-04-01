@@ -69,22 +69,38 @@
   var Thera = this;
   console.log("Thera global obj is :" + Thera);
 
-  Thera.renderAllMessages = function(data,status,xhr) {
-    $('#messages').replaceHtml(data);
-  }
+  Thera.showAllMessages = function(data) {
+    console.log("renderAllMessages");
+    console.log("data: "+ data);
+    $('#messages').replaceWith(data);  //replaceHtml
+  };
+  
+  Thera.getAllMessages = function(data) {
+    $.ajax({
+      type: "GET",
+      url: "/conversations/"+gon.conversation_id+"/edit",
+      dataType: "JSON",
+    }).success(showAllMessages(data));
+  };
   
   Thera.submitNewMessage = function() {
     // clear text box here
     var valuesToSubmit = $('form#message_box').serialize();
+    var response;
     $.ajax({
         type: "POST",
         url: "/messages",
         // url: $(this).attr('action'), //sumbits it to the given url of the form
         data: valuesToSubmit,
-        dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
-    }).
-    success(Thera.renderAllMessages);
+        dataType: "JSON", // you want a difference between normal and ajax-calls, and json is standard
+    }).success(console.log(response)). //Thera.getAllMessages(data)
+    error(console.log("noap"));
   };
+  
+// .success(function(response) {
+// $('#messages').replaceWith(response);
+// });
+
   Thera.updateMessages = function() {
     $.ajax({type: "GET", url: "/conversations/"+conversation_id,}).
       success(Thera.renderAllMessages).

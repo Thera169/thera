@@ -15,11 +15,10 @@
   <tbody id="user_list">
     <tr>
       <td>Me (<%= current_user.name %>) </td>
-      <td><%= current_user.email %></td>
       <td><%= current_user.role.name %></td>
-      <td><%#= link_to 'Show', current_user %></td>
-      <td><%= button_to 'Edit', edit_user_path(current_user), :method => :get %></td>
-      <td><%= button_to 'Destroy', current_user, method: :delete, data: { confirm: "Are you sure?" }  %></td>
+      <td><%= current_user.email %></td>
+      <td id="<%= current_user.email %>_destroy"><%= button_to 'Edit', edit_user_path(current_user), :method => :get%></td>
+      <td id="<%= current_user.email %>_edit"><%= button_to 'Destroy', current_user, method: :delete, data: { confirm: "Are you sure?" }  %></td>
     </tr>
     <% @users.each do |user| %>
       <% if user != current_user %>

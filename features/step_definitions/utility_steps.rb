@@ -43,7 +43,8 @@ Given /^I start a new conversation$/ do
 end
 
 Given /^I type a message saying "([^"].*)"$/ do |msg|
-    page.fill_in 'message_box', :with => msg
+    page.fill_in 'message_content', :with => msg
+    
     steps %{
         And I press "submit message"
     }
@@ -69,19 +70,38 @@ Given /^all roles exist$/ do
     Role.create(:name => "Admin", :description => "Can perform any CRUD operation on any resource")
 end
 
+When /^I add the user with the email: "([^"].*)"$/ do |mail|
+    
+    page.fill_in 'user_name', :with => 'New_Volunteer'
+    page.fill_in 'user_role_id', :with => 'Volunteer'
+    page.fill_in 'user_email', :with => mail
+    page.fill_in 'user_password', :with => 'aaaaaaaa'
+    page.fill_in 'user_password_confirmation', :with => 'aaaaaaaa'
+    
+end
+
 When /^I delete the user with the email: "([^"].*)"$/ do |mail|
-    page.all('#user_list tr').each do |tr|
-        next unless tr.has_selector?('#' + mail)
-        tr.all('td')[6].click_button
-    end
+    mail = mail.split("@")[0]
+    find(:xpath, '//table/tr[contains(text(), '+mail+')]/td[4]/button').click
     page.accept_alert 'Are you sure?' do
         click_button('OK')
     end
 end
 
-When /^(?:|I )press the button: "([^"]*)"$/ do |button|
-  click_on(button)
+
+When(/^I edit the user with the email: "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
 end
+
+
+When /^(?:|I )press the button: "([^"]*)"$/ do |button|
+  find(:xpath, "//input[contains(@value, 'Sign out')]").click()
+end
+
+When /^I refresh the page$/ do
+    visit [ current_path, page.driver.last_request.env['QUERY_STRING'] ].reject(&:blank?).join('?')
+end
+
 
 # page.all(:xpath, '//tr').each do |entry|
 #         if entry.has_content mail
