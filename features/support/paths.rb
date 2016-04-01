@@ -19,6 +19,9 @@ module NavigationHelpers
     when /^the authenticated home\s?page$/
       '/'
     
+    when /^the users page$/
+      '/admin/users'
+    
     when /^the new\s?conversation\s?page$/
       '/conversations/new'
     
