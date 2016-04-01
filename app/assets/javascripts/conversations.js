@@ -84,12 +84,27 @@
   //   }).success(showAllMessages(data));
   // };
   
+  // Gets latest messages every 2 seconds
+  Thera.updateMessages = function() {
+    $.ajax({type: "GET", url: "/conversations/"+conversation_id,}).
+      success(Thera.renderAllMessages).
+      error(console.log("barf"));
+  setTimeout(Thera.updateMessages, 2000);
+  };
+
+  // page ready function
+  Thera.setupTimer = function() {
+   setTimeout(Thera.updateMessages, 2000);
+  };  
+  
+  // Shows latest messages after submitting a new one 
   Thera.renderAllMessages = function(data) {
-    // console.log("data is: "+data);
-    $('#messages').replaceWith(data);
+    // console.log(data)
+    $('#messages').html(data);
     $('form#message_box').val('');
   }
   
+  // Submit a new messages
   Thera.submitNewMessage = function() {
     // clear text box here
     var valuesToSubmit = $('form#message_box').serialize();
@@ -97,7 +112,6 @@
     $.ajax({
         type: "POST",
         url: "/messages",
-        // url: $(this).attr('action'), //sumbits it to the given url of the form
         data: valuesToSubmit,
         dataType: "html" // you want a difference between normal and ajax-calls, and json is standard
     }).success(function (data) { 
@@ -107,30 +121,14 @@
     .error(function (data) {
       console.log("error, data is: " + data);
     })
+    console.log("uh");
   };
-  
-   //Thera.getAllMessages(data)
-   
-// .success(function(response) {
-// $('#messages').replaceWith(response);
-// });
-
-  Thera.updateMessages = function() {
-    $.ajax({type: "GET", url: "/conversations/"+conversation_id,}).
-      success(Thera.renderAllMessages).
-      error(console.log("barf"));
-  setTimeout(Thera.updateMessages, 2000);
-  };
-
-  // page ready function:
-  Thera.setupTimer = function() {
-   setTimeout(Thera.updateMessages, 2000);
-  };  
 
 $('form#message_box').submit(function() {
   Thera.submitNewMessage();
   return false;
 });
+
 // $('form#message_box').submit(function() {  
 //     var valuesToSubmit = $(this).serialize();
 //     $.ajax({
