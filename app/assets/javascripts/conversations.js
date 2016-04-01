@@ -69,19 +69,26 @@
   var Thera = this;
   console.log("Thera global obj is :" + Thera);
 
-  Thera.showAllMessages = function(data) {
-    console.log("renderAllMessages");
-    console.log("data: "+ data);
-    $('#messages').replaceWith(data);  //replaceHtml
-  };
+  // Thera.showAllMessages = function(data, status, xhr) {
+  //   console.log("renderAllMessages");
+  //   console.log("data: "+ data);
+  //   $('#messages').replaceWith(data);  //replaceHtml
+  // };
   
-  Thera.getAllMessages = function(data) {
-    $.ajax({
-      type: "GET",
-      url: "/conversations/"+gon.conversation_id+"/edit",
-      dataType: "JSON",
-    }).success(showAllMessages(data));
-  };
+  // Thera.getAllMessages = function(data) {
+  //   console.log("getAllMessages");
+  //   $.ajax({
+  //     type: "GET",
+  //     url: "/conversations/"+gon.conversation_id+"/edit",
+  //     dataType: "JSON",
+  //   }).success(showAllMessages(data));
+  // };
+  
+  Thera.renderAllMessages = function(data) {
+    // console.log("data is: "+data);
+    $('#messages').replaceWith(data);
+    $('form#message_box').val('');
+  }
   
   Thera.submitNewMessage = function() {
     // clear text box here
@@ -92,11 +99,18 @@
         url: "/messages",
         // url: $(this).attr('action'), //sumbits it to the given url of the form
         data: valuesToSubmit,
-        dataType: "JSON", // you want a difference between normal and ajax-calls, and json is standard
-    }).success(console.log(response)). //Thera.getAllMessages(data)
-    error(console.log("noap"));
+        dataType: "html" // you want a difference between normal and ajax-calls, and json is standard
+    }).success(function (data) { 
+      console.log("success function is called");
+      Thera.renderAllMessages(data);
+      })
+    .error(function (data) {
+      console.log("error, data is: " + data);
+    })
   };
   
+   //Thera.getAllMessages(data)
+   
 // .success(function(response) {
 // $('#messages').replaceWith(response);
 // });
@@ -111,7 +125,7 @@
   // page ready function:
   Thera.setupTimer = function() {
    setTimeout(Thera.updateMessages, 2000);
-  }  
+  };  
 
 $('form#message_box').submit(function() {
   Thera.submitNewMessage();
