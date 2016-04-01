@@ -22,10 +22,16 @@ Scenario: Create message
   And I am logged in as a survivor
   And I start a new conversation
   And I type a message saying "Hey"
-  When I refresh the page
   Then I should see "Hey"
 
-
+Scenario: Go back to main page
+  Given all roles exist
+  And I am logged in as a survivor
+  And I start a new conversation
+  When I press "Sign out"
+  Then I should be on the home page
+  And I should see "Thera"
+  
 # Scenario: register volunteer
 # 	When I fill out the fields and press the ‘Register Volunteer’ submission button, 
 # 	Then I am taken to a new page with a table titled ‘All Volunteers’ that shows all existing volunteers.

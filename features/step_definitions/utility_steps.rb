@@ -81,8 +81,16 @@ When /^I add the user with the email: "([^"].*)"$/ do |mail|
 end
 
 When /^I delete the user with the email: "([^"].*)"$/ do |mail|
-    mail = mail.split("@")[0]
-    find(:xpath, '//table/tr[contains(text(), '+mail+')]/td[4]/button').click
+    mail = mail..tr('@','').tr('.','').tr('#','').downcase!
+    puts(page.body)
+    # puts(find_by_id(mail + "_destroy").path)
+    # destroy_path = find_by_id(mail + "_destroy").path
+    within('div.' + mail) do
+        click_button 'Destroy'
+    end
+    puts(find(:xpath, find_by_id(mail + "_destroy").path+'/button'))
+    # find(:xpath, find_by_id(mail + "_destroy").path + '/button').click
+    # find_by_id(mail + "_destroy").find_button('Destroy').click()
     page.accept_alert 'Are you sure?' do
         click_button('OK')
     end
@@ -90,7 +98,7 @@ end
 
 
 When(/^I edit the user with the email: "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+  
 end
 
 
@@ -102,6 +110,11 @@ When /^I refresh the page$/ do
     visit [ current_path, page.driver.last_request.env['QUERY_STRING'] ].reject(&:blank?).join('?')
 end
 
+When(/^I fill in name_field with "([^"]*)"$/) do |new_name|
+  
+    page.fill_in 'user_name', :with => new_name
+  
+end
 
 # page.all(:xpath, '//tr').each do |entry|
 #         if entry.has_content mail

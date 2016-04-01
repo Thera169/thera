@@ -33,7 +33,7 @@ class ConversationsController < ApplicationController
     @conversation = Conversation.find(params[:id])
     gon.conversation_id = @conversation.id
     @messages = Message.where(:conversation_id => params[:id])
-
+    puts "huh"
     # if request.xhr? 
     #   puts "we did a ajax yay"
     #   @messages = Message.where(conversation_id: params[:id])

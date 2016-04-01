@@ -17,18 +17,17 @@
       <td>Me (<%= current_user.name %>) </td>
       <td><%= current_user.role.name %></td>
       <td><%= current_user.email %></td>
-      <td id="<%= current_user.email %>_destroy"><%= button_to 'Edit', edit_user_path(current_user), :method => :get%></td>
-      <td id="<%= current_user.email %>_edit"><%= button_to 'Destroy', current_user, method: :delete, data: { confirm: "Are you sure?" }  %></td>
+      <td><%= button_to 'Edit', edit_user_path(current_user), :method => :get%></td>
+      <td><%= button_to 'Destroy', current_user, method: :delete, data: { confirm: "Are you sure?" }  %></td>
     </tr>
     <% @users.each do |user| %>
       <% if user != current_user %>
-        <tr id="<%= user.email %>">
+        <tr>
           <td><%= user.name %></td>
           <td><%= user.email %></td>
           <td><%= user.role.name %></td>
-          <td><%#= link_to 'Show', user %></td>
-          <td><%= button_to 'Edit', edit_user_path(user), :method => :get %></td>
-          <td><%= button_to 'Destroy', user_path(user), method: :delete, data: { confirm: "Are you sure?" }   %></td>
+          <td><div class="<%= user.email.tr('@','').tr('.','').tr('#','') %>_edit"><%= button_to 'Edit', edit_user_path(user), :method => :get %></div></td>
+          <td><div class="<%= user.email.tr('@','').tr('.','').tr('#','') %>_destroy"><%= button_to 'Destroy', user_path(user), method: :delete, data: { confirm: "Are you sure?" }   %></div></td>
         </tr>
       <% end %>
     <% end %>

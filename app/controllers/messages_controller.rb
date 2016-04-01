@@ -53,10 +53,10 @@ class MessagesController < ApplicationController
       if request.xhr?
         puts "AJAX REQUEST MADE!"
       end
-
       @messages = Message.where(conversation_id: params[:id])
       render :partial => '/conversations/messages', :object => @messages
-      
+
+
       # Work with Sam/Ian to figure out what here is important and what isn't - Jasmine
       # respond_to do |format| 
       #   if @message.save
