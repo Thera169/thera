@@ -49,7 +49,7 @@
         null,
         1,
         0,
-        0,
+        null,
         null,
         0,
         0,
@@ -560,6 +560,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/home/ubuntu/workspace/app/helpers/users_helper.rb": [
@@ -583,7 +584,7 @@
         0
       ]
     },
-    "timestamp": 1459459423
+    "timestamp": 1459472387
   },
   "Cucumber Features": {
     "coverage": {
@@ -606,8 +607,8 @@
         null,
         1,
         1,
-        22,
-        22,
+        24,
+        24,
         null,
         null
       ],
@@ -641,12 +642,12 @@
         null,
         1,
         null,
-        5,
+        6,
         null,
         null,
         null,
-        5,
-        5,
+        6,
+        6,
         null,
         null,
         null,
@@ -740,8 +741,8 @@
         1,
         null,
         1,
-        6,
-        5,
+        8,
+        7,
         1,
         1,
         1,
@@ -769,8 +770,8 @@
         null,
         1,
         null,
-        1,
-        1,
+        2,
+        2,
         null,
         null,
         null,
@@ -1170,6 +1171,6 @@
         0
       ]
     },
-    "timestamp": 1459467149
+    "timestamp": 1459472559
   }
 }

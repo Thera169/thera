@@ -1,4 +1,4 @@
-Given /^I am logged in as a ([a-zA-Z].*)$/ do |role|
+Given /^I am logged in as a[n]? ([a-zA-Z].*)$/ do |role|
     role.downcase!
     if role == "survivor"
         steps %{
@@ -11,7 +11,7 @@ Given /^I am logged in as a ([a-zA-Z].*)$/ do |role|
                                         :role_id => 2, :password => "test1234")
         end
            steps %{
-               Given I am on the admin login page
+               Given I am on the login page
                And I fill in "Email" with "testVolunteerEmail@test.com"
                And I fill in "Password" with "test1234"
                And I press "Log in"
@@ -22,7 +22,7 @@ Given /^I am logged in as a ([a-zA-Z].*)$/ do |role|
                                         :role_id => 3, :password => "test1234")
         end
          steps %{
-               Given I am on the admin login page
+               Given I am on the login page
                And I fill in "Email" with "testAdminEmail@test.com"
                And I fill in "Password" with "test1234"
                And I press "Log in"
@@ -69,10 +69,15 @@ Given /^all roles exist$/ do
     Role.create(:name => "Admin", :description => "Can perform any CRUD operation on any resource")
 end
 
-# When /^I delete the user with the email: "([^"].*)"$/ do |mail|
-#     page.all(:xpath, '//tr').each do |entry|
+When /^I delete the user with the email: "([^"].*)"$/ do |mail|
+    find(:xpath, '//tr[contains(text(), ' + mail + ')]/td[6]').click
+    page.accept_alert 'Are you sure?' do
+        click_button('OK')
+    end
+end
+
+# page.all(:xpath, '//tr').each do |entry|
 #         if entry.has_content mail
             
 #         end    
 #     end
-# end

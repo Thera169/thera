@@ -8,4 +8,4 @@ Scenario: Destroy User
   And I am logged in as an admin
   And I follow "Manage Volunteers"
   When I delete the user with the email: "testVolunteerEmail@test.com"
-  
+  Then I should not see "testVolunteerEmail@test.com"
