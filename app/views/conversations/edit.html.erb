@@ -14,7 +14,6 @@
   <div id="messages">
   <%= render :partial => 'messages', :object => @messages %>
   </div>
-  
 
 
   <%= form_for Message.new, :html => {:id => "message_box"}, :url => '/messages', remote: true do |f| %>
@@ -29,13 +28,11 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
 <script>
   // var conversation_id = <%= @conversation.id %>;
-  var Thera = this; 
-  console.log(Thera);
-  console.log(gon.conversation_id);
   console.log('inside edit.html.erb');
+  // var Thera = this; 
+  // console.log("Thera global obj is :" + Thera);
+  // console.log("Gon conversation id: " +gon.conversation_id);
 </script>
-
-
 
 
 

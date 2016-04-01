@@ -36,6 +36,8 @@ class MessagesController < ApplicationController
       @message = Message.create!(content: params[:message][:content], conversation_id: params[:message][:conversation_id])
       @conversation = Conversation.find(params[:message][:conversation_id])
       gon.conversation_id = @conversation.id
+      puts "HEYYYY -----"
+      puts gon.conversation_id
 
       # @messages = Message.where(conversation_id: @conversation.id)
       # respond_to do |format|

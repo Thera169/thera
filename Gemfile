@@ -28,6 +28,7 @@ group :development, :test do
   gem 'better_errors'
   gem "binding_of_caller"  
   gem "factory_girl_rails", "~> 4.0"
+  # gem 'factory_girl'
   gem 'ffaker'
   gem 'simplecov', :require => false
   gem 'autotest-rails'
@@ -38,8 +39,6 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'better_errors'
-  gem "binding_of_caller"
 end
 
 group :production do

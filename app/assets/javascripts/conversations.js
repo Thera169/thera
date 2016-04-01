@@ -65,8 +65,9 @@
 
   console.log("In conversation.js");
   console.log(gon.conversation_id);
-  console.log(gon.Thera); 
-  
+  var Thera = this;
+  console.log("Thera global obj is :" + Thera);
+
   Thera.renderAllMessages = function(data,status,xhr) {
     $('#messages').replaceHtml(data);
   }

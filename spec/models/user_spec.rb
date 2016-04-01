@@ -111,6 +111,7 @@ RSpec.describe User, type: :model do
       describe "conversation generation" do
         before(:each) do
           mock_conv = mock_model(Conversation)
+          mock_conv.should_receive(:[]=).with("user_id", 1)
           mock_conv.should_receive(:save).and_return(true)
           Conversation.should_receive(:create).and_return(mock_conv)
         end
@@ -133,7 +134,7 @@ RSpec.describe User, type: :model do
           volunteer_user = User.create!(:name => "Mr. Volunteer", :role_id => role_id,
                         :email => "testVolunteerEmail@test.com", :password => "test1234",
                         :password_confirmation => "test1234")
-          volunteer_user.generate_conversation.should be_nil?
+          volunteer_user.generate_conversation.should == nil
         end
       end
 end
