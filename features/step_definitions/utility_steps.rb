@@ -58,9 +58,9 @@ Given /^an admin exists with email "([^"].*)" and password "([^"].*)" and name "
 end
 
 Given /^a volunteer exists with email "([^"].*)" and password "([^"].*)" and name "([^"].*)"$/ do |mail, pass, user|
-    if User.exists?(email: mail, role_id: 2)
-        User.where(email: mail).destroy!
-    end
+    # if User.exists?(email: mail, role_id: 2)
+    #     User.where(email: mail).destroy!
+    # end
     User.create!(:name => user, :role_id => 2, :email => mail, :password => pass)
 end
 
@@ -81,24 +81,19 @@ When /^I add the user with the email: "([^"].*)"$/ do |mail|
 end
 
 When /^I delete the user with the email: "([^"].*)"$/ do |mail|
-    mail = mail..tr('@','').tr('.','').tr('#','').downcase!
-    puts(page.body)
-    # puts(find_by_id(mail + "_destroy").path)
-    # destroy_path = find_by_id(mail + "_destroy").path
-    within('div.' + mail) do
+    mail.gsub!(/[^A-Za-z0-9]/,'').downcase!
+    within('div.' + mail + '_destroy') do
         click_button 'Destroy'
-    end
-    puts(find(:xpath, find_by_id(mail + "_destroy").path+'/button'))
-    # find(:xpath, find_by_id(mail + "_destroy").path + '/button').click
-    # find_by_id(mail + "_destroy").find_button('Destroy').click()
-    page.accept_alert 'Are you sure?' do
-        click_button('OK')
     end
 end
 
 
-When(/^I edit the user with the email: "([^"]*)"$/) do |arg1|
-  
+When /^I edit the user with the email: "([^"]*)"$/ do |mail|
+    mail.gsub!(/[^A-Za-z0-9]/,'').downcase!
+    puts(page.body)
+    within('div.' + mail + '_edit') do
+        click_button 'Edit'
+    end
 end
 
 

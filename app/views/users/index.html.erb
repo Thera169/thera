@@ -26,8 +26,8 @@
           <td><%= user.name %></td>
           <td><%= user.email %></td>
           <td><%= user.role.name %></td>
-          <td><div class="<%= user.email.tr('@','').tr('.','').tr('#','') %>_edit"><%= button_to 'Edit', edit_user_path(user), :method => :get %></div></td>
-          <td><div class="<%= user.email.tr('@','').tr('.','').tr('#','') %>_destroy"><%= button_to 'Destroy', user_path(user), method: :delete, data: { confirm: "Are you sure?" }   %></div></td>
+          <td><div class="<%= user.email.gsub(/[^A-Za-z0-9]/,'')%>_edit"><%= button_to 'Edit', edit_user_path(user), :method => :get %></div></td>
+          <td><div class="<%= user.email.gsub(/[^A-Za-z0-9]/,'')%>_destroy"><%= button_to 'Destroy', user_path(user), method: :delete, data: { confirm: "Are you sure?" }   %></div></td>
         </tr>
       <% end %>
     <% end %>

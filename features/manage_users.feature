@@ -12,12 +12,12 @@ Scenario: Destroy User
 
 Scenario: Edit User
   Given all roles exist
+  And a volunteer exists with email "testVolunteerEmail@test.com" and password "12345678" and name "Alice"
   And I am logged in as an admin
   And I follow "Manage Volunteers"
-  And a volunteer exists with email "testVolunteerEmail@test.com" and password "12345678" and name "Alice"
-  When I edit the user with the email: "testVolunteerEmail@test.com" # write step definitions
+  When I edit the user with the email: "testVolunteerEmail@test.com"
   Then I should see "Editing User"
-  When I fill in name_field with "testVolunteer@test.com" # fix name_field
+  When I fill in name_field with "testVolunteer@test.com"
   And I press "Update User"
   Then I should see "User was successfully updated."
   And I should see "Email: testVolunteer@test.com"

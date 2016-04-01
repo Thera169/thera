@@ -15,9 +15,6 @@ Scenario: Admin Login and Permissions
   When I follow "Manage Volunteers"
   Then I should see "Listing Users"
   And I should see "New User"
-  And I should see "Edit Profile"
-  And I should see "Edit"
-  And I should see "Destroy"
 
 Scenario: Volunteer Login and Permissions
   Given all roles exist  
