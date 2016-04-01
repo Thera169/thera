@@ -12,7 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'codeclimate-test-reporter', group: :test, require: nil
-
+gem 'gon'
 
 group :development, :test do
   gem 'sqlite3'
@@ -32,6 +32,7 @@ group :development, :test do
   gem 'simplecov', :require => false
   gem 'autotest-rails'
   gem 'metric_fu'
+  gem 'rspec-activemodel-mocks'
 end
 
 group :development do

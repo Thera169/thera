@@ -35,6 +35,8 @@ class MessagesController < ApplicationController
     if params[:message][:content] != "" and params[:message][:content] != nil
       @message = Message.create!(content: params[:message][:content], conversation_id: params[:message][:conversation_id])
       @conversation = Conversation.find(params[:message][:conversation_id])
+      gon.conversation_id = @conversation.id
+
       # @messages = Message.where(conversation_id: @conversation.id)
       # respond_to do |format|
       #   if @message.save
@@ -54,7 +56,8 @@ class MessagesController < ApplicationController
         if @message.save
             # format.json { render :json => current_user.profile.avatar_url, :status => 200 } 
             format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'Update SUCCESSFUL!' } 
-            format.json { render :show, status: :created, location: @message } #fuck this line. how do I show the messages w/o reloading?
+            # format.json { render :show, status: :created, location: @message } #fuck this line. how do I show the messages w/o reloading?
+            format.json { render :partial => 'messages', :object => @messages }
         else 
             format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'didnt work!' } 
             format.json {render json: @message.errors}

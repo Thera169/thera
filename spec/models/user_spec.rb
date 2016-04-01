@@ -1,7 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  # pending "add some examples to (or delete) #{__FILE__}"
+    before(:each) do
+      Role.create({name: "Survivor", description: "Can create converstations and create and read messages"})
+      Role.create({name: "Volunteer", description: "Can create messages and read any conversations"})
+      Role.create({name: "Admin", description: "Can perform any CRUD operation on any resource"})
+    end
     describe " #new_survivor" do
         before(:each) do
           mock_role = double("mock survivor role", :id => 1)
@@ -18,7 +23,7 @@ RSpec.describe User, type: :model do
       describe "admin make admin" do
         before(:each) do
             mock_role = double("Admin mock role")
-            mock_role.should_receive(:id).and_return(3)
+            allow(mock_role).to receive(:id).and_return(3)
             User.should_receive(:get_role).with("Admin").and_return(mock_role)
         end
         it "should allow the admin to make another admin" do
@@ -51,8 +56,84 @@ RSpec.describe User, type: :model do
           @user = User.admin_make_user(:role_id => "wrong role ID", :password_confirmation => "test pass",
                                                     :name => "test name", :password => "test pass",
                                                     :email => "test_email@test.com")
-          @user.should be_nil
+          @user.role_id.should == 1 
           @user.destroy!
+        end
+      end
+      describe "volunteer check" do
+        it "should return true if the user is a volunteer" do
+          role_id = Role.where(name: "Volunteer").first.id
+          volunteer_user = User.create!(:name => "Mr. Volunteer", :role_id => role_id,
+                        :email => "testVolunteerEmail@test.com", :password => "test1234",
+                        :password_confirmation => "test1234")
+          volunteer_user.volunteer?.should == true
+        end
+        it "should return false if the user is not a volunteer" do
+          role_id = Role.where(name: "Survivor").first.id
+          survivor_user = User.create!(:name => "Ms. Survivor", :role_id => role_id,
+                            :email => "testSurvivorEmail@test.com", :password => "test1234",
+                            :password_confirmation => "test1234")
+          survivor_user.volunteer?.should == false
+        end
+      end
+      describe "admin check" do
+        it "should return true if the user is an admin" do
+          role_id = Role.where(name: "Admin").first.id
+          admin_user = User.create!(:name => "Mr. Admin", :role_id => role_id,
+                            :email => "testAdminEmail@test.com", :password => "test1234",
+                            :password_confirmation => "test1234")
+          admin_user.admin?.should == true
+        end
+        it "should return false if the user is not a volunteer" do
+          role_id = Role.where(name: "Survivor").first.id
+          survivor_user = User.create!(:name => "Ms. Survivor", :role_id => role_id,
+                            :email => "testSurvivorEmail@test.com", :password => "test1234",
+                            :password_confirmation => "test1234")
+          survivor_user.admin?.should == false
+        end
+      end
+      describe "survivor check" do
+        it "should return true if the user is a survivor" do
+          role_id = Role.where(name: "Survivor").first.id
+          survivor_user = User.create!(:name => "Ms. Survivor", :role_id => role_id,
+                            :email => "testSurvivorEmail@test.com", :password => "test1234",
+                            :password_confirmation => "test1234")
+          survivor_user.survivor?.should == true
+        end
+        it "should return false if the user is not a volunteer" do
+          role_id = Role.where(name: "Admin").first.id
+          admin_user = User.create!(:name => "Mr. Admin", :role_id => role_id,
+                            :email => "testAdminEmail@test.com", :password => "test1234",
+                            :password_confirmation => "test1234")
+          admin_user.survivor?.should == false
+        end
+      end
+      describe "conversation generation" do
+        before(:each) do
+          mock_conv = mock_model(Conversation)
+          mock_conv.should_receive(:save).and_return(true)
+          Conversation.should_receive(:create).and_return(mock_conv)
+        end
+        it "should create a conversation if the user is an admin" do
+          role_id = Role.where(name: "Admin").first.id
+          admin_user = User.create!(:name => "Mr. Admin", :role_id => role_id,
+                            :email => "testAdminEmail@test.com", :password => "test1234",
+                            :password_confirmation => "test1234")
+          admin_user.generate_conversation.should == mock_conv
+        end
+        it "should create a conversation if the user is a survivor" do
+          role_id = Role.where(name: "Survivor").first.id
+          survivor_user = User.create!(:name => "Ms. Survivor", :role_id => role_id,
+                            :email => "testSurvivorEmail@test.com", :password => "test1234",
+                            :password_confirmation => "test1234")
+          survivor_user.generate_conversation.should == mock_conv
+        end
+        it "should not create a conversation if the user is a volunteer" do
+          role_id = Role.where(name: "Volunteer").first.id
+          volunteer_user = User.create!(:name => "Mr. Volunteer", :role_id => role_id,
+                        :email => "testVolunteerEmail@test.com", :password => "test1234",
+                        :password_confirmation => "test1234")
+          volunteer_user.generate_conversation.should be_nil?
         end
       end
 end

@@ -70,7 +70,10 @@ Given /^all roles exist$/ do
 end
 
 When /^I delete the user with the email: "([^"].*)"$/ do |mail|
-    find(:xpath, '//tr[contains(text(), ' + mail + ')]/td[6]').click
+    page.all('#user_list tr').each do |tr|
+        next unless tr.has_selector?('#' + mail)
+        tr.all('td')[6].click_button
+    end
     page.accept_alert 'Are you sure?' do
         click_button('OK')
     end

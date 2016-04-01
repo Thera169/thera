@@ -1,0 +1,8 @@
+<ul>
+  <%- messages.each do |message| %>
+    <li>
+    <span class="created_at"><%= message.created_at.strftime("%H:%M") %></span>
+    <%= message.content %>
+    </li>
+  <% end %>
+</ul>

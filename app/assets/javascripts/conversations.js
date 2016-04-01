@@ -37,46 +37,76 @@
   // console.log("halp")
   // console.log(conversation_id)
   
-    function loadMessages() {
-        $(function() {
-        var update;
-        console.log("load messages was called!");
-        update = function() {
-          return $.get('/conversations/' + conversation_id, null, function(data, status, jqXHR) {
-            var d, m, msgsSorted, _i, _len;
-            msgsSorted = _.sortBy(data, function(message) {
-              return new Date(message.created_at).getTime();
-            });
-            $('#message_box').empty();
-            for (_i = 0, _len = msgsSorted.length; _i < _len; _i++) {
-              m = msgsSorted[_i];
-              d = moment(m.created_at);
-              // $('.chat_message').prepend('<%= escape_javascript(render @messages) %>');
-              $('#message_box').append('<li>' + '<span class="created_at">' + d.format('hh:mm') + '</span>' + m.content + '</li>');
-            }
-            return /(?:)/;
-          });
-        };
-        setTimeout(update, 2000);
-        return update();
-        return(false);
-    });
-  }
+  //   function loadMessages() {
+  //       $(function() {
+  //       var update;
+  //       console.log("load messages was called!");
+  //       update = function() {
+  //         return $.get('/conversations/' + conversation_id, null, function(data, status, jqXHR) {
+  //           var d, m, msgsSorted, _i, _len;
+  //           msgsSorted = _.sortBy(data, function(message) {
+  //             return new Date(message.created_at).getTime();
+  //           });
+  //           $('#message_box').empty();
+  //           for (_i = 0, _len = msgsSorted.length; _i < _len; _i++) {
+  //             m = msgsSorted[_i];
+  //             d = moment(m.created_at);
+  //             // $('.chat_message').prepend('<%= escape_javascript(render @messages) %>');
+  //             $('#message_box').append('<li>' + '<span class="created_at">' + d.format('hh:mm') + '</span>' + m.content + '</li>');
+  //           }
+  //           return /(?:)/;
+  //         });
+  //       };
+  //       setTimeout(update, 2000);
+  //       return update();
+  //       return(false);
+  //   });
+  // }
 
-$('form#message_box').submit(function() {  
-    var valuesToSubmit = $(this).serialize();
+  console.log("In conversation.js");
+  console.log(gon.conversation_id);
+  console.log(gon.Thera); 
+  
+  Thera.renderAllMessages = function(data,status,xhr) {
+    $('#messages').replaceHtml(data);
+  }
+  
+  Thera.submitNewMessage = function() {
+    // clear text box here
     $.ajax({
         type: "POST",
         url: $(this).attr('action'), //sumbits it to the given url of the form
         data: valuesToSubmit,
         dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
-    }).success(function(json){
-        console.log("success");
-    }).error(function(json){
-      console.log("error", json);
-    });
-    return false; // prevents normal behaviour
-});
+    }).
+    success(Thera.renderAllMessages);
+  };
+  Thera.updateMessages = function() {
+    $.ajax({type: "GET", url: "/conversations/"+conversation_id,}).
+      success(Thera.renderAllMessages).
+      error(console.log("barf"));
+  setTimeout(Thera.updateMessages, 2000);
+  };
+
+  // page ready function:
+  Thera.setupTimer = function() {
+   setTimeout(Thera.updateMessages, 2000);
+  }  
+  
+// $('form#message_box').submit(function() {  
+//     var valuesToSubmit = $(this).serialize();
+//     $.ajax({
+//         type: "POST",
+//         url: $(this).attr('action'), //sumbits it to the given url of the form
+//         data: valuesToSubmit,
+//         dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
+//     }).success(function(json){
+//         console.log("success");
+//     }).error(function(json){
+//       console.log("error", json);
+//     });
+//     return false; // prevents normal behaviour
+// });
 
 // $('form#message_box').trigger('submit.rails');
 

@@ -1,7 +1,6 @@
 <!--<h1>Editing Conversation</h1>-->
 
 
-
 <!--<h1> Edit Conversation</h1>-->
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, id: "flash_#{name}" %>
@@ -11,12 +10,11 @@
 <!--<p id="notice"><%= notice %></p>-->
 
 <div class='right_column'>
-
-  <ul class = "chat_messages">
-    <% for message in @messages -%>
-    <%= render :partial => 'message', :object => message  %>
-    <% end -%>
-  </ul>
+  
+  <div id="messages">
+  <%= render :partial => 'messages', :object => @messages %>
+  </div>
+  
 
 
   <%= form_for Message.new, :html => {:id => "message_box"}, :url => '/messages', remote: true do |f| %>
@@ -30,9 +28,11 @@
 </div>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
 <script>
-  conversation_id = <%= @conversation.id %>;
-  console.log(conversation_id);
-  console.log('inside view');
+  // var conversation_id = <%= @conversation.id %>;
+  var Thera = this; 
+  console.log(Thera);
+  console.log(gon.conversation_id);
+  console.log('inside edit.html.erb');
 </script>
 
 

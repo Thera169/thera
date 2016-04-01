@@ -23,7 +23,7 @@
     </tr>
     <% @users.each do |user| %>
       <% if user != current_user %>
-        <tr id=<%= user.email %>>
+        <tr id="<%= user.email %>">
           <td><%= user.name %></td>
           <td><%= user.email %></td>
           <td><%= user.role.name %></td>

@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    
     @users = User.all
     authorize! :read, @users
   end
@@ -40,7 +39,6 @@ class UsersController < ApplicationController
 
   # GET admin/users/1/edit
   def edit
-    puts(params)
     @user
   end
 

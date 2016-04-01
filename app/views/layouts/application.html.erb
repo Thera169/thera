@@ -4,6 +4,9 @@
   <!--Loads application.s (which contains all our javascript) and does so async so that inline JS doesn't fuck up external JS. -->
   <%= javascript_include_tag "application", async: Rails.env.production? %> 
   <title>Thera</title>
+  <%= include_gon(:init => true) %>
+  <%= Gon::Base.render_data({}) %>
+
 </head>
 <body>
 

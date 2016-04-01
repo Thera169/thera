@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
   before_save :assign_role
 
+  
   def assign_role
     self.role = Role.find_by name: "Survivor" if self.role.nil?
   end
@@ -30,17 +31,13 @@ class User < ActiveRecord::Base
   def self.admin_make_user(args)
     role = nil
     error = ""
-    puts(args[:role_id])
     if args[:role_id].downcase == "volunteer"
       role = User.get_role("Volunteer")
     elsif args[:role_id].downcase == "admin"
       role = User.get_role("Admin")
-    else
-      error = "Either choose role volunteer or admin"
-      return nil  # return error later
     end
-    
-    return User.create!(:name => args[:name], :role_id => role.id,
+    role_id = role.id if not role.nil? else Role.where(name: "Survivor").first.id
+    return User.create!(:name => args[:name], :role_id => role_id,
                         :email => args[:email], :password => args[:password],
                         :password_confirmation => args[:password_confirmation])
   end
@@ -52,10 +49,7 @@ class User < ActiveRecord::Base
   def generate_conversation
     if survivor? or admin?
         self.conversation = Conversation.create()
-        # message = self.conversation.messages.build(content: "Your chat has started.",
-        #                                           conversation_id: self.conversation.id)
         if conversation.save() 
-          # and message.save()
           return conversation
         end
         return nil
@@ -69,7 +63,6 @@ class User < ActiveRecord::Base
   end
   
   def volunteer?
-    puts(self.role.name)
     self.role.name == "Volunteer"
   end
 

@@ -5,13 +5,15 @@ class ConversationsController < ApplicationController
 
   # GET /conversations
   # GET /conversations.json
+
+
   def index
  
     @conversations = Conversation.all
     # gets the latest message that hasn't been displayed yet/that's just been created
     # using after_id, the id of the last displayed message
     # @messages = Message.where('id > ?', params[:after_id].to_i).order('created at DESC')
-     puts("yo")
+    puts("yo")
     @messages = []
   end
 
@@ -29,10 +31,13 @@ class ConversationsController < ApplicationController
   # GET /conversations/1/edit
   def edit
     @conversation = Conversation.find(params[:id])
+    gon.conversation_id = @conversation.id
+
     if request.xhr? 
       puts "we did a ajax yay"
       @messages = Message.where(conversation_id: params[:id])
-      render(:partial => 'message', :collection => @messages)
+      render :partial => 'messages', :object => @messages
+      # render(:partial => 'message', :collection => @messages)
     else    
       # ***** make sure to explicitly pass a value in params for conversation_id!
 
