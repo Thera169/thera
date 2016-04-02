@@ -562,7 +562,7 @@
         0
       ]
     },
-    "timestamp": 1459569584
+    "timestamp": 1459571875
   },
   "Cucumber Features": {
     "coverage": {
@@ -585,8 +585,8 @@
         null,
         1,
         1,
-        44,
-        44,
+        43,
+        43,
         null,
         null
       ],
@@ -1127,6 +1127,6 @@
         0
       ]
     },
-    "timestamp": 1459569801
+    "timestamp": 1459571917
   }
 }

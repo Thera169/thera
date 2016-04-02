@@ -13,7 +13,7 @@ class ConversationsController < ApplicationController
     # gets the latest message that hasn't been displayed yet/that's just been created
     # using after_id, the id of the last displayed message
     # @messages = Message.where('id > ?', params[:after_id].to_i).order('created at DESC')
-    puts("yo")
+    #puts("yo")
     @messages = []
   end
 
@@ -33,7 +33,7 @@ class ConversationsController < ApplicationController
     @conversation = Conversation.find(params[:id])
     gon.conversation_id = @conversation.id
     @messages = Message.where(:conversation_id => params[:id])
-    puts "huh"
+    #puts "huh"
     # if request.xhr? 
     #   puts "we did a ajax yay"
     #   @messages = Message.where(conversation_id: params[:id])

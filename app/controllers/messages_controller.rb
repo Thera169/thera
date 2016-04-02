@@ -26,8 +26,8 @@ class MessagesController < ApplicationController
       @message = Message.create!(content: params[:message][:content], conversation_id: params[:message][:conversation_id])
       @conversation = Conversation.find(params[:message][:conversation_id])
       gon.conversation_id = @conversation.id
-      puts "message is -------"
-      puts @message.content
+      #puts "message is -------"
+      #puts @message.content
 
 
       # @messages = Message.where(conversation_id: @conversation.id)
@@ -42,7 +42,7 @@ class MessagesController < ApplicationController
       # end
       
       if request.xhr?
-        puts "AJAX REQUEST MADE!"
+        #puts "AJAX REQUEST MADE!"
       end
       @messages = Message.where(conversation_id: @conversation.id)
       render :partial => '/conversations/messages', :object => @messages
