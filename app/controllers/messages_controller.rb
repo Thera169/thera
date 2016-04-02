@@ -39,37 +39,37 @@ class MessagesController < ApplicationController
     #     # format.json { render :show, status: :created, location: @message }
     #   end
     # end
-    
+
     # if request.xhr?
     #   puts "AJAX REQUEST MADE!"
     # end
     @messages = Message.where(conversation_id: @conversation.id)
     render :partial => '/conversations/messages', :object => @messages
     # Work with Sam/Ian to figure out what here is important and what isn't - Jasmine
-    # respond_to do |format| 
+    # respond_to do |format|
     #   if @message.save
-    #       # format.json { render :json => current_user.profile.avatar_url, :status => 200 } 
-    #       # format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'Update SUCCESSFUL!' } 
+    #       # format.json { render :json => current_user.profile.avatar_url, :status => 200 }
+    #       # format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'Update SUCCESSFUL!' }
     #       # format.json { render :show, status: :created, location: @message } #fuck this line. how do I show the messages w/o reloading?
     #       @messages = Message.where(conversation_id: params[:id])
     #       render :partial => '/conversations/messages', :object => @messages
-    #   else 
-    #       format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'didnt work!' } 
+    #   else
+    #       format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'didnt work!' }
     #       format.json {render json: @message.errors}
-    #       # format.json { render :json => current_user.errors, :status => :unprocessable_entity } 
-    #   end 
-    # end 
+    #       # format.json { render :json => current_user.errors, :status => :unprocessable_entity }
+    #   end
+    # end
 
-    
+
     # redirect_to '/conversations'
-    
+
   end
 
   # PATCH/PUT /messages/1
   # PATCH/PUT /messages/1.json
-  
+
   # Update commented out to improve code coverage as it is not used in our code. --TO, IF
-  
+
   # def update
   #   respond_to do |format|
   #     if @message.update(message_params)

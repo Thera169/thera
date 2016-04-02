@@ -90,7 +90,7 @@ end
 
 When /^I edit the user with the email: "([^"]*)"$/ do |mail|
     new_mail = mail.gsub(/[^A-Za-z0-9]/,'').downcase
-    puts(page.body)
+    # puts(page.body)
     within('div.' + new_mail + '_edit') do
         click_button 'Edit'
     end

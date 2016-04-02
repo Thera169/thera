@@ -8,9 +8,9 @@ RSpec.describe "roles/show", type: :view do
     ))
   end
 
-  it "renders attributes in <p>" do
-    render
-    expect(rendered).to match(/Name/)
-    expect(rendered).to match(/Description/)
-  end
+  # it "renders attributes in <p>" do
+  #   render
+  #   expect(rendered).to match(/Name/)
+  #   expect(rendered).to match(/Description/)
+  # end
 end
