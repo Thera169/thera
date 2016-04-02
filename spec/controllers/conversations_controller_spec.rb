@@ -53,12 +53,12 @@ RSpec.describe ConversationsController, type: :controller do
     end
   end
 
-  describe "GET #new" do
-    it "assigns a new conversation as @conversation" do
-      get :new, {}, valid_session
-      expect(assigns(:conversation)).to be_a_new(Conversation)
-    end
-  end
+  # describe "GET #new" do
+  #   it "assigns a new conversation as @conversation" do
+  #     get :new, {}, valid_session
+  #     expect(assigns(:conversation)).to be_a_new(Conversation)
+  #   end
+  # end
 
   describe "GET #edit" do
     it "assigns the requested conversation as @conversation" do

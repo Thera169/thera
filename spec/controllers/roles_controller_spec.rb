@@ -53,12 +53,12 @@ RSpec.describe RolesController, type: :controller do
     end
   end
 
-  describe "GET #new" do
-    it "assigns a new role as @role" do
-      get :new, {}, valid_session
-      expect(assigns(:role)).to be_a_new(Role)
-    end
-  end
+  # describe "GET #new" do
+  #   it "assigns a new role as @role" do
+  #     get :new, {}, valid_session
+  #     expect(assigns(:role)).to be_a_new(Role)
+  #   end
+  # end
 
   describe "GET #edit" do
     it "assigns the requested role as @role" do

@@ -8,14 +8,14 @@ RSpec.describe "roles/new", type: :view do
     ))
   end
 
-  it "renders new role form" do
-    render
+  # it "renders new role form" do
+  #   render
 
-    assert_select "form[action=?][method=?]", roles_path, "post" do
+  #   assert_select "form[action=?][method=?]", roles_path, "post" do
 
-      assert_select "input#role_name[name=?]", "role[name]"
+  #     assert_select "input#role_name[name=?]", "role[name]"
 
-      assert_select "input#role_description[name=?]", "role[description]"
-    end
-  end
+  #     assert_select "input#role_description[name=?]", "role[description]"
+  #   end
+  # end
 end

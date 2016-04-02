@@ -53,12 +53,12 @@ RSpec.describe MessagesController, type: :controller do
     end
   end
 
-  describe "GET #new" do
-    it "assigns a new message as @message" do
-      get :new, {}, valid_session
-      expect(assigns(:message)).to be_a_new(Message)
-    end
-  end
+  # describe "GET #new" do
+  #   it "assigns a new message as @message" do
+  #     get :new, {}, valid_session
+  #     expect(assigns(:message)).to be_a_new(Message)
+  #   end
+  # end
 
   describe "GET #edit" do
     it "assigns the requested message as @message" do
