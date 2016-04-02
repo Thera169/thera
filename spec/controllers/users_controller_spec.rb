@@ -37,12 +37,18 @@ RSpec.describe UsersController, type: :controller do
   # UsersController. Be sure to keep this updated too.
   let(:valid_session) { {} }
   
+  before(:each) do
+    Role.create({name: "Survivor", description: "Can create converstations and create and read messages"})
+    Role.create({name: "Volunteer", description: "Can create messages and read any conversations"})
+    Role.create({name: "Admin", description: "Can perform any CRUD operation on any resource"})
+  end
+  
   # TO
   describe "Create admin" do
     it "Creates an admin" do
       user = User.create!(:role_id => "admin", :password_confirmation => "test pass", :name => "test name",
                           :password => "test pass", :email => "test_email@test.com")
-      expect(true).to eq(true)
+      expect(user.role_id).to eq(1)
     end
   end
 
