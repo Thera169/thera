@@ -36,6 +36,15 @@ RSpec.describe UsersController, type: :controller do
   # in order to pass any filters (e.g. authentication) defined in
   # UsersController. Be sure to keep this updated too.
   let(:valid_session) { {} }
+  
+  # TO
+  describe "Create admin" do
+    it "Creates an admin" do
+      user = User.create!(:role_id => "admin", :password_confirmation => "test pass", :name => "test name",
+                          :password => "test pass", :email => "test_email@test.com")
+      expect(true).to eq(true)
+    end
+  end
 
   describe "GET #index" do
     it "assigns all users as @users" do
