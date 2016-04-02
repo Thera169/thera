@@ -42,27 +42,33 @@ class RolesController < ApplicationController
 
   # PATCH/PUT /roles/1
   # PATCH/PUT /roles/1.json
-  def update
-    respond_to do |format|
-      if @role.update(role_params)
-        format.html { redirect_to @role, notice: 'Role was successfully updated.' }
-        format.json { render :show, status: :ok, location: @role }
-      else
-        format.html { render :edit }
-        format.json { render json: @role.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  
+  # Update commented out to improve code coverage as it is not used in our code. --TO, IF
+  
+  # def update
+  #   respond_to do |format|
+  #     if @role.update(role_params)
+  #       format.html { redirect_to @role, notice: 'Role was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @role }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @role.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /roles/1
   # DELETE /roles/1.json
-  def destroy
-    @role.destroy
-    respond_to do |format|
-      format.html { redirect_to roles_url, notice: 'Role was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  
+  # Destroy commented out to improve code coverage since it is not used in our code. --TO, IF
+  
+  # def destroy
+  #   @role.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to roles_url, notice: 'Role was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Never trust parameters from the scary internet, only allow the white list through.

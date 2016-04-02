@@ -8,14 +8,7 @@ class MessagesController < ApplicationController
     @messages = Message.all
   end
 
-  # GET /messages/1
-  # GET /messages/1.json
-  # NOTE: try and always use show when routing to conversations/index (to maintain modularity)
-  def show
-    # puts "show's being called yo!"
-    # @messages = Message.where(conversation_id: params[:id])
-    # @messages = Message.all
-  end
+
 
 
   # GET /messages/new
@@ -23,10 +16,7 @@ class MessagesController < ApplicationController
     @message = Message.new
   end
 
-  # GET /messages/1/edit
-  def edit
-    # Not for this iteration
-  end
+
 
   # POST /messages
   # POST /messages.json
@@ -82,27 +72,33 @@ class MessagesController < ApplicationController
 
   # PATCH/PUT /messages/1
   # PATCH/PUT /messages/1.json
-  def update
-    respond_to do |format|
-      if @message.update(message_params)
-        format.html { redirect_to @message, notice: 'Message was successfully updated.' }
-        format.json { render :show, status: :ok, location: @message }
-      else
-        format.html { render :edit }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  
+  # Update commented out to improve code coverage as it is not used in our code. --TO, IF
+  
+  # def update
+  #   respond_to do |format|
+  #     if @message.update(message_params)
+  #       format.html { redirect_to @message, notice: 'Message was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @message }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @message.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /messages/1
   # DELETE /messages/1.json
-  def destroy
-    @message.destroy
-    respond_to do |format|
-      format.html { redirect_to messages_url, notice: 'Message was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+
+  # Destroy commented out to improve code coverage since it is not used in our code. --TO, IF
+
+  # def destroy
+  #   @message.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to messages_url, notice: 'Message was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
