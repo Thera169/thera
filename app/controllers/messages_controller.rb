@@ -4,17 +4,17 @@ class MessagesController < ApplicationController
 
   # GET /messages
   # GET /messages.json
-  def index
-    @messages = Message.all
-  end
+  # def index
+  #   @messages = Message.all
+  # end
 
 
 
 
   # GET /messages/new
-  def new
-    @message = Message.new
-  end
+  # def new
+  #   @message = Message.new
+  # end
 
 
 
@@ -22,49 +22,44 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create
     # Associate text body with this message's body
-    if params[:message][:content] != "" and params[:message][:content] != nil
-      @message = Message.create!(content: params[:message][:content], conversation_id: params[:message][:conversation_id])
-      @conversation = Conversation.find(params[:message][:conversation_id])
-      gon.conversation_id = @conversation.id
-      puts "message is -------"
-      puts @message.content
+    @message = Message.create!(content: params[:message][:content], conversation_id: params[:message][:conversation_id])
+    @conversation = Conversation.find(params[:message][:conversation_id])
+    gon.conversation_id = @conversation.id
+    puts "message is -------"
+    puts @message.content
 
 
-      # @messages = Message.where(conversation_id: @conversation.id)
-      # respond_to do |format|
-      #   if @message.save
-      #     format.html { redirect_to @message, notice: 'Message was successfully created.' }
-          # format.json { render :show, status: :created, location: @message }
-      #   else
-      #     # format.html { redirect_to @message, notice: 'Message was not able to be sent.' }
-      #     # format.json { render :show, status: :created, location: @message }
-      #   end
-      # end
-      
-      if request.xhr?
-        puts "AJAX REQUEST MADE!"
-      end
-      @messages = Message.where(conversation_id: @conversation.id)
-      render :partial => '/conversations/messages', :object => @messages
-      # Work with Sam/Ian to figure out what here is important and what isn't - Jasmine
-      # respond_to do |format| 
-      #   if @message.save
-      #       # format.json { render :json => current_user.profile.avatar_url, :status => 200 } 
-      #       # format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'Update SUCCESSFUL!' } 
-      #       # format.json { render :show, status: :created, location: @message } #fuck this line. how do I show the messages w/o reloading?
-      #       @messages = Message.where(conversation_id: params[:id])
-      #       render :partial => '/conversations/messages', :object => @messages
-      #   else 
-      #       format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'didnt work!' } 
-      #       format.json {render json: @message.errors}
-      #       # format.json { render :json => current_user.errors, :status => :unprocessable_entity } 
-      #   end 
-      # end 
-    else
-      @conversation = Conversation.find(params[:message][:conversation_id])
-      flash[:notice] = "Please enter in a message" # DOES NOT WORK
-      # redirect_to '/conversations/' + @conversation.id.to_s + '/edit'
-    end
+    # @messages = Message.where(conversation_id: @conversation.id)
+    # respond_to do |format|
+    #   if @message.save
+    #     format.html { redirect_to @message, notice: 'Message was successfully created.' }
+        # format.json { render :show, status: :created, location: @message }
+    #   else
+    #     # format.html { redirect_to @message, notice: 'Message was not able to be sent.' }
+    #     # format.json { render :show, status: :created, location: @message }
+    #   end
+    # end
+    
+    # if request.xhr?
+    #   puts "AJAX REQUEST MADE!"
+    # end
+    @messages = Message.where(conversation_id: @conversation.id)
+    render :partial => '/conversations/messages', :object => @messages
+    # Work with Sam/Ian to figure out what here is important and what isn't - Jasmine
+    # respond_to do |format| 
+    #   if @message.save
+    #       # format.json { render :json => current_user.profile.avatar_url, :status => 200 } 
+    #       # format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'Update SUCCESSFUL!' } 
+    #       # format.json { render :show, status: :created, location: @message } #fuck this line. how do I show the messages w/o reloading?
+    #       @messages = Message.where(conversation_id: params[:id])
+    #       render :partial => '/conversations/messages', :object => @messages
+    #   else 
+    #       format.html { redirect_to '/conversations/' + @conversation.id.to_s + '/edit', :notice => 'didnt work!' } 
+    #       format.json {render json: @message.errors}
+    #       # format.json { render :json => current_user.errors, :status => :unprocessable_entity } 
+    #   end 
+    # end 
+
     
     # redirect_to '/conversations'
     

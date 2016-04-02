@@ -45,14 +45,17 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.admin_make_user(params[:user])
+    args = params[:user].clone
+    if ["volunteer", "admin"].include?(args[:role_id].downcase)
+      args[:role_id] = args[:role_id].slice(0,1).capitalize + args[:role_id].slice(1..-1)
+    end
+    @user = User.admin_make_user(args)
     respond_to do |format|
       if @user
         format.html { redirect_to users_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -77,7 +80,6 @@ class UsersController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end

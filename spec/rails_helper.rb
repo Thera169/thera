@@ -5,9 +5,7 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'spec_helper'
 require 'rspec/rails'
-require 'simplecov' # may need to delete
-require 'codeclimate-test-reporter' # may need to delete
-CodeClimate::TestReporter.start # may need to delete
+require 'devise'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 
@@ -40,8 +38,12 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = false 
-  
-  
+
+  config.include FactoryGirl::Syntax::Methods
+  config.include Devise::TestHelpers, type: :controller
+
+  config.include Warden::Test::Helpers
+
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
   end

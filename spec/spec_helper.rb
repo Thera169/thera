@@ -22,6 +22,8 @@ require 'rspec/rails'
 require 'rspec/autorun'
 require 'simplecov'
 require 'codeclimate-test-reporter'
+require_relative 'support/controller_helpers'
+require 'devise'
 CodeClimate::TestReporter.start
 
 RSpec.configure do |config|
@@ -48,6 +50,12 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
+  config.extend ControllerHelpers, type: :controller
+  Warden.test_mode!
+
+  config.after do
+    Warden.test_reset!
+  end
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin

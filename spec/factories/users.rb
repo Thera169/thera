@@ -1,23 +1,33 @@
-FactoryGirl.define do
-    factory :user do
-        name FFaker::Name.name
-        email FFaker::Internet.email
-        password FFaker::Name.name
-    end 
-    
-    #To use traits, in an rspec file do "create(:user, :survivor)" to create a survivor.
-    #Do this instead of create(:user, role_id: '1', name: 'Jasmine Lee',email: 'Jasmine@example.com' )
-    
-    trait :survivor do 
-        role_id 1
-    end 
-    
-    trait :volunteer do 
-        role_id 2
-    end 
-    
-    trait :admin do 
-        role_id 3
-    end 
 
+FactoryGirl.define do
+  factory :user, :class => 'User' do
+    name "ian"
+    email "person0@example.com"
+    password '12345678'
+    password_confirmation '12345678'
+  end
+end
+
+FactoryGirl.define do
+  factory :admin_role, :class => 'Role' do
+    name 'Admin'
+  end
+end
+
+
+FactoryGirl.define do
+  factory :admin, :class => 'User' do
+    name "ian"
+    email "person1@example.com"
+    password '12345678'
+    password_confirmation '12345678'
+    role { create(:admin_role) }
+  end
+end
+
+
+FactoryGirl.define do
+  factory :survivor, :class => 'Role' do
+    name 'Survivor'
+  end
 end
