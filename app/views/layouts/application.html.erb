@@ -4,6 +4,7 @@
   <!--Loads application.s (which contains all our javascript) and does so async so that inline JS doesn't fuck up external JS. -->
 <!-- set async: Rails.env.production? when we actually push this to prod-->
   <%= javascript_include_tag "application", async: true %>  
+  <%= stylesheet_link_tag "application" %>
   <title>Thera</title>
   <%= include_gon(:init => true) %>
   <%= Gon::Base.render_data({}) %>
@@ -20,7 +21,9 @@
   Signed in as <%= current_user.name + ": " + current_user.role.name %>
   <% end %>
 <% end %>
+<!--commented out for now so luis and jasmine can work on frontend -->
 <%= render "devise/shared/nav_links" %>
+
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, id: "flash_#{name}" %>
 <% end %>

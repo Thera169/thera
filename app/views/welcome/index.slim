@@ -1,0 +1,47 @@
+doctype html
+
+
+html
+  head
+    title Thera
+    
+  body
+    div class="container-fluid" id="navbar"
+      div class="collapse navbar-collapse navbar-custom navbar-responsive-collapse"
+          ul class="nav navbar-nav navbar-right"
+            li 
+              a href="" Volunteer Sign-In
+            li
+              a href="" FAQ's
+            li
+              =image_tag("Logo.png", :id => "logo")
+
+        
+    
+    div id="left-half"
+    
+      .container#content
+        .row
+          .span9
+            =image_tag("CityBlue.png", :id => "city")
+          .span3.offset
+
+  
+      
+    div id="right-half"
+      div id ="description"      
+        h1 Welcome to Thera
+        p id="description-text" Thera connects you to certified volunteers in your area
+          who are ready to answer your questions and guide
+          you through any difficult situation related to 
+          violence, sexual assault, or emotional harm. 
+          
+      /=image_tag("GetStarted.png", :id =>"getStarted")
+      /= link_to image_tag("GetStarted.png", :id=>"getStarted"), create_survivor_path, :method => :post
+      /= button_to 'Start a Conversation', create_survivor_path, :method => :post
+      /= button_to image_tag("GetStarted.png"), create_survivor_path, :method => :post
+      
+      = button_to "Start a Conversation", {:controller => 'welcome', :action => "new_survivor"}, {:class => "getStarted" }
+
+    
+
