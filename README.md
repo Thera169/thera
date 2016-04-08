@@ -1,6 +1,7 @@
 # thera
 
 Pivotal Tracker: https://www.pivotaltracker.com/n/projects/1545429
+Heroku: http://lychee-sundae-26175.herokuapp.com
 
 <a href="https://codeclimate.com/github/Thera169/thera"><img src="https://codeclimate.com/github/Thera169/thera/badges/gpa.svg" /></a>
 
