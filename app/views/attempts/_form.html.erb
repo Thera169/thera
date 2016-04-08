@@ -1,5 +1,5 @@
 <h1>Survey <%= @survey.name %></h1>
-<%= form_for(@attempt, :url => attempt_scope(@attempt)) do |f| %>
+<%= form_for(@attempt, :url => attempt_scope(@survey), :action => "create") do |f| %>
   <%= f.fields_for :answers do |builder| %>
     <ul>
       <% @survey.questions.each_with_index do |question, index| %>

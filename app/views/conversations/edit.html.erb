@@ -23,9 +23,13 @@
   <% end %>
 
   <%- @participant = current_user %>
-  <%- @survey = Survey::Survey.first %>
+  <%- @survey = Survey::Survey.last %>
   <%- if @survey.available_for_participant?(@participant) %>
-  <%= render 'contests/surveys/form' %>
+  <!--<%= link_to @survey.name, new_survey_attempt_path(survey_id: @survey.id) %>-->
+  <%- @attempt = @survey.attempts.new %>
+  <%- @attempt.answers.build %>
+  <%= render 'attempts/form' %>
+
   <% else %>
   Uupss, <%= @participant.name %> you have reach the maximum number of
   attempts for <%= @survey.name %>

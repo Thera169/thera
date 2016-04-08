@@ -1,6 +1,6 @@
-class Contests::AttemptsController < ApplicationController
+class AttemptsController < ApplicationController
 
-  helper 'contests/surveys'
+  helper 'surveys'
 
   before_filter :load_active_survey
   before_filter :normalize_attempts_data, :only => :create

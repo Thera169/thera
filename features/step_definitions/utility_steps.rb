@@ -3,7 +3,7 @@ Given /^I am logged in as a[n]? ([a-zA-Z].*)$/ do |role|
     if role == "survivor"
         steps %{
             Given I am on the home page  
-            And I press "Log in"
+            And I press "Get Started"
         }
     elsif role == "volunteer"
         if not User.exists?(:name => "test_volunteer")
@@ -14,7 +14,7 @@ Given /^I am logged in as a[n]? ([a-zA-Z].*)$/ do |role|
                Given I am on the login page
                And I fill in "Email" with "testVolunteerEmail@test.com"
                And I fill in "Password" with "test1234"
-               And I press "Log in"
+               And I follow "Volunteer Sign-In"
            }
     elsif role == "admin"
         if not User.exists?(:name => "test_admin")
@@ -25,7 +25,7 @@ Given /^I am logged in as a[n]? ([a-zA-Z].*)$/ do |role|
                Given I am on the login page
                And I fill in "Email" with "testAdminEmail@test.com"
                And I fill in "Password" with "test1234"
-               And I press "Log in"
+               And I follow "Volunteer Sign-In"
            }
     end
 end

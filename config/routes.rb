@@ -11,7 +11,12 @@ Rails.application.routes.draw do
   resources :roles
   resources :messages
   resources :conversations
+  
+  resources :surveys do
+    resources :attempts
+  end 
 
+  
   authenticated :user do
     root :to => 'conversations#index', as: :authenticated_root
   end

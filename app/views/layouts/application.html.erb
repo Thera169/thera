@@ -23,7 +23,7 @@
 <% end %>
 <!--commented out for now so luis and jasmine can work on frontend -->
 
-<% unless current_page?(root_path) %>
+<% unless current_page?(root_path) or current_page?(new_user_session_url) %>
   <%= render "devise/shared/nav_links" %>
 <% end %>
 

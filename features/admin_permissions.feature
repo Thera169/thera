@@ -8,7 +8,7 @@ Scenario: Manage Volunteers
   And I am on the login page
   And I fill in "Email" with "testAdminEmail@test.com"
   And I fill in "Password" with "12345678"
-  And I press "Log in"
+  And I follow "Volunteer Sign-In"
   Then I should see "Manage Volunteers"
   
 Scenario: Manage Volunteers Visible
@@ -17,7 +17,7 @@ Scenario: Manage Volunteers Visible
   And I am on the login page
   And I fill in "Email" with "testAdminEmail@test.com"
   And I fill in "Password" with "12345678"
-  And I press "Log in"
+  And I follow "Volunteer Sign-In"
   And I follow "Manage Volunteers"
   Then I should see "Listing Users"
   
@@ -27,7 +27,7 @@ Scenario: Volunteer Cannot Manage Volunteers
   And I am on the login page
   And I fill in "Email" with "testVolunteerEmail@test.com"
   And I fill in "Password" with "12345678"
-  And I press "Log in"
+  And I follow "Volunteer Sign-In"
   Then I should not see "Listing Users"
   
 # Scenario: Admin destroy conversation
