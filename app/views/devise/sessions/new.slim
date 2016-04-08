@@ -1,0 +1,44 @@
+doctype html
+
+
+html
+  head
+    
+  body
+    div class="container-fluid" id="navbar"
+      div class="collapse navbar-collapse navbar-custom navbar-responsive-collapse"
+          ul class="nav navbar-nav navbar-right"
+            li 
+              = link_to "Volunteer Sign-In", new_user_session_url 
+            li
+              a href="" FAQ's
+            li
+              =image_tag("Logo.png", :id => "logo")
+
+    
+    div id="city-side"
+    
+      .container#content
+        .row
+          .span9
+            =image_tag("CityBlue.png", :id => "city")
+          .span3.offset
+
+  
+      
+    div id="sign-in-side"
+        h3 SECURE SIGN-IN
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .field
+                = f.label :email
+                br/
+                = f.email_field :email, autofocus: true, placeholder: "Email"
+            .field
+                = f.label :password
+                br/
+                = f.password_field :password, autocomplete: "off", placeholder: "Password"
+            .actions
+                = f.submit "Enter"
+        /! <haml_loud> render &quot;devise/shared/links&quot; </haml_loud
+
+            

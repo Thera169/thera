@@ -116,3 +116,35 @@ end
             
 #         end    
 #     end
+
+Given (/^I have a conversation with "([^"]*)"$/) do |user1|
+    pending
+end
+
+And (/^"([^"]*)" is waiting$/) do |user2|
+    pending
+end
+
+Then (/^I should see "([^"]*)" in "([^"]*)"$/) do |user2, request_box|
+    pending
+end
+
+When /^I click on (\d+) stars$/ do |num_stars|
+    pending
+end
+
+Then /^(\d+) stars are saved in the survey$/ do |num_stars|
+    pending
+end
+
+Given (/^I see "([^"]*)"$/) do |text|
+    pending
+end
+
+And (/^I type "([^"]*)" in "([^"]*)"$/) do |comment, comment_box|
+    pending
+end
+
+Given /^I have not submitted a rating$/ do
+    pending
+end

@@ -20,6 +20,8 @@ gem 'codeclimate-test-reporter', group: :test, require: nil
 gem 'gon'
 gem "slim-rails"
 gem 'slim'
+gem "survey", "~> 0.1"
+
 
 group :development, :test do
   gem 'sqlite3'

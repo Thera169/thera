@@ -2,28 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@font-face 
-    font-family: AvenirLight
-    src: url("AvenirLTStd-Light.otf") format("opentype")
-
-@font-face 
-    font-family: AvenirBook
-    src: url("AvenirLTStd-Book.otf") format("opentype")
-
-@font-face 
-    font-family: AvenirMedium
-    src: url("AvenirLTStd-Medium.otf") format("opentype")
-
-html, body
-    height: 100%
-    background: -webkit-linear-gradient(#4A6D9D, #8DA4D1)
-
 .navbar-custom
     background-color: none
+    margin-top: 1.5em
 
 .nav.navbar-nav.navbar-right li a 
     color: white
 
+.nav.navbar-nav.navbar-right li a:hover
+    color: black
 
 #left-half
     width: 50%
@@ -47,32 +34,30 @@ html, body
     padding-left: 1.5em
     font-weight: 100
 
-body
-    -webkit-font-smoothing: antialiased
-    text-rendering: optimizelegibility
-
-
 #city
     position: absolute
     height: 300px
     top: 50%
     transform: translateX(-10%) translateY(-50%)
     left: 10%
-    
-#getStarted 
-    // background-image: url("GetStarted.png")
-    padding-left: 2em
+
+#startButton
+    color: blue
+
+.btn
+    margin-left: 1.5em
     // display:block
     // cursor: pointer
-    // width: 180px
-    // position: relative
-    // float: left
-    // color: white
+    width: 150px
+    position: relative
+    float: left
+    color: black
     // transform: translateY(-50%) translateX(113%)
 
 #logo 
+    margin-top: 5px
     padding-left: 1em
-    float:left
+    float: left
     position: relative
     transform: translateY(20%)
     padding-right: 1em

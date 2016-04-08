@@ -22,6 +22,14 @@
     <%= f.submit "submit message" %>
   <% end %>
 
+  <%- @participant = current_user %>
+  <%- @survey = Survey::Survey.first %>
+  <%- if @survey.available_for_participant?(@participant) %>
+  <%= render 'contests/surveys/form' %>
+  <% else %>
+  Uupss, <%= @participant.name %> you have reach the maximum number of
+  attempts for <%= @survey.name %>
+  <% end %>
 
 </div>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>

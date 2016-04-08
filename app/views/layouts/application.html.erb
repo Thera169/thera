@@ -22,7 +22,12 @@
   <% end %>
 <% end %>
 <!--commented out for now so luis and jasmine can work on frontend -->
-<%= render "devise/shared/nav_links" %>
+
+<% unless current_page?(root_path) %>
+  <%= render "devise/shared/nav_links" %>
+<% end %>
+
+
 
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, id: "flash_#{name}" %>

@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_confirmation_of :password
   before_save :assign_role
+  has_surveys
 
   def assign_role
     self.role = Role.find_by name: "Survivor" if self.role.nil?
