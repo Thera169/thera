@@ -45,6 +45,5 @@ html
       /= button_to "Start a Conversation", {:controller => 'welcome', :action => "new_survivor"}, {:class => "getStarted" }
 
       div class="startButton"
-        =button_to "Get Started", {:controller => 'welcome', :action => "new_survivor" }, :class => "btn"
+        =button_to "Get Started", {:controller => 'welcome', :action => "index" }, :class => "btn"
         /=button_to image_tag("GetStarted.png"), :controller => 'welcome', :action => "new_survivor", :method => :post, :class => "btn"
-

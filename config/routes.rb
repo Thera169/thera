@@ -1,26 +1,22 @@
 Rails.application.routes.draw do
-  devise_for :users, :skip => :registrations
-  # delete '/users/sign_out' => 'devise/sessions#destroy'
-  
-  scope "/admin" do
-    resources :users
-  end
-  
-  match "/users/new", :to => "welcome#new_survivor", :via => :post, as: :create_survivor 
-  match "/users/:id/edit", :to => "users#edit_self", :via => :get, as: :edit_self
-  resources :roles
-  resources :messages
-  resources :conversations
-  
-  resources :surveys do
-    resources :attempts
-  end 
+ devise_for :users, :controllers => { registrations: 'registrations', sessions: "users/sessions"}
+ # devise_for :users, controllers: { sessions: "users/sessions" }
 
-  
   authenticated :user do
-    root :to => 'conversations#index', as: :authenticated_root
+    root 'users#index'
   end
-  root :to => 'welcome#index'
 
+  unauthenticated :user do
+    devise_scope :user do
+      get "/login" => "devise/sessions#new"
+      get "/" => "welcome#index"
+    end
+  end
+
+  post 'playing' => 'conversations#new'
+  
+  resources :conversations do
+    resources :messages
+  end
 
 end

@@ -1,0 +1,33 @@
+
+<div class="col " style="width: 600px; display: table-cell;">
+  <table class="table table-info games-table">
+    <tbody>
+
+      <% @users.each do |user| %>
+      <% unless (current_user == user or (@reciever and @reciever == user)) %>
+      <tr>
+        <td id="new-messages-<%= user.id %>"><%= availability(user) %></td>
+        <td id="new-messages-name-<%= user.id %>" ><%= user.name %></td>
+        <td class="start-btn-table">
+          <%= button_to "View!", conversations_path(:recipient_id => user.id, :sender_id => current_user.id), class: "btn btn-success btn-xs start-conversation"%>
+        </td id="new-message-content-<%= user.id %>">
+        <td> 
+        </td>
+      </tr>
+      <% end %>
+      <% end %>
+
+    </tbody>
+  </table>
+</div>
+<script type="text/javascript">
+</script>
+<script type="text/javascript">
+  channel = <%= raw ('"' + '/notifications/' + current_user.id.to_s + '"') %>
+  PrivatePub.subscribe(channel, function(data, channel) {
+    console.log(data)
+    $('#new-messages-'+ data.sender_id).html("<div class='blink'></div>");
+    $("#new-messages-name-"+ data.sender_id).addClass("bold-name")
+  });
+</script>
+<%= subscribe_to "/notifications/" + current_user.id.to_s %>

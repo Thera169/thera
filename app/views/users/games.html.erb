@@ -1,0 +1,19 @@
+<div class="col col-md-4 col-md-offset-4">
+
+<table class="table table-info games-table">
+  <tbody>
+    <% @users.each do |user| %>
+    <% unless current_user == user %>
+    <tr>
+      <td id="new-messages-<%= user.id %>"><%= availability(user) %></td>
+      <td id="new-messages-name-<%= user.id %>"><%= user.name %></td>
+      <td class="start-btn-table">
+        <%= button_to "Play!", conversations_path(:recipient_id => user.id, :sender_id => current_user.id), class: "btn btn-success btn-xs start-conversation"%>
+      </td>
+    </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+</div>
+

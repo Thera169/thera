@@ -5,17 +5,15 @@ class WelcomeController < ApplicationController
     @user = User.new_survivor()
     sign_in(@user, event: :authentication )
     sign_in @user, :bypass => true 
-    #@conversation = @user.generate_conversation
-    @conversation = Conversation.create()
-    @conversation.messages.build(content: "Your chat has started.",
-                                      conversation_id: @conversation.id)
-    @messages = @conversation.messages
+
+    volunteer = User.find_available_volunteer
+    @conversation = Conversation.get_conversation(current_user.id, volunteer.id)
     @user.conversation = @conversation
-    # puts(@user.role.name)
+
     if @conversation
-      redirect_to edit_conversation_url(@conversation)
+      redirect_to conversation_path(@conversation)
     else
       redirect_to root_path
-    end
+    end 
   end
 end

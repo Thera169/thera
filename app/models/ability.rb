@@ -7,13 +7,16 @@ class Ability
     elsif user.volunteer?
       can :manage, User, id: user.id
       can :read, Conversation
+      can :create, Conversation
       can :update, Conversation
       can :read, Message
       can :create, Message
       can :update, Message
     elsif user.survivor?
+      can :read, User, id: user.id
+      can :destroy, User, id: user.id
       can :manage, Conversation do |conversation|
-        conversation.try(:user) == user
+        conversation.try(:sender_id) == user.id
       end
       can :read, Message
       can :create, Message

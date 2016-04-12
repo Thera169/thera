@@ -1,0 +1,20 @@
+<div class="alert alert-dismissible alert-info col-md-6 col-md-offset-3 text-center main-well">
+<h2>My Account</h2><br>
+
+<%= form_for(@user, url: registration_path(@user), html: { method: :put }) do |f| %>
+
+  <div class="field">
+    <%= f.label :choose_an_avatar%><br>
+    <%= image_tag "cat_box.png" %><%= f.radio_button :avatar, 'cat_box.png', :checked => true%>  
+    <%= image_tag "cat_fight.png" %><%= f.radio_button :avatar, 'cat_fight.png', checked: true%>
+    <%= image_tag "cat_clean.png" %><%= f.radio_button :avatar, 'cat_clean.png', checked: true%><br>
+    <%= image_tag "cat_drunk.png" %><%= f.radio_button :avatar, 'cat_drunk.png', checked: true%>
+    <%= image_tag "cat_purr.png" %><%= f.radio_button :avatar, 'cat_purr.png', checked: true%>
+    <%= image_tag "cat_tied.png" %><%= f.radio_button :avatar, 'cat_tied.png', checked: true%>
+  </div>
+<br>
+  <div class="actions">
+    <%= f.submit "Meow!"%>
+  </div>
+<% end %>
+</div>

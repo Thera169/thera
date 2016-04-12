@@ -14,4 +14,3 @@ u1 = User.create({name: "Sally", email: "sally@example.com", password: "aaaaaaaa
 u2 = User.create({name: "Sue", email: "sue@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r2.id})
 u3 = User.create({name: "Kev", email: "kev@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r2.id})
 u4 = User.create({name: "Jack", email: "jack@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r3.id})
-survey = Survey::Survey.new(:name => "Example Survey", :description => "Give us feedback on the volunteer.", :attempts_number => 0)

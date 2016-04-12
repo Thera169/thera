@@ -11,21 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160408050618) do
+ActiveRecord::Schema.define(version: 20160317045953) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "conversations", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
-  add_index "conversations", ["user_id"], name: "index_conversations_on_user_id"
+  add_index "conversations", ["recipient_id"], name: "index_conversations_on_recipient_id", using: :btree
+  add_index "conversations", ["sender_id"], name: "index_conversations_on_sender_id", using: :btree
 
   create_table "messages", force: :cascade do |t|
+    t.text     "body"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "content"
     t.integer  "conversation_id"
+    t.integer  "user_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -35,68 +41,29 @@ ActiveRecord::Schema.define(version: 20160408050618) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "survey_answers", force: :cascade do |t|
-    t.integer  "attempt_id"
-    t.integer  "question_id"
-    t.integer  "option_id"
-    t.boolean  "correct"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "survey_attempts", force: :cascade do |t|
-    t.integer "participant_id"
-    t.string  "participant_type"
-    t.integer "survey_id"
-    t.boolean "winner"
-    t.integer "score"
-  end
-
-  create_table "survey_options", force: :cascade do |t|
-    t.integer  "question_id"
-    t.integer  "weight",      default: 0
-    t.string   "text"
-    t.boolean  "correct"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "survey_questions", force: :cascade do |t|
-    t.integer  "survey_id"
-    t.string   "text"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "survey_surveys", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "attempts_number", default: 0
-    t.boolean  "finished",        default: false
-    t.boolean  "active",          default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.integer  "role_id"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
+    t.string   "email",                  default: "",                    null: false
+    t.string   "encrypted_password",     default: "",                    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,                     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.string   "avatar"
+    t.datetime "last_seen",              default: '2016-04-11 05:10:17'
+    t.boolean  "online?",                default: false
+    t.string   "status"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["role_id"], name: "index_users_on_role_id"
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["role_id"], name: "index_users_on_role_id", using: :btree
 
 end

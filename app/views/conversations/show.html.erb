@@ -1,4 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div style="width: 100%; display: table;">
+  <div style="display: table-row">
+    <% if current_user and can? :manage, current_user %>
+      <%= render  'conversations' %>
+    <% end %>
+    <div class="conversation col-md-offset-1" style="display: table-cell;">
+      <div class="chatboxhead">
+        <div class="chatboxtitle">
+          <i class="fa fa-comments"></i>
 
-<%= link_to 'Edit', edit_conversation_path(@conversation) %> |
-<%= link_to 'Back', conversations_path %>
+          <h1>
+            <%= @reciever.name %> 
+          </h1>
+        </div>
+        <div class="chatboxoptions">
+          <%= link_to "<i class='fa  fa-minus'></i> ".html_safe, "#", class: "toggleChatBox", "data-cid" => @conversation.id %>
+          &nbsp;&nbsp;
+          <%= link_to "<i class='fa  fa-times'></i> ".html_safe, "#", class: "closeChat", "data-cid" => @conversation.id %>
+        </div>
+        <br clear="all"/>
+      </div>
+      <div class="chatboxcontent">
+        <% if @messages.any? %>
+            <%= render @messages %>
+        <% end %>
+      </div>
+      <div class="chatboxinput">
+        <%= form_for([@conversation, @message], :remote => true, :html => {id: "conversation_form_#{@conversation.id}"}) do |f| %>
+            <%= f.text_field :body, class: "chatboxtextarea", "data-cid" => @conversation.id %>
+            <div class="chat-form-btns">
+            <%= f.submit "send", class: "btn btn-primary btn-sm btn-submit"%>
+            </div>
+
+        <% end %>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%= subscribe_to conversation_path(@conversation) %>
+
