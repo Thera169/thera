@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160317045953) do
+ActiveRecord::Schema.define(version: 20160414035425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(version: 20160317045953) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "surveys", force: :cascade do |t|
+    t.integer  "rating"
+    t.text     "text"
+    t.integer  "conversation_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "surveys", ["conversation_id"], name: "index_surveys_on_conversation_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.integer  "role_id"
@@ -57,7 +67,7 @@ ActiveRecord::Schema.define(version: 20160317045953) do
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
     t.string   "avatar"
-    t.datetime "last_seen",              default: '2016-04-11 05:10:17'
+    t.datetime "last_seen",              default: '2016-04-14 00:37:37'
     t.boolean  "online?",                default: false
     t.string   "status"
   end

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   
   resources :conversations do
     resources :messages
+    resources :surveys
   end
 
 end

@@ -19,10 +19,17 @@
         </div>
         <br clear="all"/>
       </div>
-      <div class="chatboxcontent">
-        <% if @messages.any? %>
-            <%= render @messages %>
-        <% end %>
+      <div class="row">
+
+        <div class="feedback_box col-md-3">
+        <p>Rate your conversation here:</p>
+        <%= render 'survey' %>
+        </div>
+        <div class="chatboxcontent col-md-9">
+          <% if @messages.any? %>
+              <%= render @messages %>
+          <% end %>
+        </div>
       </div>
       <div class="chatboxinput">
         <%= form_for([@conversation, @message], :remote => true, :html => {id: "conversation_form_#{@conversation.id}"}) do |f| %>
@@ -34,6 +41,7 @@
         <% end %>
 
       </div>
+      
     </div>
 
   </div>
