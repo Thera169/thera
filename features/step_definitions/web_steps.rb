@@ -82,6 +82,10 @@ When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
 end
 
+# When /^(?:|I )hit "([^"]*)"$/ do |link|
+#   find("GetStarted.png[alt='GetStarted']").click
+# end
+
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
   # puts page.body
 

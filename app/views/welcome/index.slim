@@ -11,7 +11,7 @@ html
           ul class="nav navbar-nav navbar-right"
             li 
               =link_to "Volunteer Sign-In", new_user_session_url 
-            li class="navbarItems"
+            li
               a |
             li
               a href="" FAQ's
@@ -44,6 +44,14 @@ html
       
       /= button_to "Start a Conversation", {:controller => 'welcome', :action => "new_survivor"}, {:class => "getStarted" }
 
-      div class="startButton"
-        =button_to "Get Started", {:controller => 'welcome', :action => "index" }, :class => "btn"
+      div id="startButton"
+        =link_to image_tag("GetStarted.png", :alt => "GetStarted"), new_conversation_url, :id => "GetStarted"
         /=button_to image_tag("GetStarted.png"), :controller => 'welcome', :action => "new_survivor", :method => :post, :class => "btn"
+
+
+
+
+
+
+
+
