@@ -3,7 +3,7 @@ Given /^I am logged in as a[n]? ([a-zA-Z].*)$/ do |role|
     if role == "survivor"
         steps %{
             Given I am on the home page  
-            And I follow "GetStarted"
+            And I press "Get Started"
         }
     elsif role == "volunteer"
         if not User.exists?(:name => "test_volunteer")

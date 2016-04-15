@@ -27761,3 +27761,1939 @@ Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e86
 
 
 Started GET "/assets/GetStarted-9e692c0fd381d0808d83461eaf5e60c4977984b08474cab4bb19536120786b63.png" for 127.0.0.1 at 2016-04-14 23:48:40 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:21:38 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (57.1ms)
+Completed 200 OK in 293ms (Views: 291.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:38 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/welcome.self-877220282872256109b64ae278289c5ad21634d9e308db14068d2e7ad81b182f.css?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/assets/GetStarted-9e692c0fd381d0808d83461eaf5e60c4977984b08474cab4bb19536120786b63.png" for 127.0.0.1 at 2016-04-15 14:21:39 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (12.3ms)
+Completed 200 OK in 116ms (Views: 116.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/welcome.self-877220282872256109b64ae278289c5ad21634d9e308db14068d2e7ad81b182f.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:22:24 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:22:57 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.2ms)
+Completed 200 OK in 231ms (Views: 230.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:57 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:57 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:57 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:57 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:57 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/welcome.self-b72589ec721c0efd0d556fd62eaad34dd5e8ec5413baa861a1b16e78a96265b3.css?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:22:58 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.5ms)
+Completed 200 OK in 237ms (Views: 237.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/welcome.self-9ad9db6250a2df2f1051d02385d3dc020626eb21d3ce3c032d3f6ab814e1326f.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:23:12 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (17.2ms)
+Completed 200 OK in 163ms (Views: 162.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/welcome.self-9ad9db6250a2df2f1051d02385d3dc020626eb21d3ce3c032d3f6ab814e1326f.css?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:23:24 -0700
+
+
+Started POST "/conversations/new" for 127.0.0.1 at 2016-04-15 14:23:26 -0700
+
+ActionController::RoutingError (No route matches [POST] "/conversations/new"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.6.1) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.1) lib/rack/server.rb:286:in `start'
+  railties (4.2.0) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.0) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `load'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `call'
+  spring (1.3.6) lib/spring/client/command.rb:7:in `call'
+  spring (1.3.6) lib/spring/client.rb:26:in `run'
+  spring (1.3.6) bin/spring:48:in `<top (required)>'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `load'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `<top (required)>'
+  /Users/Luis/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+  /Users/Luis/.rvm/rubies/ruby-2.3.0/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.6ms)
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (91.4ms)
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (52.5ms)
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Luis/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (125.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (9.9ms)
+Completed 200 OK in 99ms (Views: 98.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/welcome.self-9ad9db6250a2df2f1051d02385d3dc020626eb21d3ce3c032d3f6ab814e1326f.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:24:07 -0700
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2016-04-15 14:24:09 -0700
+Processing by ConversationsController#new as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-04-15 14:24:09 -0700
+Processing by Users::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (6.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 124ms (Views: 123.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.1ms)
+Completed 200 OK in 212ms (Views: 211.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/welcome.self-3ca45aeec9f47e28a8f8efe59c758b827396cc7f692673f6ce5efddf118d16ee.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:24:47 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.6ms)
+Completed 200 OK in 228ms (Views: 227.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/welcome.self-8ec6d58d87fe3cbb78613544e1ad5c7fe77e2a2d1d9fa3e72ad1e3987252a60a.css?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:24:55 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:24:56 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:24:56 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:25:02 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.0ms)
+Completed 200 OK in 109ms (Views: 108.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:02 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:02 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:02 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:02 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/welcome.self-9ad9db6250a2df2f1051d02385d3dc020626eb21d3ce3c032d3f6ab814e1326f.css?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:25:03 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:26:27 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.5ms)
+Completed 200 OK in 214ms (Views: 213.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/welcome.self-4d76523caaa09a242351ed553ad7a2c35b2df4a5f78a63e69ed891eb55f46b85.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:26:28 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.0ms)
+Completed 200 OK in 230ms (Views: 229.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/welcome.self-48d3037c64e91dfd6c131d638f6f7ec18116f3edb1d4faacf1b8b32e46af1f41.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:26:43 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:26:48 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.1ms)
+Completed 200 OK in 216ms (Views: 215.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/welcome.self-c5ad08ecdd2688d241a1c1282f748aa933e60ff882f084603b4152d494e5734e.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:26:49 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.7ms)
+Completed 200 OK in 218ms (Views: 217.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/welcome.self-3b9c67764be1f9aaf8c16092ac2083cfb8f84b7d5b02ef89092c0a9437f3d066.css?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:26:55 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (4.4ms)
+Completed 200 OK in 233ms (Views: 232.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/welcome.self-c411444a3404d11a544863688a9af99aae5f99fd3568f254c04a0ce9dafa2bf0.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:27:07 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:27:30 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (4.5ms)
+Completed 200 OK in 221ms (Views: 220.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:30 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:30 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/welcome.self-1d86629600adcf81ee27db0d230ffbf12ec272f6f45ccc3e95395cf1dcf6e5fb.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:27:31 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.1ms)
+Completed 200 OK in 101ms (Views: 100.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/welcome.self-c411444a3404d11a544863688a9af99aae5f99fd3568f254c04a0ce9dafa2bf0.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:27:36 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.4ms)
+Completed 200 OK in 225ms (Views: 225.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/welcome.self-9414eefd55a8a563b4c3610a8eaeefee3ccdcf234950d40498ac925b0460f3a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:27:54 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:28:25 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.8ms)
+Completed 200 OK in 217ms (Views: 216.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/welcome.self-04289a44cc08ce3f19477aa2fed798e29e5e3a3990d45e1cc71b6dfe241a46e0.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:28:26 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:28:40 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (3.3ms)
+Completed 200 OK in 226ms (Views: 225.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:40 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:40 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:40 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/welcome.self-bdbb37e16036882b90a6325ceaec2a87d40aa37b791b0954bf99e23358bf60ad.css?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:28:41 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (4.1ms)
+Completed 200 OK in 230ms (Views: 229.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/welcome.self-9c04dd95e59fb1fe001382cd7af2fd7d9c8d6ca7061e6ec0ad3459f496c50c14.css?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:31:27 -0700
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2016-04-15 14:31:29 -0700
+Processing by ConversationsController#new as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-04-15 14:31:29 -0700
+Processing by Users::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (5.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 110ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-15 14:35:51 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.slim within layouts/application (11.2ms)
+Completed 200 OK in 119ms (Views: 118.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d4328dcb0dd4f3ce3ff1b845fc1dc2acc7965bec1adf9c2bd58abf13828103ec.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:51 -0700
+
+
+Started GET "/assets/bootstrap-iso.self-ab92795cfdaede6c513cd9826b50890d4a36163f53ac88fd05aecf97bb1936a4.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:51 -0700
+
+
+Started GET "/assets/bootstrap.self-2c02c88b09116b7629bac8cf4fdb1dd92aa67ee6a3604ba3636d709f20f969cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:51 -0700
+
+
+Started GET "/assets/chat.self-40c9d92619ac19f2f506685474b9cfd53aeab015b651404199c6bebe9f5e423c.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/conversation.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/custom.self-1c35d1e2214b692a88b91036c77cb20d577b73a5563c230f8c3c4e2529d22421.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/main.self-ca69e098c77d5185e62b9cabb19c803ac38e3bece0309febca42572f1badfcca.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/sessions.new.self-b58933da2c57bf0b977fb70d43f751a8f5f3da6e07aac245dab1a6290dd868cc.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/survey.self-f0aa351695aa20f7abd3d33dd6c3cad6fa9145607fe7f56b8fb5856522b6ed6d.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/user.self-f3ddafd98632223fc7ce61403bdf6a436da21ec0cf545f7036d1e6b093cf5e72.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/welcome.self-9c04dd95e59fb1fe001382cd7af2fd7d9c8d6ca7061e6ec0ad3459f496c50c14.css?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/private_pub.self-b110feb9d6b39a3b0dc59510984a4ff9ad14a15e427afbd7474c4531dbb660a6.js?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/alert.self-3ae3d4fd98090d3ea824c5daa1e15593b0d7f83f92a20bf414ab5f735812d63d.js?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/chat.self-7ffa8e7f88b0e5038f04a5a800e6088d4f61a08efa8340702ff2c7fd269d7d64.js?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/conversation.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/jquery.min.self-3b980a22cc7f1242cdc4eb4dc9fbdd7912920de0fac9d556369c02f85d2db918.js?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/survey.self-71fd171dd9032419c2bf89c734edec0b27723d767f0e697446d02ba6b7d5ac66.js?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/user.self-b31158e1e1dadf5875a3b12b3079bde2504deb99e0feebaf6bfd326b741ee823.js?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/application.self-a6aad5d1a7a741ef9445dadba4f402117dfb9f846ed768e3498ccaa127008983.js?body=1" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/Logo-1d7996e9878a9d623ddf814200a74b49ef292de78670e9c786ea32bce2a85da2.png" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/assets/CityBlue-b278a2074177a073d322d28dee2453430d0df2889b800b3e865124ab63fa7cb3.png" for 127.0.0.1 at 2016-04-15 14:35:52 -0700
+
+
+Started GET "/conversations/new" for 127.0.0.1 at 2016-04-15 14:42:25 -0700
+Processing by ConversationsController#new as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-04-15 14:42:25 -0700
+Processing by Users::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 118ms (Views: 116.6ms | ActiveRecord: 0.0ms)
