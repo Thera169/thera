@@ -6,7 +6,7 @@ class SurveysController < ApplicationController
   		if params["rating-input-1"].nil?
   			return
   		end
-  		Survey.create({rating: => params["rating-input-1"], text: => params[], conversation: @conversation})
+  		Survey.create({:rating => params["rating-input-1"], :text => params[], :conversation =>  @conversation})
   		if params[:save_conversation] == "save_confirm"
   			#make sure to not delete conversation when this is implemented properly
   		end
