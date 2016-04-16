@@ -21,17 +21,17 @@
 //     -webkit-font-smoothing: antialiased
 //     text-rendering: optimizelegibility
     
-@font-face 
-    font-family: AvenirLight
-    src: url("AvenirLTStd-Light.otf") format("opentype")
+/*@font-face */
+/*    font-family: AvenirLight*/
+/*    src: url("AvenirLTStd-Light.otf") format("opentype")*/
 
-@font-face 
-    font-family: AvenirBook
-    src: url("AvenirLTStd-Book.otf") format("opentype")
+/*@font-face */
+/*    font-family: AvenirBook*/
+/*    src: url("AvenirLTStd-Book.otf") format("opentype")*/
 
-@font-face 
-    font-family: AvenirMedium
-    src: url("AvenirLTStd-Medium.otf") format("opentype")
+/*@font-face */
+/*    font-family: AvenirMedium*/
+/*    src: url("AvenirLTStd-Medium.otf") format("opentype")*/
 
 #actions
 	align: center
