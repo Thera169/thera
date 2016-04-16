@@ -15,31 +15,35 @@
  *= require main.scss
  */
  
-/*// html, body*/
-/*//     height: 100%*/
-/*//     background: -webkit-linear-gradient(#4A6D9D, #8DA4D1)*/
-/*//     -webkit-font-smoothing: antialiased*/
-/*//     text-rendering: optimizelegibility*/
+html, body {
+    height: 100%
+    background: -webkit-linear-gradient(#4A6D9D, #8DA4D1)
+    -webkit-font-smoothing: antialiased
+    text-rendering: optimizelegibility
+}
     
-@font-face 
+@font-face {
     font-family: AvenirLight
     src: url("AvenirLTStd-Light.otf") format("opentype")
+}
 
-@font-face 
+@font-face {
     font-family: AvenirBook
     src: url("AvenirLTStd-Book.otf") format("opentype")
+}
 
-@font-face 
+@font-face  {
     font-family: AvenirMedium
     src: url("AvenirLTStd-Medium.otf") format("opentype")
+}
 
-#actions
+#actions {
 	align: center
-	
+}
     
-.field
+.field {
     color: black
-
+}
 
 
 .rating:hover .rating-star:hover,
