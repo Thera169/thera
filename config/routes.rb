@@ -3,13 +3,13 @@ Rails.application.routes.draw do
  # devise_for :users, controllers: { sessions: "users/sessions" }
 
   authenticated :user do
-    root 'users#index'
+    root :to => 'conversations#index', as: :authenticated_root
   end
 
   scope "/admin" do
     resources :users
   end
-  
+
   unauthenticated :user do
     devise_scope :user do
       get "/login" => "devise/sessions#new"
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end
 
   post 'playing' => 'conversations#new'
-  # get 'admin_page' => 'users#admin_page'
+  # get 'admin_page' => 'users#index'
 
   resources :conversations do
     resources :messages

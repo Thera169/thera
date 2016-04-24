@@ -6,7 +6,7 @@ class ConversationsController < ApplicationController
 
   def index
     if current_user.admin?
-      redirect_to admin_page_url
+      redirect_to users_path
     else
       @decorated_conversation = ConversationDecorator.new(current_user)
       @users = User.all
