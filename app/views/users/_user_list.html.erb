@@ -1,5 +1,5 @@
 <h1>Listing Users</h1>
-<%= link_to 'New User', new_user_registration_path %>
+<%= link_to 'New User', new_user_path %>
 <table>
   <thead>
     <tr>
@@ -15,8 +15,8 @@
       <td>Me (<%= current_user.name %>) </td>
       <td><%= current_user.role.name %></td>
       <td><%= current_user.email %></td>
-      <td><%= button_to 'Edit', edit_user_registration_path(current_user), :method => :get%></td>
-      <td><%= button_to 'Destroy', cancel_user_registration_path(current_user), method: :delete, data: { confirm: "Are you sure?" }  %></td> 
+      <td><%= button_to 'Edit', edit_user_path(current_user), :method => :get%></td>
+      <td><%= button_to 'Destroy', current_user, method: :delete, data: { confirm: "Are you sure?" }  %></td>
     </tr>
     <% @users.each do |user| %>
       <% if user != current_user %>
@@ -24,8 +24,8 @@
           <td><%= user.name %></td>
           <td><%= user.email %></td>
           <td><%= user.role.name %></td>
-          <td><div class="<%= user.email.gsub(/[^A-Za-z0-9]/,'')%>_edit"><%= button_to 'Edit', edit_user_registration_path(user), :method => :get %></div></td>
-          <td><div class="<%= user.email.gsub(/[^A-Za-z0-9]/,'')%>_destroy"><%= button_to 'Destroy', user_registration_path(user), method: :delete, data: { confirm: "Are you sure?" }   %></div></td>
+          <td><div class="<%= user.email.gsub(/[^A-Za-z0-9]/,'')%>_edit"><%= button_to 'Edit', edit_user_path(user), :method => :get %></div></td>
+          <td><div class="<%= user.email.gsub(/[^A-Za-z0-9]/,'')%>_destroy"><%= button_to 'Destroy', user_path(user), method: :delete, data: { confirm: "Are you sure?" }   %></div></td>
         </tr>
       <% end %>
     <% end %>
