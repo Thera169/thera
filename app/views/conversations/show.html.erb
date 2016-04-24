@@ -9,7 +9,19 @@
           <i class="fa fa-comments"></i>
 
           <h1>
-            <%= @reciever.name %> 
+          <div class="container">
+            <div class="row">
+              <div class="col-md-1">
+                <%= @reciever.name %>
+              </div>
+              <div class="col-md-11">
+                <span class="pull-right">
+                <%= render 'devise/menu/login_items' %>
+                <%= yield %>
+                </span>
+              </div>
+            </div>
+          </div>
           </h1>
         </div>
         <div class="chatboxoptions">

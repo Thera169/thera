@@ -9,7 +9,7 @@ $( document ).ready(function() {
 		var rating = rating_1.add(rating_2).add(rating_3).add(rating_4).add(rating_5)
 		//Wrappers for all fields
 		var comment_area = $('#rating_form textarea[name="comment_name"]').parent();
-		var save_conv_area = $('#rating_form input:checkbox[name="save_conversation"]').parent();
+		var save_conv_area = $('#rating_form input:radio[name="save_conversation"]').parent();
 		var all=comment_area.add(save_conv_area);
 		rating.change(function(){
 			// var value=this.value;						

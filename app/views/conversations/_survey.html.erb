@@ -2,26 +2,32 @@
         <div class="container-fluid">
             <div class="row">
                 <form id="rating_form" action="/conversations/<%=@conversation.id%>/surveys" method="post">
+                    <% if flash[:notice] %>
+                        <div class="notice"><%= flash[:notice] %></div>
+                    <% end %>
+                    <% if flash[:error] %>
+                        <div class="error"><%= flash[:error] %></div>
+                    <% end %>
                     <span class="rating">
-
+                        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                         <input type="radio" class="rating-input"
-                    id="rating-input-1-5" name="rating-input-1"/>
+                    id="rating-input-1-5" name="rating-input-1" value="5"/>
                         <label for="rating-input-1-5" class="rating-star"></label>
                         
                         <input type="radio" class="rating-input"
-                                id="rating-input-1-4" name="rating-input-1"/>
+                                id="rating-input-1-4" name="rating-input-1" value="4"/>
                         <label for="rating-input-1-4" class="rating-star"></label>
                         
                         <input type="radio" class="rating-input"
-                                id="rating-input-1-3" name="rating-input-1"/>
+                                id="rating-input-1-3" name="rating-input-1" value="3"/>
                         <label for="rating-input-1-3" class="rating-star"></label>
                         
                         <input type="radio" class="rating-input"
-                                id="rating-input-1-2" name="rating-input-1"/>
+                                id="rating-input-1-2" name="rating-input-1" value="2"/>
                         <label for="rating-input-1-2" class="rating-star"></label>
                         
                         <input type="radio" class="rating-input"
-                                id="rating-input-1-1" name="rating-input-1"/>
+                                id="rating-input-1-1" name="rating-input-1" value="1"/>
                         <label for="rating-input-1-1" class="rating-star"></label>
 
                     </span>
@@ -35,8 +41,8 @@
                         <label class="control-label small" for="save_conversation">
                         Because of your low rating, may we temporarily save and anonymously review your conversation so as to ensure we may prevent this in the future?
                         </label>
-                        <input type="checkbox" name="save_conversation" value="save_confirm">Yes
-                        <input type="checkbox" name="save_conversation" value="save_deny">No
+                        <input type="radio" name="save_conversation" value="yes">Yes
+                        <input type="radio" name="save_conversation" value="no">No
                     </div>
                     <button class="btn btn-primary " name="submit" type="submit">
                     Submit
