@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :avatarize, only: [:index]
+  # before_action :avatarize, only: [:index]
   before_action :authenticate_user!
   #load_and_authorize_resource
 
@@ -18,7 +18,9 @@ class UsersController < ApplicationController
   #   binding.pry
   # end
 
-  def avatarize
+  def admin_page
+    @conversations = Conversation.all()
+    @users = User.all()
     # dont add 
     # @user = current_user
     # if current_user.sign_in_count == 1 && current_user.avatar.nil?

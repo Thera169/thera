@@ -5,8 +5,12 @@ class ConversationsController < ApplicationController
   # layout false
 
   def index
-    @decorated_conversation = ConversationDecorator.new(current_user)
-    @users = User.all
+    if current_user.admin?
+      redirect_to admin_page_url
+    else
+      @decorated_conversation = ConversationDecorator.new(current_user)
+      @users = User.all
+    end
   end
 
   def create

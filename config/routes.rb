@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   end
 
   post 'playing' => 'conversations#new'
-  
+  get 'admin_page' => 'users#admin_page'
   resources :conversations do
     resources :messages
     resources :surveys

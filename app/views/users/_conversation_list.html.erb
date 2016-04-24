@@ -1,0 +1,37 @@
+<head>
+  <title>Thera</title>
+  <!--Font-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='../assets/stylesheets/conversations/index.css'>
+  <!-- Bootstrap: Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <!-- Bootstrap: Latest compiled and minified JavaScript -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <h1>Thera</h1>
+  <table id="existing_conversation_table">
+    <thead>
+      <tr>
+        <th>Conversation</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @conversations.each do |conversation| %>
+        <% if can? :update, conversation %> 
+        <tr>
+          <td><%= link_to "Conversation #{conversation.id}", edit_conversation_path(conversation) %></td>
+          <td><%= link_to 'Destroy', conversation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  
+  
+  <!--hide back button bc we don't need it yet-->
+  <!--<%= link_to 'Back', conversations_path %>-->
+</body>
