@@ -7,7 +7,9 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    @conversations = Conversation.all
+    @surveys = Survey.where("rating < ?", 3)
+    puts "Pooooopooop"
+    puts @surveys
     authorize! :read, @users
   end
 

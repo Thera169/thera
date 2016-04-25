@@ -1,6 +1,14 @@
-<h1>Listing Users</h1>
+<div>
+<span class="pull-right">
+  <%= render 'devise/menu/login_items' %>
+</span>
+</div>
+
+<h1> Admin Dashboard </h1>
 <p id = "notice"> <%= notice %> </p> 
-<%= link_to 'Add a new Volunteer or Admin', new_user_path %>
+<h2><%= link_to 'Add a new Volunteer or Admin', new_user_path %> </h2>
+
+<h2>Listing Users</h2>
 <table>
   <thead>
     <tr>
@@ -33,6 +41,34 @@
   </tbody>
 </table>
 
-<br>
+<h2>Bad Conversations</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Rating</th>
+      <th>Volunteer</th>
+      <th>Feedback</th>
+      <th>Conversation</th>
+      <th>Date</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id="conversation_list">
+
+    <% @surveys.each do |survey| %>
+        <tr>
+          <td><%= survey.rating %></td>
+          <td><%= survey.conversation.recipient.name %>
+          <td><%= survey.text %></td>
+          <td><%= link_to 'View Conversation', conversation_messages_path(survey.conversation) %>
+          <td><%= survey.updated_at %></td>          
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
 
 
