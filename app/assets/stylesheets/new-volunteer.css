@@ -1,0 +1,26 @@
+#new_volunteer_admin_text {
+
+}
+
+#new_form {
+	padding-top: 1.5em;
+	text-align: center;
+}
+
+.actions {
+	padding: 10px;
+	text-align: center;
+	color: black;
+	font-size: 1.1em;
+}
+
+.field {
+	color: black;
+	font-size: 1.1em;
+	padding-bottom: 10px;
+}
+
+#back_text {
+	color: blue;
+	font-size: 1.1em;
+}

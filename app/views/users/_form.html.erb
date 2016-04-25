@@ -13,16 +13,17 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, autofocus: true %>
   </div>
 
   <% if can? :manage, :all %>
-  <div class="field">
-    <%= f.label :role_id %><br>
+  <div class="field center-block">
+    <%= f.label :role_id %>
+    <br>
 
     <%= f.radio_button(:role_id, "Admin", checked: true) %>
     <%= label_tag(:role_id_admin, "Admin") %>
-    <br>
+
     <%= f.radio_button(:role_id, "Volunteer") %>
     <%= label_tag(:role_id_admin, "Volunteer") %>
 
@@ -37,7 +38,7 @@
     <%= f.label :password, "New password" %><br />
     (Must be at least 8 characters long.)
     <br>
-    <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">

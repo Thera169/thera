@@ -1,0 +1,55 @@
+#list_users {
+
+	margin-left: 1em;
+}
+
+table {
+	color: black;
+    margin: 0 auto;
+    border-collapse:collapse;
+}
+
+th, td {
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+#bad_conversation {
+	color: black;
+	text-align: center;
+}
+
+#user_table {
+	padding-top: 2em;
+	padding-bottom: 1.5em;
+}
+
+#add_user {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#add_user_text {
+	color: blue;
+	font-size: 1.1em;
+}
+
+#logout_div {
+	padding-top: 1.5em;
+}
+
+#logout_link {
+	color: black;
+}
+
+#user_listing {
+	text-align: center;
+	color: black;
+}
+
+#login_button {
+	width: 20%;
+	border: none;
+}
+
+

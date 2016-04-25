@@ -1,15 +1,16 @@
+<div class="alert alert-info col-md-9 center-block">
 <div>
 <span class="pull-right">
   <%= render 'devise/menu/login_items' %>
 </span>
 </div>
 
-<h1> Admin Dashboard </h1>
-<p id = "notice"> <%= notice %> </p> 
-<h2><%= link_to 'Add a new Volunteer or Admin', new_user_path %> </h2>
+<h1 id="list_users"> Admin Dashboard </h1>
+<p id="notice"> <%= notice %> </p> 
+<h3 id="add_user"><%= link_to 'Add a new Volunteer', new_user_path, :id => "add_user_text" %> </h3>
 
-<h2>Listing Users</h2>
-<table>
+<h3 id="user_listing">User Listing</h3>
+<table id="user_table">
   <thead>
     <tr>
       <th>Name</th>
@@ -22,8 +23,8 @@
   <tbody id="user_list">
     <tr>
       <td>Me (<%= current_user.name %>) </td>
-      <td><%= current_user.role.name %></td>
       <td><%= current_user.email %></td>
+      <td><%= current_user.role.name %></td>
       <td><%= button_to 'Edit', edit_user_path(current_user), :method => :get%></td>
       <td><%= button_to 'Destroy', current_user, method: :delete, data: { confirm: "Are you sure?" }  %></td>
     </tr>
@@ -41,7 +42,7 @@
   </tbody>
 </table>
 
-<h2>Bad Conversations</h2>
+<h3 id="bad_conversation">Bad Conversations</h3>
 <table>
   <thead>
     <tr>
@@ -68,6 +69,7 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 
 
