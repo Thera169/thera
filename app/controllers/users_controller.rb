@@ -52,10 +52,10 @@ class UsersController < ApplicationController
     end
     @user = User.admin_make_user(args)
     respond_to do |format|
-      if @user
+      if !@user.errors.any? #if no errors, proceed
         format.html { redirect_to users_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
-      else
+      else 
         format.html { render :new }
       end
     end

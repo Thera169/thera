@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_confirmation_of :password
   before_save :assign_role
-  
+
   # after_create :add_avatar
 
   # def add_avatar
@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
 
   def self.admin_make_user(args)
     role = User.get_role(args[:role_id])
-    return User.create!(:name => args[:name], :role_id => role.id, :email => args[:email], :password => args[:password], :password_confirmation => args[:password_confirmation])
+    return User.create(:name => args[:name], :role_id => role.id, :email => args[:email], :password => args[:password], :password_confirmation => args[:password_confirmation])
   end
 
   def self.get_role(name)

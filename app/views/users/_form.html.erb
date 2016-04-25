@@ -19,7 +19,13 @@
   <% if can? :manage, :all %>
   <div class="field">
     <%= f.label :role_id %><br>
-    <%= f.text_field :role_id, placeholder: "Admin or Volunteer" %>
+
+    <%= f.radio_button(:role_id, "Admin", checked: true) %>
+    <%= label_tag(:role_id_admin, "Admin") %>
+    <br>
+    <%= f.radio_button(:role_id, "Volunteer") %>
+    <%= label_tag(:role_id_admin, "Volunteer") %>
+
   </div>
   <% end %>
 
@@ -29,9 +35,8 @@
   </div>
  <div class="field">
     <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
-    <% end %>
+    (Must be at least 8 characters long.)
+    <br>
     <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
   </div>
 

@@ -1,5 +1,6 @@
 <h1>Listing Users</h1>
-<%= link_to 'Add a new Volunteer', new_user_path %>
+<p id = "notice"> <%= notice %> </p> 
+<%= link_to 'Add a new Volunteer or Admin', new_user_path %>
 <table>
   <thead>
     <tr>
@@ -9,7 +10,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
 
   <tbody id="user_list">
     <tr>
