@@ -10,10 +10,10 @@ r1 = Role.create({name: "Survivor", description: "Can create converstations and 
 r2 = Role.create({name: "Volunteer", description: "Can create messages and read any conversations"})
 r3 = Role.create({name: "Admin", description: "Can perform any CRUD operation on any resource"})
 
-u1 = User.create({name: "Sally", email: "sally@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r1.id})
-u2 = User.create({name: "Sue", email: "sue@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r2.id})
-u3 = User.create({name: "Kev", email: "kev@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r2.id})
-u4 = User.create({name: "Jack", email: "jack@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r3.id})
+u1 = User.create({name: "Sally", email: "sally@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r1.id, online: true})
+u2 = User.create({name: "Sue", email: "sue@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r2.id, online: true})
+u3 = User.create({name: "Kev", email: "kev@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r2.id, online: true})
+u4 = User.create({name: "Jack", email: "jack@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r3.id, online: true})
 
 # initialize a bad conversation between Survivor Sally and Volunteer Kev for development purposes (see admin dashboard UI)
 c1 = Conversation.create({sender_id: u1.id, recipient_id: u3.id})
