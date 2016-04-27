@@ -1,77 +1,104 @@
-<div style="width: 100%; display: table;">
-  <div style="display: table-row">
+<!-- <div> -->
+  
+
+  <!-- <div style="display: table-row"> -->
+    
+
     <% if current_user and can? :manage, current_user %>
-      <%= render  'conversations' %>
+      <div id="volunteer-sidebar">
+        <%= render  'conversations' %>
+      </div>
     <% end %>
-    <div class="conversation col-md-offset-1" style="display: table-cell;">
+    
+
+
+    <div class="conversation" id="conversation-container">
       <div class="chatboxhead">
         <div class="chatboxtitle">
+
           <i class="fa fa-comments"></i>
 
           <h1>
+          
           <div class="container">
             <div class="row">
-              <div class="col-md-1">
+              
+              <div class="col-md" id="receiver-name">
                 <%= @reciever.name %>
               </div>
+              
               <% if current_user and can? :manage, current_user %>
-              <div class="col-md-10">
-                <span class="pull-right">
-                <%= render 'devise/menu/login_items' %>
-                <%= yield %>
-                </span>
-              </div>
+                <div class="">
+                  <span class="pull-left">
+                    <%= render 'devise/menu/login_items' %>
+                    <%= yield %>
+                  </span>
+                </div>
+
               <%- else %>
-              <div class="col-md-11">
-                <span class="pull-right">
-                <%= render 'devise/menu/login_items' %>
-                <%= yield %>
-                </span>
-              </div>
+                <div class="">
+                  <span class="pull-right" id="survivor-logout">
+                    <%= render 'devise/menu/login_items' %>
+                    <%= yield %>
+                  </span>
+                </div>
               <%- end %>
             </div>
           </div>
+
           </h1>
+
         </div>
-        <div class="chatboxoptions">
+
+        <!-- <div class="chatboxoptions">
+
           <%= link_to "<i class='fa  fa-minus'></i> ".html_safe, "#", class: "toggleChatBox", "data-cid" => @conversation.id %>
           &nbsp;&nbsp;
           <%= link_to "<i class='fa  fa-times'></i> ".html_safe, "#", class: "closeChat", "data-cid" => @conversation.id %>
-        </div>
+        </div> -->
+        
         <br clear="all"/>
       </div>
-      <div class="row">
-
-        <div class="feedback_box col-md-3">
+      
+      <div class="row" id="chat-container">
+          
           <%- if current_user.survivor? %>
-            <p>Rate your conversation here:</p>
-            <%= render 'survey' %>
-            <%- else %>
+            <div class="col-md-3" id="survey-text">
+              <p>Rate your conversation here</p>
+              <%= render 'survey' %>
+            </div>
+            <div class="chatboxcontent col-md-9">
+              <% if @messages.any? %>
+                  <%= render @messages %>
+              <% end %>
+            </div>
+          <%- else %>
             <!-- Based Luis --> 
-            <div class = "" > </div>
+
+            <div class="chatboxcontent col-md-9">
+              <% if @messages.any? %>
+                  <%= render @messages %>
+              <% end %>
+            </div>
+          
           <%- end %> 
-        </div>
-        <div class="chatboxcontent col-md-9">
-          <% if @messages.any? %>
-              <%= render @messages %>
-          <% end %>
-        </div>
+
       </div>
+
       <div class="chatboxinput">
         <%= form_for([@conversation, @message], :remote => true, :html => {id: "conversation_form_#{@conversation.id}"}) do |f| %>
             <%= f.text_field :body, class: "chatboxtextarea", "data-cid" => @conversation.id %>
             <div class="chat-form-btns">
-            <%= f.submit "send", class: "btn btn-primary btn-sm btn-submit"%>
+            <%= f.submit "Send", class: "btn btn-primary btn-sm", id: "send_button" %>
             </div>
 
         <% end %>
-
       </div>
       
     </div>
 
-  </div>
-</div>
+  <!-- </div> -->
+<!-- </div> -->
 
 <%= subscribe_to conversation_path(@conversation) %>
 

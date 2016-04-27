@@ -1,6 +1,6 @@
 
-<div class="col " style="width: 600px; display: table-cell;">
-  <table class="table table-info games-table">
+<div id="sidebar">
+  <table class="table games-table" id="volunteer-table">
     <tbody>
 
       <% @users.each do |user| %>
@@ -9,7 +9,7 @@
         <td id="new-messages-<%= user.id %>"><%= availability(user) %></td>
         <td id="new-messages-name-<%= user.id %>" ><%= user.name %></td>
         <td class="start-btn-table">
-          <%= button_to "View!", conversations_path(:recipient_id => user.id, :sender_id => current_user.id), class: "btn btn-success btn-xs start-conversation"%>
+          <%= button_to "View", conversations_path(:recipient_id => user.id, :sender_id => current_user.id), class: "btn btn-success btn-xs start-conversation"%>
         </td id="new-message-content-<%= user.id %>">
         <td> 
         </td>
@@ -20,14 +20,15 @@
     </tbody>
   </table>
 </div>
-<script type="text/javascript">
-</script>
-<script type="text/javascript">
-  channel = <%= raw ('"' + '/notifications/' + current_user.id.to_s + '"') %>
-  PrivatePub.subscribe(channel, function(data, channel) {
-    console.log(data)
-    $('#new-messages-'+ data.sender_id).html("<div class='blink'></div>");
-    $("#new-messages-name-"+ data.sender_id).addClass("bold-name")
-  });
-</script>
+
+<div id="chat">
+  <script type="text/javascript">
+    channel = <%= raw ('"' + '/notifications/' + current_user.id.to_s + '"') %>
+    PrivatePub.subscribe(channel, function(data, channel) {
+      console.log(data)
+      $('#new-messages-'+ data.sender_id).html("<div class='blink'></div>");
+      $("#new-messages-name-"+ data.sender_id).addClass("bold-name")
+    });
+  </script>
+</div>
 <%= subscribe_to "/notifications/" + current_user.id.to_s %>

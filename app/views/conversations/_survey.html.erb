@@ -8,7 +8,7 @@
                     <% if flash[:error] %>
                         <div class="error"><%= flash[:error] %></div>
                     <% end %>
-                    <span class="rating">
+                    <span class="rating" id="star-ratings">
                         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
                         <input type="radio" class="rating-input"
                     id="rating-input-1-5" name="rating-input-1" value="5"/>
@@ -35,7 +35,12 @@
                         <label class="control-label small" for="rating_selected">
                         Please enter any comments you'd like to add about your conversation:
                         </label>
-                        <textarea class="form-control" cols="10" id="rating_comment" name="comment_name" rows="5"></textarea>
+                        <textarea class="form-control" id="rating_comment" name="comment_name" rows="5"></textarea>
+                        <div>
+                            <button class="btn btn-primary " name="submit" type="submit">
+                                Submit
+                            </button>
+                        </div>
                     </div>
                     <div class="form-group hidden" id="save_conversation_id">
                         <label class="control-label small" for="save_conversation">
@@ -44,9 +49,8 @@
                         <input type="radio" name="save_conversation" value="yes">Yes
                         <input type="radio" name="save_conversation" value="no">No
                     </div>
-                    <button class="btn btn-primary " name="submit" type="submit">
-                    Submit
-                    </button>
+
+                    
                 </form>
             </div>
         </div>

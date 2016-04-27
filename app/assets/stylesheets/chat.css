@@ -1,3 +1,14 @@
+#survivor-logout {
+    margin-top: 0.5em;
+    font-size: 20px;
+}
+
+#receiver-name {
+    margin-top: 1%;
+    margin-bottom: -3%;
+    font-size: 25px;
+}
+
 .chatbox {
     position: fixed;
     position: expression("absolute");
@@ -6,19 +17,17 @@
 }
  
 .chatboxhead {
-    background: #666;
+    background: #6F6F6F;
     color: white;
-    padding: 0.5rem;
     overflow: hidden;
- 
-    border-right: 1px solid rgba(85, 85, 85, 0.87);
-    border-left: 1px solid rgba(85, 85, 85, 0.87);
+    /*border-right: 1px solid rgba(85, 85, 85, 0.87);
+    border-left: 1px solid rgba(85, 85, 85, 0.87);*/
 }
  
 .chatboxhead h1 {
     display: inline;
-    font-size: 17px;
-    font-weight: 700;
+    font-size: 1.5em;
+    /*font-weight: 700;*/
 }
  
 .chatboxblink {
@@ -29,17 +38,17 @@
  
 .chatboxcontent {
     /*font-family: arial, sans-serif;*/
-      font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-    height: 320px;
-    /*width: 280px;*/
+    height: 480px;
+    /*width: 100%;*/
     overflow-y: auto;
-    padding: 7px;
+    padding: 10px;
     border-left: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
     border-bottom: 1px solid #eeeeee;
-    background: #e5e5e5;
-    line-height: 1.3em;
+    background: white;
+    line-height: 1em;
     list-style: none;
 }
  
@@ -59,7 +68,7 @@
     width: 100%;
 }
  
-.other .avatar:after {
+/*.other .avatar:after {
     content: "";
     position: absolute;
     top: 0;
@@ -69,7 +78,7 @@
     border: 5px solid white;
     border-left-color: transparent;
     border-bottom-color: transparent;
-}
+}*/
  
 .self {
     justify-content: flex-end;
@@ -80,7 +89,7 @@
     order: 1;
     border-bottom-right-radius: 0;
     width: 45%;
-    height: 75px;
+    height: 100%;
 }
  
 .self .avatar {
@@ -101,7 +110,7 @@
 }
  
 .chatboxmessagecontent {
-    background: white;
+    background: #e5e5e5;
     padding: 10px;
     border-radius: 2px;
     padding-bottom: 10px;
@@ -125,7 +134,7 @@
  
 .chatboxmessagecontent time {
     font-size: 9px;
-    color: #ccc;
+    color: #6F6F6F;
 }
  
 .chatboxinput {
@@ -173,5 +182,5 @@
 }
  
 .chatboxtitle {
-    float: left;
+
 }

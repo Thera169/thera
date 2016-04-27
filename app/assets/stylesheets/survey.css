@@ -1,3 +1,17 @@
+#star-ratings {
+    margin-left: 5%;
+
+}
+
+#survey-text {
+    text-align: center;
+    padding: 10px;
+}
+
+#comment_section {
+    padding-left: 5%;
+}
+
 .rating {
     overflow: hidden;
     display: inline-block;
@@ -28,6 +42,6 @@
 }
 
 /* Just for the demo */
-body {
+/*body {
     margin: 20px;
-}
+}*/

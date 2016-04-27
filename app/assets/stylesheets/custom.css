@@ -26,8 +26,9 @@ body {
 }
 
 .conversation {
-  margin-left: 150px;
+  /*margin-left: 150px;*/
   width: 75%;
+  /*display: inline;*/
 }
 
 .btn-submit {
@@ -36,8 +37,7 @@ body {
 }
 
 .chat-form-btns {
-  margin-left: 83%;
-
+  margin-top: 5px;
 }
 
 #circle-logged-on {
@@ -47,6 +47,7 @@ body {
     -moz-border-radius: 25px;
     border-radius: 25px;
     background-color: #FFCC00; 
+
 }
 
 #circle-available {
@@ -99,18 +100,11 @@ body {
 }
 
 .games-table {
-  border-radius: 5px;
   background-color: white;
-  border-bottom: 1px;
-  margin-top: 40px; 
 }
 
 .bold-name {
   font-weight: bold;
 }
-
-
-
-
 
 
