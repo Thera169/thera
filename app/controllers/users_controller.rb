@@ -8,8 +8,6 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @surveys = Survey.where("rating < ?", 3)
-    puts "Pooooopooop"
-    puts @surveys
     authorize! :read, @users
   end
 

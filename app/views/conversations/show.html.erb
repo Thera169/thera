@@ -34,8 +34,13 @@
       <div class="row">
 
         <div class="feedback_box col-md-3">
-        <p>Rate your conversation here:</p>
-        <%= render 'survey' %>
+          <%- if current_user.survivor? %>
+            <p>Rate your conversation here:</p>
+            <%= render 'survey' %>
+            <%- else %>
+            <!-- Based Luis --> 
+            <div class = "" > </div>
+          <%- end %> 
         </div>
         <div class="chatboxcontent col-md-9">
           <% if @messages.any? %>

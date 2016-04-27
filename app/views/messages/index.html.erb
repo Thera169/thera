@@ -14,11 +14,16 @@ Volunteer: <%= @conversation.recipient.name %>
   </thead>
 
   <tbody>
-    <% @messages.each do |message| %>
-      <tr>
-        <td><%= message.user.name %> said:</td>
-        <td><%= message.body %></td>
-      </tr>
+    <% if @messages.any? %>
+      <% @messages.each do |message| %>
+        <tr>
+          <td><%= message.user.name %> said:</td>
+          <td><%= message.body %></td>
+        </tr>
+      <% end %>
+    <% else %>
+    <br>
+      There are no messages for this conversation.
     <% end %>
   </tbody>
 </table>
