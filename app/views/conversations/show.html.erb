@@ -14,12 +14,21 @@
               <div class="col-md-1">
                 <%= @reciever.name %>
               </div>
+              <% if current_user and can? :manage, current_user %>
+              <div class="col-md-10">
+                <span class="pull-right">
+                <%= render 'devise/menu/login_items' %>
+                <%= yield %>
+                </span>
+              </div>
+              <%- else %>
               <div class="col-md-11">
                 <span class="pull-right">
                 <%= render 'devise/menu/login_items' %>
                 <%= yield %>
                 </span>
               </div>
+              <%- end %>
             </div>
           </div>
           </h1>
