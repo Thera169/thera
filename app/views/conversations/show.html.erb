@@ -1,101 +1,163 @@
 <!-- <div> -->
   
 
-  <!-- <div style="display: table-row"> -->
+  <!-- <div> -->
     
 
     <% if current_user and can? :manage, current_user %>
-      <div id="volunteer-sidebar">
-        <%= render  'conversations' %>
-      </div>
-    <% end %>
-    
-
-
-    <div class="conversation" id="conversation-container">
-      <div class="chatboxhead">
-        <div class="chatboxtitle">
-
-          <i class="fa fa-comments"></i>
-
-          <h1>
-          
-          <div class="container">
-            <div class="row">
-              
-              <div class="col-md" id="receiver-name">
-                <%= @reciever.name %>
-              </div>
-              
-              <% if current_user and can? :manage, current_user %>
-                <div class="">
-                  <span class="pull-left">
-                    <%= render 'devise/menu/login_items' %>
-                    <%= yield %>
-                  </span>
-                </div>
-
-              <%- else %>
-                <div class="">
-                  <span class="pull-right" id="survivor-logout">
-                    <%= render 'devise/menu/login_items' %>
-                    <%= yield %>
-                  </span>
-                </div>
-              <%- end %>
-            </div>
-          </div>
-
-          </h1>
-
+      <div class="alert alert-info col-md-2 text-center" id="volunteer-sidebar">
+        
+        <h3 style="color: black; margin-top: -5%; padding: 5px;">Chats</h3>
+        <div>
+          <%= render 'conversations' %>
         </div>
 
-        <!-- <div class="chatboxoptions">
+        <span>
+          <%= render 'devise/menu/login_items' %>
+          <%= yield %>
+        </span>
+      </div>
+    <% end %>
 
-          <%= link_to "<i class='fa  fa-minus'></i> ".html_safe, "#", class: "toggleChatBox", "data-cid" => @conversation.id %>
-          &nbsp;&nbsp;
-          <%= link_to "<i class='fa  fa-times'></i> ".html_safe, "#", class: "closeChat", "data-cid" => @conversation.id %>
-        </div> -->
+
+    <%- if current_user.survivor? %>
+
+      <div class="conversation" id="conversation-container-survivor">
+        <div class="chatboxhead">
+          <div class="chatboxtitle">
+
+            <i class="fa fa-comments"></i>
+
+            <h1>
+            
+            <div class="container">
+              <div>
+                
+                <div id="receiver-name">
+                  <%= @reciever.name %>
+                </div>
+                
+                <% if current_user and can? :manage, current_user %>
+                  <div>
+                    <span class="pull-left">
+                      <%= render 'devise/menu/login_items' %>
+                      <%= yield %>
+                    </span>
+                  </div>
+
+                <%- else %>
+                  <div class="">
+                    <span class="pull-right" id="survivor-logout">
+                      <%= render 'devise/menu/login_items' %>
+                      <%= yield %>
+                    </span>
+                  </div>
+                <%- end %>
+              </div>
+            </div>
+
+            </h1>
+
+          </div>
+
+          <!-- <div class="chatboxoptions">
+
+            <%= link_to "<i class='fa  fa-minus'></i> ".html_safe, "#", class: "toggleChatBox", "data-cid" => @conversation.id %>
+            &nbsp;&nbsp;
+            <%= link_to "<i class='fa  fa-times'></i> ".html_safe, "#", class: "closeChat", "data-cid" => @conversation.id %>
+          </div> -->
+          
+          <br clear="all"/>
+        </div>
         
-        <br clear="all"/>
-      </div>
-      
-      <div class="row" id="chat-container">
+
+        <div id="chat-container">
+            
+          <div class="col-md-3" id="survey-text">
+            <p>Rate your conversation here</p>
+            <%= render 'survey' %>
+          </div>
           
-          <%- if current_user.survivor? %>
-            <div class="col-md-3" id="survey-text">
-              <p>Rate your conversation here</p>
-              <%= render 'survey' %>
-            </div>
-            <div class="chatboxcontent col-md-9">
-              <% if @messages.any? %>
-                  <%= render @messages %>
-              <% end %>
-            </div>
-          <%- else %>
-            <!-- Based Luis --> 
+          <div class="chatboxcontent col-md-9">
+            <% if @messages.any? %>
+                <%= render @messages %>
+            <% end %>
+          </div>
+        </div>
 
-            <div class="chatboxcontent col-md-9">
-              <% if @messages.any? %>
-                  <%= render @messages %>
-              <% end %>
+        <div class="chatboxinput">
+          <%= form_for([@conversation, @message], :remote => true, :html => {id: "conversation_form_#{@conversation.id}"}) do |f| %>
+              <%= f.text_field :body, class: "chatboxtextarea", "data-cid" => @conversation.id %>
+              <div class="chat-form-btns">
+              <%= f.submit "Send", class: "btn btn-primary btn-sm", id: "send_button" %>
+              </div>
+
+          <% end %>
+        </div>
+        
+      </div>
+
+    <%- else %>    
+
+      <div class="conversation" id="conversation-container-volunteer">
+        <div class="chatboxhead" id="survivor-text">
+          <div class="chatboxtitle" id="survivor-title">
+
+            <i class="fa fa-comments"></i>
+
+            <h1>
+            
+            <div class="container">
+              <div>
+                
+                <div id="receiver-name-survivor">
+                  <%= @reciever.name %>
+                </div>
+                
+
+                <div>
+                  <!-- <span class="pull-left">
+                    <%= render 'devise/menu/login_items' %>
+                    <%= yield %>
+                  </span> -->
+                </div>
+              </div>
             </div>
+
+            </h1>
+
+          </div>
+
+          <!-- <div class="chatboxoptions">
+
+            <%= link_to "<i class='fa  fa-minus'></i> ".html_safe, "#", class: "toggleChatBox", "data-cid" => @conversation.id %>
+            &nbsp;&nbsp;
+            <%= link_to "<i class='fa  fa-times'></i> ".html_safe, "#", class: "closeChat", "data-cid" => @conversation.id %>
+          </div> -->
           
-          <%- end %> 
+          <br clear="all"/>
+        </div>
+        
+        <div id="chat-container">
+          <div class="chatboxcontent">
+            <% if @messages.any? %>
+                <%= render @messages %>
+            <% end %>
+          </div>
+        </div>
 
+        <div class="chatboxinput">
+          <%= form_for([@conversation, @message], :remote => true, :html => {id: "conversation_form_#{@conversation.id}"}) do |f| %>
+              <%= f.text_field :body, class: "chatboxtextarea", "data-cid" => @conversation.id %>
+              <div class="chat-form-btns">
+              <%= f.submit "Send", class: "btn btn-primary btn-sm", id: "send_button" %>
+              </div>
+
+          <% end %>
+        </div>
+        
       </div>
-
-      <div class="chatboxinput">
-        <%= form_for([@conversation, @message], :remote => true, :html => {id: "conversation_form_#{@conversation.id}"}) do |f| %>
-            <%= f.text_field :body, class: "chatboxtextarea", "data-cid" => @conversation.id %>
-            <div class="chat-form-btns">
-            <%= f.submit "Send", class: "btn btn-primary btn-sm", id: "send_button" %>
-            </div>
-
-        <% end %>
-      </div>
-      
-    </div>
+    <%- end %> 
 
   <!-- </div> -->
 <!-- </div> -->

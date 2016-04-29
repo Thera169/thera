@@ -3,18 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #volunteer-sidebar {
-	width: 25%;
-    height: 100%;
+	margin: 10px;
     float: left;
 }
 
-#conversation-container {
+#conversation-container-survivor {
+	padding: 10px;
 	position: absolute;
 	width: 100%;
 	float: right;
 	display: inline;
 }
 
+#conversation-container-volunteer {
+	padding: 10px;
+	position: absolute;
+	width: 80%;
+	float: right;
+	display: inline;
+}
+
+
 #send_button {
 	color: white;
 }
+
+

@@ -9,6 +9,13 @@
     font-size: 25px;
 }
 
+#receiver-name-survivor {
+    margin-top: 1%;
+    margin-bottom: -3%;
+    margin-right: 12%;
+    font-size: 25px;
+}
+
 .chatbox {
     position: fixed;
     position: expression("absolute");
@@ -22,6 +29,10 @@
     overflow: hidden;
     /*border-right: 1px solid rgba(85, 85, 85, 0.87);
     border-left: 1px solid rgba(85, 85, 85, 0.87);*/
+}
+
+#survivor-title {
+    margin-bottom: 25px;
 }
  
 .chatboxhead h1 {
@@ -138,11 +149,11 @@
 }
  
 .chatboxinput {
-    padding: 5px;
+    padding: 10px;
     background-color: #ffffff;
-    border-left: 1px solid #cccccc;
-    border-right: 1px solid #cccccc;
-    border-bottom: 1px solid #cccccc;
+    /*border-left: 1px solid #cccccc;*/
+    /*border-right: 1px solid #cccccc;*/
+    /*border-bottom: 1px solid #cccccc;*/
 }
  
 .chatboxtextarea {
