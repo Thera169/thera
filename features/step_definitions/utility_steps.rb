@@ -51,9 +51,9 @@ Given /^I type a message saying "([^"].*)"$/ do |msg|
 end
 
 Given /^an admin exists with email "([^"].*)" and password "([^"].*)" and name "([^"].*)"$/ do |mail, pass, user|
-    if User.exists?(email: mail, role_id: 3)
-            User.where(email: mail).destroy!
-    end
+    # if User.exists?(email: mail, role_id: 3)
+    #         User.where(email: mail).destroy!
+    # end
     User.create!(:name => user, :role_id => 3, :email => mail, :password => pass)
 end
 
