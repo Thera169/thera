@@ -61,9 +61,17 @@
     <% @surveys.each do |survey| %>
         <tr>
           <td><%= survey.rating %></td>
-          <td><%= survey.conversation.recipient.name %>
+          <% if !survey.conversation.nil? and !survey.conversation.recipient.nil? %> 
+          <td><%= survey.conversation.recipient.name %></td>
+          <% else %>
+          <td>No conversation recipient found</td>
+          <% end %>
           <td><%= survey.text %></td>
-          <td><%= link_to 'View Conversation', conversation_messages_path(survey.conversation) %>
+          <% if !survey.conversation.nil? %> 
+          <td><%= link_to 'View Conversation', conversation_messages_path(survey.conversation) %></td>
+          <% else %>
+          <td>No conversation link found</td>
+          <% end %>
           <td><%= survey.updated_at %></td>          
         </tr>
     <% end %>

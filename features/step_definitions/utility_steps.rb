@@ -58,14 +58,17 @@ Given /^an admin exists with email "([^"].*)" and password "([^"].*)" and name "
     # if User.exists?(email: mail, role_id: 3)
     #         User.where(email: mail).destroy!
     # end
-    User.create!(:name => user, :role_id => 3, :email => mail, :password => pass)
+    role=Role.where(name: "Admin").first
+    User.create!(:name => user, :role_id => role.id, :email => mail, :password => pass)
+    puts Role.all.length()
 end
 
 Given /^a volunteer exists with email "([^"].*)" and password "([^"].*)" and name "([^"].*)"$/ do |mail, pass, user|
     # if User.exists?(email: mail, role_id: 2)
     #     User.where(email: mail).destroy!
     # end
-    User.create!(:name => user, :role_id => 2, :email => mail, :password => pass)
+    role=Role.where(name: "Volunteer").first
+    User.create!(:name => user, :role_id => role.id, :email => mail, :password => pass)
 end
 
 Given /^all roles exist$/ do

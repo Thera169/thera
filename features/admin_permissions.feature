@@ -15,7 +15,7 @@ Scenario: Manage Volunteers
   
 Scenario: Volunteer Cannot Manage Volunteers
   Given all roles exist  
-  And an admin exists with email "testVolunteerEmail@test.com" and password "12345678" and name "John"
+  And a volunteer exists with email "testVolunteerEmail@test.com" and password "12345678" and name "John"
   And I am on the login page
   And I fill in "Email" with "testVolunteerEmail@test.com"
   And I fill in "Password" with "12345678"
@@ -24,9 +24,13 @@ Scenario: Volunteer Cannot Manage Volunteers
   
 Scenario: Admin Creates a Volunteer
   Given all roles exist  
-  And an admin exists with email "testVolunteerEmail@test.com" and password "12345678" and name "John"
+  And an admin exists with email "testAdminEmail2@test.com" and password "12345678" and name "John"
+  And a volunteer exists with email "testVolunteer2Email@test.com" and password "12345678" and name "Sue"
   And I am on the login page
-  And a conversation exists with conversation "Conversation 1" # need to fix
-  And I press "Destroy" # need to fix to find right destroy
-  Then I should be on the login page
-  And I should not see "Conversation 1"
+  And I fill in "Email" with "testAdminEmail2@test.com"
+  And I fill in "Password" with "12345678"
+  And I press "Log in"
+  Then I should see "Sue"
+  When I delete the user with the email "testVolunteerEmail2@test.com"
+  Then I should be on the admin page
+  And I should not see "Sue"
