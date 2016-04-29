@@ -3,9 +3,8 @@ Feature: all users
 	So I can get the help I need
 	
 Scenario: Start conversation
-  Given I am logged in as a survivor
+  Given I am not logged in
   And I am on the home page
-  And all roles exist
   When I start a new conversation
   Then I should see "Your chat has started."
 

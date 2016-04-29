@@ -1,3 +1,7 @@
+Given /^I am not logged in$/ do
+    page.driver.submit :delete, '/users/sign_out', {}
+end 
+
 Given /^I am logged in as a[n]? ([a-zA-Z].*)$/ do |role|
     role.downcase!
     if role == "survivor"
@@ -38,7 +42,7 @@ Given /^I start a new conversation$/ do
     }
     test_volunteer = User.create(:name => "test volunteer", :email => "testVolunteerEmail@test.com",
                                     :password => "test1234", :role_id => 2)
-    conv = Conversation.create(:user_id => test_volunteer.id)
+    conv = Conversation.create(:sender_id => test_volunteer.id)
     path_to('the conversation page')
 end
 
