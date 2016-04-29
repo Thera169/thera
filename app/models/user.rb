@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   
   def self.new_survivor
     rand = (0...8).map { (30 + rand(26)).chr }.join 
-    user = User.create(:name => "anon", :role_id => User.get_role("Survivor").id, :email => rand, :password => rand, :password_confirmation => rand)
+    user = User.create(:name => Bazaar.heroku, :role_id => User.get_role("Survivor").id, :email => rand, :password => rand, :password_confirmation => rand)
     return user
   end
   

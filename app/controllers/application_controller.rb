@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = "Access denied to this resource!"
-    redirect_to root_url
+    redirect_to authenticated_root_path
   end
 
   def update_last_seen

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     devise_scope :user do
       get "/login" => "devise/sessions#new"
       get "/" => "welcome#index"
+      post "/new_convo" => "welcome#new_survivor"
     end
   end
 

@@ -13,11 +13,9 @@ class Ability
       can :create, Message
       can :update, Message
     elsif user.survivor?
-      can :read, User, id: user.id
-      can :destroy, User, id: user.id
-      can :manage, Conversation do |conversation|
-        conversation.try(:sender_id) == user.id
-      end
+      can :read, User, :id => user.id
+      can :destroy, User, :id => user.id
+      can :manage, Conversation, :sender_id => user.id
       can :read, Message
       can :create, Message
     end

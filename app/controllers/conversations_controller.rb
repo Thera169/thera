@@ -7,6 +7,9 @@ class ConversationsController < ApplicationController
   def index
     if current_user.admin?
       redirect_to users_path
+    elsif current_user.survivor?
+      @conversation = Conversation.get_conversation_survivor(current_user.id,0)
+      redirect_to conversation_path(@conversation)
     else
       @decorated_conversation = ConversationDecorator.new(current_user)
       @users = User.all

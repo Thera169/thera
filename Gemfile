@@ -18,6 +18,7 @@ gem 'cancancan', '~> 1.10'
 gem "slim-rails"
 gem 'slim'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bazaar'
 
 
 group :development, :test do

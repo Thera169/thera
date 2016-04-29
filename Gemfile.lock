@@ -47,6 +47,7 @@ GEM
     ast (2.2.0)
     autotest-rails (4.2.1)
       ZenTest (~> 4.5)
+    bazaar (0.0.2)
     bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -444,6 +445,7 @@ PLATFORMS
 DEPENDENCIES
   ZenTest (= 4.11.0)
   autotest-rails
+  bazaar
   better_errors
   bootstrap-sass (~> 3.2.0)
   byebug

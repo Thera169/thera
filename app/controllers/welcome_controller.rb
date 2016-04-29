@@ -8,7 +8,6 @@ class WelcomeController < ApplicationController
 
     volunteer = User.find_available_volunteer
     @conversation = Conversation.get_conversation(current_user.id, volunteer.id)
-    @user.conversation = @conversation
 
     if @conversation
       redirect_to conversation_path(@conversation)
