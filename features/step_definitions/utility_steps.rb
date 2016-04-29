@@ -47,10 +47,10 @@ Given /^I start a new conversation$/ do
 end
 
 Given /^I type a message saying "([^"].*)"$/ do |msg|
-    page.fill_in 'message_content', :with => msg
+    page.fill_in 'message_body', :with => msg
     
     steps %{
-        And I press "submit message"
+        And I press "Send"
     }
 end
 
@@ -154,4 +154,21 @@ end
 
 Given /^I have not submitted a rating$/ do
     pending
+end
+def wait_for_ajax
+    Timeout.timeout(Capybara.default_max_wait_time) do
+      loop until finished_all_ajax_requests?
+    end
+end
+
+def finished_all_ajax_requests?
+    page.evaluate_script('jQuery.active').zero?
+end
+
+Then /^(?:|I )should see "([^"]*)" once the page loads$/ do |text|
+  visit current_path
+  steps %{
+    Then I should see #{text}
+  }
+
 end

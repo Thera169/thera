@@ -25,14 +25,14 @@ Scenario: Create message
   And I am on the home page
   And I start a new conversation
   And I type a message saying "Hey"
-  Then I should see "Hey"
+  Then I should see "Hey" once the page loads
 
 Scenario: Go back to main page
   Given all roles exist
   And a volunteer exists with email "testAdminEmail@test.com" and password "12345678" and name "John"
   And I am on the home page
   And I start a new conversation
-  When I press "Sign out"
+  When I follow "Logout"
   Then I should be on the home page
   And I should see "Thera"
   
