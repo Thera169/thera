@@ -1,4 +1,4 @@
-# thera
+# Thera
 
 <p>Pivotal Tracker: https://www.pivotaltracker.com/n/projects/1545429</p>
 <p>Heroku: https://fathomless-eyrie-31747.herokuapp.com/</p>
