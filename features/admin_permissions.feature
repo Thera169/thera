@@ -4,12 +4,12 @@ Feature: admin permissions
     
 Scenario: Manage Volunteers
   Given all roles exist  
-  And an admin exists with email "testAdminEmail@test.com" and password "12345678" and name "John"
+  And an admin exists with email "testAdminEmail@test.com" and password "test1234" and name "test admin"
   And I am on the login page
   And I fill in "Email" with "testAdminEmail@test.com"
-  And I fill in "Password" with "12345678"
-  And I follow "Volunteer Sign-In"
-  Then I should see "Manage Volunteers"
+  And I fill in "Password" with "test1234"
+  And I press "Log in"
+  Then I should see "Admin Dashboard"
   
 Scenario: Manage Volunteers Visible
   Given all roles exist  

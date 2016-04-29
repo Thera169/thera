@@ -10,11 +10,11 @@ Scenario: Admin Login and Permissions
   When I fill in "Email" with "testAdminEmail@test.com"
   And I fill in "Password" with "12345678"
   And I press "Log in"
-  Then I should see "Signed in as John: Admin"
+  Then I should see "Admin Dashboard"
   And I should be on the authenticated home page
-  When I follow "Manage Volunteers"
-  Then I should see "Listing Users"
-  And I should see "New User"
+  And I should see "Bad Conversations"
+  And I should see "User Listing"
+  And I should see "Add a new Volunteer"
 
 # Scenario: Volunteer Login and Permissions
 #   Given all roles exist  
