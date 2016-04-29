@@ -22,7 +22,7 @@ Scenario: Volunteer Cannot Manage Volunteers
   And I press "Log in"
   Then I should not see "User Listing"
   
-Scenario: Admin destroy conversation
+Scenario: Admin Creates a Volunteer
   Given all roles exist  
   And an admin exists with email "testVolunteerEmail@test.com" and password "12345678" and name "John"
   And I am on the login page
