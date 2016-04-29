@@ -4,28 +4,33 @@ Feature: all users
 	
 Scenario: Start conversation
   Given I am not logged in
+  And all roles exist
+  And a volunteer exists with email "testAdminEmail@test.com" and password "12345678" and name "John"
   And I am on the home page
   When I start a new conversation
-  Then I should see "Your chat has started."
+  Then I should see "Rate your conversation here"
 
 Scenario: Sign out and go back to main page
   Given all roles exist
-  And I am logged in as a survivor
+  And a volunteer exists with email "testAdminEmail@test.com" and password "12345678" and name "John"
+  And I am on the home page
   And I start a new conversation
-  When I press "Sign out"
+  When I follow "Logout"
   Then I should be on the home page
-  And I should see "Signed out successfully."
+  And I should see "Welcome to Thera"
 
 Scenario: Create message
   Given all roles exist
-  And I am logged in as a survivor
+  And a volunteer exists with email "testAdminEmail@test.com" and password "12345678" and name "John"
+  And I am on the home page
   And I start a new conversation
   And I type a message saying "Hey"
   Then I should see "Hey"
 
 Scenario: Go back to main page
   Given all roles exist
-  And I am logged in as a survivor
+  And a volunteer exists with email "testAdminEmail@test.com" and password "12345678" and name "John"
+  And I am on the home page
   And I start a new conversation
   When I press "Sign out"
   Then I should be on the home page
