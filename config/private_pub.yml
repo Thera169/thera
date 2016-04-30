@@ -7,6 +7,6 @@ test:
   secret_token: "secret"
 
 production:
-  server: "https://therafaye.herokuapp.com/"
+  server: "https://therafaye.herokuapp.com/faye"
   secret_token: "ianfox"
   signature_expiration: 86400 # one day
