@@ -8,7 +8,8 @@ addons:
 cache:
   - bundler
 
-script:
+script:'
+  - bundle exec rake db:create titleize_test
   - bundle exec rake db:migrate
   - bundle exec rake db:seed
   - bundle exec rake cucumber
