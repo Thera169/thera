@@ -37,6 +37,17 @@ Given /^I am logged in as a[n]? ([a-zA-Z].*)$/ do |role|
     end
 end
 
+Given /^a conversation exists between "([^"].*)" and "([^"].*)"$/ do | volunteer, survivor |
+    volunteer.downcase!
+    survivor.downcase!
+    vol = User.where(email: volunteer).first
+    surv = User.where(email: survivor).first
+    puts User.all.first.email
+    puts "\n" 
+    puts User.all.second.email
+    conv = Conversation.create(:sender_id => vol.id, :recipient_id => surv.id)
+    visit "/conversations/#{conv.id}"
+end
 
 Given /^I start a new conversation$/ do
     steps %{
@@ -62,6 +73,14 @@ Given /^an admin exists with email "([^"].*)" and password "([^"].*)" and name "
     #         User.where(email: mail).destroy!
     # end
     role=Role.where(name: "Admin").first
+    User.create!(:name => user, :role_id => role.id, :email => mail, :password => pass)
+end
+
+Given /^a survivor exists with email "([^"].*)" and password "([^"].*)" and name "([^"].*)"$/ do |mail, pass, user|
+    # if User.exists?(email: mail, role_id: 3)
+    #         User.where(email: mail).destroy!
+    # end
+    role=Role.where(name: "Survivor").first
     User.create!(:name => user, :role_id => role.id, :email => mail, :password => pass)
 end
 
@@ -173,4 +192,11 @@ Then /^(?:|I )should see "([^"]*)" once the page loads$/ do |text|
     Then I should see "#{text}"
   }
 
+end
+Then /^"([^"]*)" should be hidden$/ do |text|
+    steps %{
+        Then I should see "#{text}"
+    }
+    expect(page).to have_selector('#save_conversation_id', visible: false)
+    expect(page).to have_selector('#comment_section', visible: false)
 end

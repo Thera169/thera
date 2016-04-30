@@ -11,7 +11,7 @@ Scenario: Submit rating
 Scenario: Submit comment
   Given all roles exist
   And I am logged in as a survivor
-  When I fill in rating_comment with "Volunteer provided great advice"
+  When I fill in "rating_comment" with "Volunteer provided great advice"
   And I press "Submit"
   Then I should not see "Add Comment"
   And I should see "Survey submitted successfully."
@@ -19,5 +19,4 @@ Scenario: Submit comment
 Scenario: Hide comment box
   Given all roles exist
   And I am logged in as a survivor
-  Then I should not see "Please enter any comments you'd like to add about your conversation:"
-  
+  Then "Please enter any comments you'd like to add about your conversation:" should be hidden
