@@ -6,7 +6,6 @@ Scenario: Destroy User
   Given all roles exist  
   And a volunteer exists with email "testvolunteeremail@test.com" and password "12345678" and name "Alice"
   And I am logged in as an admin
-  And I follow "Manage Volunteers"
   When I delete the user with the email: "testvolunteeremail@test.com"
   Then I should not see "testvolunteeremail@test.com"
 
@@ -14,7 +13,6 @@ Scenario: Edit User
   Given all roles exist
   And a volunteer exists with email "testvolunteeremail@test.com" and password "12345678" and name "Alice"
   And I am logged in as an admin
-  And I follow "Manage Volunteers"
   When I edit the user with the email: "testvolunteeremail@test.com"
   Then I should see "Editing User"
   When I fill in name_field with "New name"
@@ -30,8 +28,7 @@ Scenario: Edit User
 Scenario: Add User
   Given all roles exist
   And I am logged in as an admin
-  And I follow "Manage Volunteers"
-  And I follow "New User"
+  And I follow "Add a new Volunteer"
   When I add the user with the email: "testvolunteeremail@test.com"
   And I press "Create User"
   Then I should see "New_Volunteer"

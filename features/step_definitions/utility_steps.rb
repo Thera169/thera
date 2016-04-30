@@ -6,30 +6,33 @@ Given /^I am logged in as a[n]? ([a-zA-Z].*)$/ do |role|
     role.downcase!
     if role == "survivor"
         steps %{
-            Given I am on the home page  
-            And I press "Get Started"
+            Given a volunteer exists with email "testVolunteerEmail@test.com" and password "test1234" and name "Jack"
+            And I am on the home page  
+            And I press "Start a Conversation"
         }
     elsif role == "volunteer"
         if not User.exists?(:name => "test_volunteer")
+            role = Role.where(name: "Volunteer").first
             admin_user = User.create(:email => "testVolunteerEmail@test.com", :name => "test volunteer",
-                                        :role_id => 2, :password => "test1234")
+                                        :role_id => role.id, :password => "test1234")
         end
-           steps %{
-               Given I am on the login page
-               And I fill in "Email" with "testVolunteerEmail@test.com"
-               And I fill in "Password" with "test1234"
-               And I follow "Volunteer Sign-In"
+           steps %{ 
+                Given I am on the login page
+                And I fill in "Email" with "testVolunteerEmail@test.com"
+                And I fill in "Password" with "test1234"
+                And I press "Log in"
            }
     elsif role == "admin"
         if not User.exists?(:name => "test_admin")
+            role = Role.where(name: "Admin").first
             admin_user = User.create(:email => "testAdminEmail@test.com", :name => "test admin",
-                                        :role_id => 3, :password => "test1234")
+                                        :role_id => role.id, :password => "test1234")
         end
          steps %{
-               Given I am on the login page
-               And I fill in "Email" with "testAdminEmail@test.com"
-               And I fill in "Password" with "test1234"
-               And I follow "Volunteer Sign-In"
+                Given I am on the login page
+                And I fill in "Email" with "testAdminEmail@test.com"
+                And I fill in "Password" with "test1234"
+                And I press "Log in"
            }
     end
 end
@@ -60,7 +63,6 @@ Given /^an admin exists with email "([^"].*)" and password "([^"].*)" and name "
     # end
     role=Role.where(name: "Admin").first
     User.create!(:name => user, :role_id => role.id, :email => mail, :password => pass)
-    puts Role.all.length()
 end
 
 Given /^a volunteer exists with email "([^"].*)" and password "([^"].*)" and name "([^"].*)"$/ do |mail, pass, user|
@@ -80,7 +82,6 @@ end
 When /^I add the user with the email: "([^"].*)"$/ do |mail|
     
     page.fill_in 'user_name', :with => 'New_Volunteer'
-    page.fill_in 'user_role_id', :with => 'Volunteer'
     page.fill_in 'user_email', :with => mail
     page.fill_in 'user_password', :with => 'aaaaaaaa'
     page.fill_in 'user_password_confirmation', :with => 'aaaaaaaa'
@@ -137,7 +138,8 @@ Then (/^I should see "([^"]*)" in "([^"]*)"$/) do |user2, request_box|
 end
 
 When /^I click on (\d+) stars$/ do |num_stars|
-    pending
+    puts page.body
+    choose "rating-input-1-#{num_stars}"
 end
 
 Then /^(\d+) stars are saved in the survey$/ do |num_stars|
@@ -168,7 +170,7 @@ end
 Then /^(?:|I )should see "([^"]*)" once the page loads$/ do |text|
   visit current_path
   steps %{
-    Then I should see #{text}
+    Then I should see "#{text}"
   }
 
 end

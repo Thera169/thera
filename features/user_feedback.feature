@@ -3,19 +3,21 @@ Feature: As a user
   So that I can help make the service better
 
 Scenario: Submit rating
+  Given all roles exist
+  And I am logged in as a survivor
   When I click on 5 stars
-  Then 5 stars are saved in the survey
-  And I should see "Add Comment"
+  Then I should see "Please enter any comments you'd like to add about your conversation:"
 
 Scenario: Submit comment
-  Given I see "Add Comment"
-  And I type "Volunteer provided great advice" in "Comments Box"
-  When I press "Submit"
+  Given all roles exist
+  And I am logged in as a survivor
+  When I fill in rating_comment with "Volunteer provided great advice"
+  And I press "Submit"
   Then I should not see "Add Comment"
-  And I should see "Your comments have been received"
-  And I should see "Edit Comment"
+  And I should see "Survey submitted successfully."
 
 Scenario: Hide comment box
-  Given I have not submitted a rating
-  Then I should not see "Add Comment"
+  Given all roles exist
+  And I am logged in as a survivor
+  Then I should not see "Please enter any comments you'd like to add about your conversation:"
   

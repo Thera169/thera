@@ -18,8 +18,8 @@ module NavigationHelpers
       
     when /^the authenticated home\s?page$/
       '/'
-    
-    when /^the users page$/
+
+    when /^the admin home page$/
       '/admin/users'
     
     when /^the new\s?conversation\s?page$/
