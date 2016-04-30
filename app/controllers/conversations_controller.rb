@@ -12,7 +12,7 @@ class ConversationsController < ApplicationController
       redirect_to conversation_path(@conversation)
     else
       @decorated_conversation = ConversationDecorator.new(current_user)
-      @users = User.all
+      @users = User.where("last_seen < ?", Time.now - 1.hour)
     end
   end
 

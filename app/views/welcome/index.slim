@@ -14,7 +14,7 @@ html
             li
               a |
             li
-              a href="" FAQ's
+              a href="" FAQs
             li
               =image_tag("Logo.png", :id => "logo")
 
@@ -27,7 +27,9 @@ html
             =image_tag("CityBlue.png", :id => "city")
           .span3.offset
 
-  
+
+      = flash[:no_volunteers]
+
       
     div id="right-half"
       div id ="description"      

@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
   
   def self.find_available_volunteer
     volunteer_role = User.get_role("Volunteer")
-    return User.where(:role_id => volunteer_role.id).sample
+    return User.where(:role_id => volunteer_role.id, :status => "online").sample
   end
 
 
