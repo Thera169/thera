@@ -1,7 +1,7 @@
 # Thera
 
 <p>Pivotal Tracker: https://www.pivotaltracker.com/n/projects/1545429</p>
-<p>Heroku: theraapp.herokuapp.com
+<p>Heroku: https://theraapp.herokuapp.com
 
 <a href="https://codeclimate.com/github/Thera169/thera"><img src="https://codeclimate.com/github/Thera169/thera/badges/gpa.svg" /></a>
 
