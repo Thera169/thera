@@ -2,9 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 #volunteer-sidebar {
 	margin: 10px;
     float: left;
+    color: black;
 }
 
 #conversation-container-survivor {
@@ -18,7 +21,7 @@
 #conversation-container-volunteer {
 	padding: 10px;
 	position: absolute;
-	width: 80%;
+	width: 73%;
 	float: right;
 	display: inline;
 }

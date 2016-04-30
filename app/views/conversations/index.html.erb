@@ -9,10 +9,13 @@
 	<input type="checkbox" checked data-toggle="toggle">
 </div> -->
 	
-<div class="">
+<div style="height: 100%; overflow-y: auto;">
 
-	<%= render  'conversations' %>
-	<div class="" style="background: white; padding: 10px;">
+	<div>
+		<%= render 'conversations' %>
+	</div>
+	
+	<div style="background: white; padding: 10px;">
 		<%= render 'devise/menu/login_items' %>
 	</div>
 </div>

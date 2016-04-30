@@ -10,8 +10,6 @@
         <td class="start-btn-table">
           <%= button_to "View", conversations_path(:recipient_id => user.id, :sender_id => current_user.id), class: "btn btn-success btn-xs start-conversation"%>
         </td id="new-message-content-<%= user.id %>">
-        <td> 
-        </td>
       </tr>
       <% end %>
       <% end %>

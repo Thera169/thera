@@ -1,6 +1,10 @@
 #list_users {
-
 	margin-left: 1em;
+}
+
+#admin-container {
+	height: 100%;
+	overflow-y: auto;
 }
 
 table {

@@ -17,8 +17,8 @@ u4 = User.create({name: "Jack", email: "jack@example.com", password: "aaaaaaaa",
 
 # initialize a bad conversation between Survivor Sally and Volunteer Kev for development purposes (see admin dashboard UI)
 c1 = Conversation.create({sender_id: u1.id, recipient_id: u3.id})
-m1a = Message.create({body: "poop", conversation_id: c1.id, user_id: u3.id})
-m1b = Message.create({body: "pewp", conversation_id: c1.id, user_id: u1.id})
+m1a = Message.create({body: "hi", conversation_id: c1.id, user_id: u3.id})
+m1b = Message.create({body: "sorry I can't help right now", conversation_id: c1.id, user_id: u1.id})
 s1 = Survey.create({rating: 1, text: "I did not have a good conversation.", conversation_id: c1.id})
 
 # another bad conversation 
